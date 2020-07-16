@@ -2,10 +2,14 @@
 
 * Студент: [Илья](https://up.htmlacademy.ru/adaptive/20/user/1539133).
 <<<<<<< HEAD
+<<<<<<< HEAD
 * Наставник: 'Сергей Остаповец' (https://htmlacademy.ru/profile/seraphim).
 =======
 * Наставник: `Сергей Остаповец`.
 >>>>>>> 65b4ff15ebb94ac17d70810577495cc30548b569
+=======
+* Наставник: [Сергей Остаповец] (https://htmlacademy.ru/profile/seraphim).
+>>>>>>> f44c6d75df9669d1493db8a742cd0a7d35944f28
 
 ---
 
