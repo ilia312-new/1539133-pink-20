@@ -1,7 +1,11 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Илья](https://up.htmlacademy.ru/adaptive/20/user/1539133).
+<<<<<<< HEAD
 * Наставник: 'Сергей Остаповец' (https://htmlacademy.ru/profile/seraphim).
+=======
+* Наставник: `Сергей Остаповец`.
+>>>>>>> 65b4ff15ebb94ac17d70810577495cc30548b569
 
 ---
 
