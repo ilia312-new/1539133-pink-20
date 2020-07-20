@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк: Фотографии</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <div class="page-header__nav-wrapper">
+        <nav class="main-nav">
+          <div class="main-nav__logo-wrapper">
+            <a class="header-logo" title="Логотип Pink">
+              <svg class="header-logo__image">
+                <use href="img/logo-pink.svg"></use>
+              </svg>
+            </a>
+
+            <button class="main-nav__toggle" type="button" title="Меню"></button>
+          </div>
+
+          <ul class="main-menu">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="">Главная</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="https://htmlacademy.ru" title="HTML Academy">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="page-header__title-wrapper content-wrapper">
+        <h1 class="page-header__title">Фотографии пользователей Pink</h1>
+      </div>
+    </header>
+
+    <main class="page-inner">
+      <div class="page-inner__title-wrapper content-wrapper">
+        <p class="page-inner__title">Взгляните на фотографии, которые выкладывают пользователи!&thinsp;<br>Видите, как не хватает ваших?</p>
+
+      </div>
+
+      <section class="gallery">
+
+<!-- <h2 class="visually-hidden">Галерея фотографий пользователей приложения</h2> -->
+
+        <figure class="photo">
+          <a class="photo__link" href="#">
+            <img class="photo__image" src="img/content/1.jpg" alt="Фотография дня">
+          </a>
+
+          <figcaption class="photo__content">
+            <p class="photo__author">
+              <b class="photo__author-name">Анна</b>
+              <time class="photo__date" datetime="">(5 минут назад)</time>
+            </p>
+            <p class="photo__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <div class="photo__likes">
+              <button class="photo__like-button" type="button" name="button-like-count">
+              </button>
+              <span class="photo__like-count">Нравится: 215</span>
+            </div>
+          </figcaption>
+        </figure>
+
+        <div class="gallery__photo-wrapper">
+          <figure class="gallery__photo photo">
+            <a class="photo__link" href="#">
+              <img class="photo__image" src="img/content/2.jpg" alt="Фото 1">
+            </a>
+
+            <figcaption class="photo__content">
+              <p class="photo__author">
+                <b class="photo__author-name">Левон</b>
+                <time class="photo__date">(5 часов назад)</time>
+              </p>
+              <p class="photo__text">Вчера он на луну летал, сегодня в руки к нам попал</p>
+
+              <div class="photo__likes">
+                <button class="photo__like-button" type="button" name="button-like-count">
+                </button>
+                <span class="photo__like-count">Нравится: 356</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__photo photo">
+            <a class="photo__link" href="#">
+              <img class="photo__image" src="img/content/3.jpg" alt="Фото 2">
+            </a>
+
+            <figcaption class="photo__content">
+              <p class="photo__author">
+                <b class="photo__author-name">Антон</b>
+                <time class="photo__date">(5 часов назад)</time>
+              </p>
+              <p class="photo__text">Соседи будут рады!</p>
+
+              <div class="photo__likes">
+                <button class="photo__like-button" type="button" name="button-like-count">
+                </button>
+                <span class="photo__like-count">Нравится: 666</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__photo photo">
+            <a class="photo__link" href="#">
+              <img class="photo__image" src="img/content/4.jpg" alt="Фото 3">
+            </a>
+
+            <figcaption class="photo__content">
+              <p class="photo__author">
+                <b class="photo__author-name">Борис</b>
+                <time class="photo__date">(20 часов назад)</time>
+              </p>
+              <p class="photo__text">Здесь могла быть ваша цитата о высоком и вечном</p>
+
+              <div class="photo__likes">
+                <button class="photo__like-button" type="button" name="button-like-count">
+                </button>
+                <span class="photo__like-count">Нравится: 215</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__photo photo">
+            <a class="photo__link" href="#">
+              <img class="photo__image" src="img/content/5.jpg" alt="Фото 4">
+            </a>
+
+            <figcaption class="photo__content">
+              <p class="photo__author">
+                <b class="photo__author-name">Сергей</b>
+                <time class="photo__date">(25 часов назад)</time>
+              </p>
+              <p class="photo__text">Самая кубанская в мире!</p>
+
+              <div class="photo__likes">
+                <button class="photo__like-button" type="button" name="button-like-count">
+                </button>
+                <span class="photo__like-count">Нравится: 4</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__photo photo">
+            <a class="photo__link" href="#">
+              <img class="photo__image" src="img/content/6.jpg" alt="Фото 5">
+            </a>
+
+            <figcaption class="photo__content">
+              <p class="photo__author">
+                <b class="photo__author-name">Максим</b>
+                <time class="photo__date">(40 часов назад)</time>
+              </p>
+              <p class="photo__text">Где снег-то!</p>
+
+              <div class="photo__likes">
+                <button class="photo__like-button" type="button" name="button-like-count">
+                </button>
+                <span class="photo__like-count">Нравится: 150</span>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__photo photo">
+            <a class="photo__link" href="#">
+              <img class="photo__image" src="img/content/7.jpg" alt="Фото 6">
+            </a>
+
+            <figcaption class="photo__content">
+              <p class="photo__author">
+                <b class="photo__author-name">Надежда</b>
+                <time class="photo__date">(45 часов назад)</time>
+              </p>
+              <p class="photo__text">Всем GM и взаимные лайки!</p>
+
+              <div class="photo__likes">
+                <button class="photo__like-button" type="button" name="button-like-count">
+                </button>
+                <span class="photo__like-count">Нравится: 2560</span>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+<!-- <section class="content-wrapper">
+</section> -->
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer content-wrapper">
+        <img src="img/logo-pink.svg" alt="Логотип Pink">
+        <!-- место для ссылки -->
+        <img src="img/logo-glasses.svg" alt="Логотип подвала">
+        <!-- место для ссылки -->
+        <ul class="social-links">
+          <li class="social-links__item">
+            <a class="social-links__link" href="https://twitter.com" title="Twitter"></a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="https://www.facebook.com" title="Facebook"></a>
+          </li>
+          <li class="social-links__item">
+            <a class="social-links__link" href="https://www.youtube.com" title="Youtube"></a>
+          </li>
+        </ul>
+
+        <div class="page-footer__copyright">
+          <span class="page-footer__copyright-text">Разработано</span>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru" title="HTML Academy">HTML Academy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

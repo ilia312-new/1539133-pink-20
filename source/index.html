@@ -3,10 +3,203 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+  <body class="page">
+    <header class="page-header">
+      <div class="page-header__nav-wrapper">
+        <nav class="main-nav">
+          <div class="main-nav__logo-wrapper">
+            <a class="header-logo" title="Логотип Pink">
+              <svg class="header-logo__image">
+                <use href="img/logo-pink.svg"></use>
+              </svg>
+            </a>
 
+            <button class="main-nav__toggle" type="button" title="Меню"></button>
+          </div>
+
+          <ul class="main-menu">
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="">Главная</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="main-menu__item">
+              <a class="main-menu__link" href="https://htmlacademy.ru" title="HTML Academy">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <h1 class="visually-hidden">Приложение Pink</h1>
+
+      <div class="page-header store">
+        <div class="store__content">
+          <p class="store__title">Взгляни на жизнь иначе!</p>
+
+<!-- место для иконок магазинов -->
+
+          <a class="store__button">Скачать приложение</a>
+
+          <p class="store__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
+      </div>
+    </header>
+      <main class="page-main">
+        <div class="page-main__titles">
+          <p class="page-main__title">Устали от серости мегаполиза?</p>
+          <p class="page-main__title">Нам есть, что вам предложить!</p>
+        </div>
+
+        <section class="features">
+          <ul class="features__list">
+            <li class="features__item features__item--first">
+              <h2 class="features__item-title">Поднимает настроение</h2>
+              <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+            </li>
+            <li>
+              <h2 class="features__item-title">Меняет мир вокруг</h2>
+              <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li>
+              <h2 class="features__item-title">Заводит новых друзей</h2>
+              <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="slider-reviews content-wrapper">
+
+<!-- Место для чего-то еще -->
+
+          <div class="slider-reviews__slide">
+            <p class="slider-reviews__author">Николай Петров</p>
+            <blockquote class="slider-reviews__quote">
+              <p class="slider-reviews__quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+          </div>
+          <div class="slider-reviews__slider-controls slider-controls">
+<!--        <button class="slider-controls__button" type="button" aria-label="1"></button>
+            <button class="slider-controls__button" type="button" aria-label="2"></button>
+            <button class="slider-controls__button" type="button" aria-label="3"></button>
+-->
+          </div>
+        </section>
+        <section class="price">
+          <h3 class="visually-hidden">Стоимость предложения</h3>
+
+          <div class="price__slider content-wrapper">
+            <table class="price__table table-price">
+              <thead>
+                <tr>
+                  <th class="table-price__header">
+                    <span class="table-price__license-type">База</span>
+                    <span class="table-price__license-price">1,99 USD</span>
+                  </th>
+                  <th>
+                    <!-- Сделать хит продаж в уголке в ленточке -->
+                    <span class="table-price__license-type">Стандарт</span>
+                    <span class="table-price__license-price">3,99 USD</span>
+                  </th>
+                  <th>
+                    <span class="table-price__license-type">Анлим</span>
+                    <span class="table-price__license-price">9,99 USD</span>
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="table-price__cell">Розовый фильтр</td>
+                  <td class="table-price__cell">Розовый фильтр</td>
+                  <td class="table-price__cell">Розовый фильтр</td>
+                </tr>
+                <tr>
+                  <td class="table-price__cell">Смайлики</td>
+                  <td class="table-price__cell">Смайлики</td>
+                  <td class="table-price__cell">Смайлики</td>
+                </tr>
+                <tr>
+                  <td class="table-price__cell">Комментарии</td>
+                  <td class="table-price__cell">Комментарии</td>
+                  <td class="table-price__cell">Комментарии</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="price__slider-controls slider-controls">
+<!--        <button class="slider-controls__button" type="button" aria-label="1"></button>
+            <button class="slider-controls__button" type="button" aria-label="2"></button>
+            <button class="slider-controls__button" type="button" aria-label="3"></button>
+-->
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts">
+          <h4 class="visually-hidden">Контакты</h4>
+
+          <p class="contacts__title">Остались вопросы?<br>Связитесь с нами!</p>
+
+          <dl class="contacts__list">
+            <div class="contacts__item">
+              <dt class="contacts__list-term">Звоните:</dt>
+              <dd class="contacts__list-description">
+                <a class="contacts__list-link" href="">+7 (812) 555-66-66</a>
+              </dd>
+            </div>
+            <div class="contacts__item">
+              <dt class="contacts__list-term">Пишите:</dt>
+              <dd class="contacts__list-description">
+                <a class="contacts__list-link" href="">mail@htmlacademy.ru</a>
+              </dd>
+            </div>
+            <div class="contacts__item">
+              <dt class="contacts__list-term">Приезжайте в гости:</dt>
+              <dd class="contacts__list-description">
+                <address class="contacts__list-address">ул. Большая Конюшенная, 19/8</address>
+              </dd>
+            </div>
+
+          </dl>
+        </section>
+
+        <div class="map">
+          <svg class="">
+            <use href="img/minimap.svg"></use>
+          </svg>
+          <div class="map__marker"></div>
+        </div>
+      </main>
+      <footer class="page-footer">
+        <div class="page-footer content-wrapper">
+          <img src="img/logo-pink.svg" alt="Логотип Pink">
+          <!-- место для ссылки -->
+          <img src="img/logo-glasses.svg" alt="Логотип подвала">
+          <!-- место для ссылки -->
+          <ul class="social-links">
+            <li class="social-links__item">
+              <a class="social-links__link" href="https://twitter.com" title="Twitter"></a>
+            </li>
+            <li class="social-links__item">
+              <a class="social-links__link" href="https://www.facebook.com" title="Facebook"></a>
+            </li>
+            <li class="social-links__item">
+              <a class="social-links__link" href="https://www.youtube.com" title="Youtube"></a>
+            </li>
+          </ul>
+
+          <div class="page-footer__copyright">
+            <span class="page-footer__copyright-text">Разработано</span>
+            <a class="page-footer__copyright-link" href="https://htmlacademy.ru" title="HTML Academy">HTML Academy</a>
+          </div>
+        </div>
+      </footer>
   </body>
+
 </html>
