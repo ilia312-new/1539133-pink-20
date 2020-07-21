@@ -192,8 +192,43 @@
         </div>
       </section>
 
-<!-- <section class="content-wrapper">
-</section> -->
+      <section class="photo-editor">
+        <div class="photo-editor__top">
+          <p class="photo-editor__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+        </div>
+        <div class="photo-editor__form-wrapper content-wrapper">
+          <form class="form-photo" action="https://echo.htmlacademy.ru" method="post">
+            <input class="visually-hidden" type="file" name="image" value="">
+            <label class="form-photo__image" for="image"></label>
+<!-- кнопки управления -->
+            <div class="form-photo__controls">
+              <div class="form-photo__filters-buttons">
+                <button class="form-photo__filter-button" type="button" name="clipping">
+                  <img src="img/symbol-clipping.svg" alt="Обрезка">
+                </button>
+                <button type="button" name="fill">
+                  <img src="img/symbol-fill.svg" alt="Заливка">
+                </button>
+                <button type="button" name="contrast">
+                  <img src="img/symbol-contrast.svg" alt="Контрастность">
+                </button>
+              </div>
+<!-- шкала кадрирования -->
+                <div class="form-photo__filter">
+                  <div class="form-photo__icon-wrapper">
+                    <img class="form-photo__icon" src="img/symbol-crop.svg" alt="Кадрировать">
+                  </div>
+                  <input class="form-photo__filter-range" type="range" min="" max="" name="fill" value="">
+                </div>
+<!-- кнопки отправки -->
+                <div class="form-photo__buttons">
+                  <button class="form-photo__button button_rounded" type="submit">Запостить</button>
+                  <button class="form-photo__button button_rounded" type="reset">Отмена</button>
+                </div>
+              </div>
+            </form>
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
