@@ -11,7 +11,7 @@
       <div class="page-header__nav-wrapper">
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
-            <a class="header-logo" title="Логотип Pink">
+            <a class="header-logo" aria-label="Логотип Pink">
               <svg class="header-logo__image">
                 <use href="img/logo-pink.svg"></use>
               </svg>
@@ -21,17 +21,17 @@
           </div>
 
           <ul class="main-menu">
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="">Главная</a>
+            <li class="main-menu__item-link">
+              <a class="" href="">Главная</a>
             </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="photo.html">Фотографии</a>
+            <li class="main-menu__item-link">
+              <a class="" href="photo.html">Фотографии</a>
             </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="form.html">Конкурс</a>
+            <li class="main-menu__item-link">
+              <a class="" href="form.html">Конкурс</a>
             </li>
-            <li class="main-menu__item">
-              <a class="main-menu__link" href="https://htmlacademy.ru" title="HTML Academy">HTML Academy</a>
+            <li class="main-menu__item-link">
+              <a class="" href="https://htmlacademy.ru" title="HTML Academy">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -157,25 +157,30 @@
 
     <footer class="page-footer">
       <div class="page-footer content-wrapper">
-        <img src="img/logo-pink.svg" alt="Логотип Pink">
-        <!-- место для ссылки -->
-        <img src="img/logo-glasses.svg" alt="Логотип подвала">
-        <!-- место для ссылки -->
+        <div class="page-footer__icon-wrapper">
+          <img src="img/logo-pink.svg" alt="Логотип Pink">
+          <!-- место для ссылки -->
+        </div>
+        <div class="page-footer__icon-wrapper">
+          <img src="img/logo-glasses.svg" alt="Логотип подвала">
+          <!-- место для ссылки -->
+        </div>
+<!-- сетка со ссылками -->
         <ul class="social-links">
           <li class="social-links__item">
-            <a class="social-links__link" href="https://twitter.com" title="Twitter"></a>
+            <a class="social-links__link" href="https://twitter.com" aria-label="Twitter"></a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link" href="https://www.facebook.com" title="Facebook"></a>
+            <a class="social-links__link" href="https://www.facebook.com" aria-label="Facebook"></a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link" href="https://www.youtube.com" title="Youtube"></a>
+            <a class="social-links__link" href="https://www.youtube.com" aria-label="Youtube"></a>
           </li>
         </ul>
 
         <div class="page-footer__copyright">
           <span class="page-footer__copyright-text">Разработано</span>
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru" title="HTML Academy">HTML Academy</a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru" aria-label="HTML Academy">HTML Academy</a>
         </div>
       </div>
     </footer>
