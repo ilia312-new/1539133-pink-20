@@ -22,16 +22,16 @@
 
           <ul class="main-menu">
             <li class="main-menu__item-link">
-              <a class="" href="">Главная</a>
+              <a href="">Главная</a>
             </li>
             <li class="main-menu__item-link">
-              <a class="" href="photo.html">Фотографии</a>
+              <a href="photo.html">Фотографии</a>
             </li>
             <li class="main-menu__item-link">
-              <a class="" href="form.html">Конкурс</a>
+              <a href="form.html">Конкурс</a>
             </li>
             <li class="main-menu__item-link">
-              <a class="" href="https://htmlacademy.ru" title="HTML Academy">HTML Academy</a>
+              <a href="https://htmlacademy.ru" title="HTML Academy">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -48,7 +48,7 @@
 <!-- формы отправки -->
       <form class="page-inner__form-feedback form-feedback" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-feedback__name-wrapper">
-          <fieldset class="form-feedback__fieldset">
+          <fieldset class="form-feedback__fieldset-fullname">
             <label class="form-feedback__label">Фамилия:
               <input class="form-feedback__input" type="text" name="lastname" placeholder="Укажите фамилию *" required>
             </label>
@@ -62,7 +62,7 @@
         </div>
 
         <div class="form-feedback__achivment-wrapper">
-          <fieldset class="foem-feedback__fieldset fieldset-achivment">
+          <fieldset class="form-feedback__fieldset-achivment">
             <legend class="form-feedback__legend">
               <span class="form-feedback__legend-text">Ваши безбашенные достижения в путешествии</span>
             </legend>
@@ -70,32 +70,38 @@
             <ul class="form-feedback__list">
               <li class="form-feedback__achivment-item">
                 <p class="form-feedback__achivment-layout">
-                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="shark" checked><span class="form-feedback__checkbox-sign">Сделал селфи с акулой</span>
+                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="shark" checked>
+                    <span class="form-feedback__checkbox-sign">Сделал селфи с акулой</span>
                 </p>
               </li>
               <li class="form-feedback__achivment-item">
                 <p class="form-feedback__achivment-layout">
-                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="beach" checked><span class="form-feedback__checkbox-sign">Обгорел на пляже</span>
+                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="beach" checked>
+                    <span class="form-feedback__checkbox-sign">Обгорел на пляже</span>
                 </p>
               </li>
               <li class="form-feedback__achivment-item">
                 <p class="form-feedback__achivment-layout">
-                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="chuck" checked><span class="form-feedback__checkbox-sign">Видел Чака Норриса</span>
+                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="chuck" checked>
+                    <span class="form-feedback__checkbox-sign">Видел Чака Норриса</span>
                 </p>
               </li>
               <li class="form-feedback__achivment-item">
                 <p class="form-feedback__achivment-layout">
-                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="souvenirs" checked><span class="form-feedback__checkbox-sign">Накупил сувениров</span>
+                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="souvenirs" checked>
+                    <span class="form-feedback__checkbox-sign">Накупил сувениров</span>
                 </p>
               </li>
               <li class="form-feedback__achivment-item">
                 <p class="form-feedback__achivment-layout">
-                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="tower" checked><span class="form-feedback__checkbox-sign">Удержал башню</span>
+                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="tower" checked>
+                    <span class="form-feedback__checkbox-sign">Удержал башню</span>
                 </p>
               </li>
               <li class="form-feedback__achivment-item">
                 <p class="form-feedback__achivment-layout">
-                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="hotel" checked><span class="form-feedback__checkbox-sign">Разгромил отель</span>
+                  <input class="form-feedback__checkbox visually-hidden" type="checkbox" name="achivments" value="hotel" checked>
+                    <span class="form-feedback__checkbox-sign">Разгромил отель</span>
                 </p>
               </li>
             </ul>
@@ -103,36 +109,43 @@
         </div>
 
         <div class="form-feedback__contacts-wrapper">
-          <fieldset class="form-feedback__fieldset form-feedback__fieldset_contacts">
-            <legend class="form-feedback__legend form-feedback__legend_contacts"><span class="form-feedback__legend-text">Котактная информация</span>
+          <fieldset class="form-feedback__fieldset--contacts">
+            <legend class="form-feedback__legend form-feedback__legend--contacts">
+              <span class="form-feedback__legend-text">Котактная информация</span>
             </legend>
 
-            <label class="form-feedback__label form-feedback__label_contacts">Номер телефона
-              <input class="form-feedback__input form-feedback__input_contacts" type="tel" name="phone" placeholder="Номер, пожалуйста">
+            <label class="form-feedback__label form-feedback__label--contacts">Номер телефона
+              <input class="form-feedback__input form-feedback__input--contacts" type="tel" name="phone" placeholder="Номер, пожалуйста">
             </label>
-            <label class="form-feedback__label form-feedback__label_contacts">Номер телефона
-              <input class="form-feedback__input form-feedback__input_contacts" type="email" name="email" placeholder="ВВедите почту *" required>
+            <label class="form-feedback__label form-feedback__label--contacts">Номер телефона
+              <input class="form-feedback__input form-feedback__input--contacts" type="email" name="email" placeholder="ВВедите почту *" required>
             </label>
           </fieldset>
         </div>
 
         <div class="form-feedback__platform-wrapper">
-          <fieldset class="form-feedback__fieldset form-feedback__fieldset_platform">
-            <legend class="form-feedback__legend"><span class="form-feedback__legend-text">С каким приложением путешествовали?</span></legend>
+          <fieldset class="form-feedback__fieldset--platform">
+            <legend class="form-feedback__legend">
+              <span class="form-feedback__legend-text">С каким приложением путешествовали?</span>
+            </legend>
             <ul class="form-feedback__list">
               <li class="feedback__platform-item">
                 <p class="form-feedback__platform-layout">
-                  <input class="form-feedback__radio visually-hidden" type="radio" name="platform" value="1" checked><span class="form-feedback__radio-sign">Pink для iOS</span>
+                  <input class="form-feedback__radio visually-hidden" type="radio" name="platform" value="1" checked>
+                    <span class="form-feedback__radio-sign">Pink для iOS</span>
+                  <!-- блок visually-hidden применить в качестве свойства к элементу form-feedback__radio -->
                 </p>
               </li>
               <li class="feedback__platform-item">
                 <p class="form-feedback__platform-layout">
-                  <input class="form-feedback__radio visually-hidden" type="radio" name="platform" value="2"><span class="form-feedback__radio-sign">Pink на Android</span>
+                  <input class="form-feedback__radio visually-hidden" type="radio" name="platform" value="2">
+                    <span class="form-feedback__radio-sign">Pink на Android</span>
                 </p>
               </li>
               <li class="feedback__platform-item">
                 <p class="form-feedback__platform-layout">
-                  <input class="form-feedback__radio visually-hidden" type="radio" name="platform" value="3"><span class="form-feedback__radio-sign">Windows Phone</span>
+                  <input class="form-feedback__radio visually-hidden" type="radio" name="platform" value="3">
+                    <span class="form-feedback__radio-sign">Windows Phone</span>
                 </p>
               </li>
             </ul>
@@ -141,7 +154,9 @@
 
         <div class="form-feedback__emotions-wrapper">
           <fieldset class="form-feedback__fieldset form-feedback__fieldset_emotions">
-            <legend class="form-feedback__legend"><span class="form-feedback__legend-text">Опишите свои эмоции</span></legend>
+            <legend class="form-feedback__legend">
+              <span class="form-feedback__legend-text">Опишите свои эмоции</span>
+            </legend>
 
             <textarea class="form-feedback__textarea form-feedback__input" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
@@ -149,7 +164,7 @@
 
         <div class="form-feedback__submit-wrapper">
           <button class="form-feedback__button button_squared" type="submit">Отправить форму</button>
-
+<!-- button_squared проверить работу с миксинами-->
           <p class="form-feedback__notification">* - обязательные для заполнения поля</p>
         </div>
       </form>
