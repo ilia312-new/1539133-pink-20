@@ -11,13 +11,11 @@
       <div class="page-header__nav-wrapper">
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
-            <a class="header-logo" aria-label="Логотип Pink">
-              <svg class="header-logo__image">
-                <use href="img/logo-pink.svg"></use>
-              </svg>
+            <a class="main-nav__header-logo" aria-label="Логотип Pink">
+              <img class="header-logo__image" src="img/logo-pink-white-mobile.svg" alt="Pink">
             </a>
 
-            <button class="main-nav__toggle" type="button" title="Меню"></button>
+            <button class="main-nav__toggle" type="button" aria-label="Меню"></button>
           </div>
 
           <ul class="main-menu">
@@ -37,23 +35,40 @@
         </nav>
       </div>
 
-      <h1 class="visually-hidden">Приложение Pink</h1>
+  <!--    <h1 class="visually-hidden">Приложение Pink</h1> -->
 
-      <div class="page-header store">
+      <div class="page-header__store">
         <div class="store__content">
           <p class="store__title">Взгляни на жизнь иначе!</p>
 
-<!-- место для иконок магазинов -->
+          <a class="store__button" href="#">Скачать приложение</a>
 
-          <a class="store__button">Скачать приложение</a>
+          <ul class="store__list">
+            <li class="store__item">
+              <a class="store__link" href="#" aria-label="iOS">
+                <img src="img/logo-apple.svg" alt="iOS-sign">
+              </a>
+            </li>
+            <li class="store__item">
+              <a class="store__link" href="#" aria-label="Android">
+                <img src="img/logo-android.svg" alt="Android-logo">
+              </a>
+            </li>
+            <li class="store__item">
+              <a class="store__link" href="#" aria-label="Windows">
+                <img src="img/logo-microsoft.svg" alt="Windows-logo">
+              </a>
+            </li>
+          </ul>
 
           <p class="store__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </div>
     </header>
+
       <main class="page-main">
         <div class="page-main__titles">
-          <p class="page-main__title">Устали от серости мегаполиза?</p>
+          <p class="page-main__title">Устали от серости мегаполиса?</p>
           <p class="page-main__title">Нам есть, что вам предложить!</p>
         </div>
 
