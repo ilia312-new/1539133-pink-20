@@ -1,6 +1,4 @@
 .main-nav {
-  margin: 0 auto;
-  padding: 0 10px;
   display: flex;
   flex-wrap: wrap;
   width: 320px;
@@ -54,13 +52,13 @@
   }
 }
 
-// меню выходит за границы макета, нужно придумать что с этм сделать
+// меню при любых значениях выравнивания прижимается к правому краю
 
 .main-menu {
-  align-self: flex-start;
-  border: 1px solid #000000;
+  display: block;
+  box-sizing: border-box;
   line-height: 32px;
-  width: 320px;
+  width: 300px;
 }
 
 .main-menu__item {
