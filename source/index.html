@@ -74,15 +74,15 @@
 
         <section class="features">
           <ul class="features__list">
-            <li class="features__item features__item--first">
+            <li class="features__item">
               <h2 class="features__item-title">Поднимает настроение</h2>
               <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
-            <li>
+            <li class="features__item">
               <h2 class="features__item-title">Меняет мир вокруг</h2>
               <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
-            <li>
+            <li class="features__item">
               <h2 class="features__item-title">Заводит новых друзей</h2>
               <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
@@ -106,44 +106,45 @@
 -->
           </div>
         </section>
+
         <section class="price">
           <h3 class="visually-hidden">Стоимость предложения</h3>
 
           <div class="price__slider content-wrapper">
-            <table class="price__table table-price">
+            <table class="price-table">
               <thead>
                 <tr>
-                  <th class="table-price__header">
-                    <span class="table-price__license-type">База</span>
-                    <span class="table-price__license-price">1,99 USD</span>
+                  <th class="price-table__header">
+                    <span class="price-table__license-type">База</span>
+                    <span class="price-table__license-price">1,99 USD</span>
                   </th>
-                  <th>
+                  <th class="price-table__header--hit">
                     <!-- Сделать хит продаж в уголке в ленточке -->
-                    <span class="table-price__license-type">Стандарт</span>
-                    <span class="table-price__license-price">3,99 USD</span>
+                    <span class="price-table__license-type">Стандарт</span>
+                    <span class="price-table__license-price">3,99 USD</span>
                   </th>
-                  <th>
-                    <span class="table-price__license-type">Анлим</span>
-                    <span class="table-price__license-price">9,99 USD</span>
+                  <th class="price-table__header">
+                    <span class="price-table__license-type">Анлим</span>
+                    <span class="price-table__license-price">9,99 USD</span>
                   </th>
                 </tr>
               </thead>
 
               <tbody>
                 <tr>
-                  <td class="table-price__cell">Розовый фильтр</td>
-                  <td class="table-price__cell">Розовый фильтр</td>
-                  <td class="table-price__cell">Розовый фильтр</td>
+                  <td class="price-table__cell">Розовый фильтр</td>
+                  <td class="price-table__cell">Розовый фильтр</td>
+                  <td class="price-table__cell">Розовый фильтр</td>
                 </tr>
                 <tr>
-                  <td class="table-price__cell">Смайлики</td>
-                  <td class="table-price__cell">Смайлики</td>
-                  <td class="table-price__cell">Смайлики</td>
+                  <td class="price-table__cell">Смайлики</td>
+                  <td class="price-table__cell">Смайлики</td>
+                  <td class="price-table__cell">Смайлики</td>
                 </tr>
                 <tr>
-                  <td class="table-price__cell">Комментарии</td>
-                  <td class="table-price__cell">Комментарии</td>
-                  <td class="table-price__cell">Комментарии</td>
+                  <td class="price-table__cell">Комментарии</td>
+                  <td class="price-table__cell">Комментарии</td>
+                  <td class="price-table__cell">Комментарии</td>
                 </tr>
               </tbody>
             </table>
@@ -185,14 +186,15 @@
         </section>
 
         <div class="map">
-          <svg class="">
-            <use href="img/minimap.svg"></use>
-          </svg>
+          <picture>
+            <img class="map__image" src="img/bg-map-mobile@1x.png">
+          </picture>
           <div class="map__marker"></div>
         </div>
       </main>
+
       <footer class="page-footer">
-        <div class="page-footer content-wrapper">
+        <div class="page-footer__content-wrapper">
           <div class="page-footer__icon-wrapper">
             <img src="img/logo-pink.svg" alt="Логотип Pink">
             <!-- место для ссылки -->
@@ -204,13 +206,13 @@
 <!-- сетка со ссылками -->
           <ul class="social-links">
             <li class="social-links__item">
-              <a class="social-links__link" href="https://twitter.com" aria-label="Twitter"></a>
+              <a class="social-links__link--twitter" href="https://twitter.com" aria-label="Twitter"></a>
             </li>
             <li class="social-links__item">
-              <a class="social-links__link" href="https://www.facebook.com" aria-label="Facebook"></a>
+              <a class="social-links__link--fb" href="https://www.facebook.com" aria-label="Facebook"></a>
             </li>
             <li class="social-links__item">
-              <a class="social-links__link" href="https://www.youtube.com" aria-label="Youtube"></a>
+              <a class="social-links__link--youtube" href="https://www.youtube.com" aria-label="Youtube"></a>
             </li>
           </ul>
 

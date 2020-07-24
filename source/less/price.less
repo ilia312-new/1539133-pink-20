@@ -1,0 +1,57 @@
+.price {
+  padding-top: 91px;
+  padding-bottom: 32px;
+  background-color: #f2f2f2;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-size: 100% 25px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.price__slider {
+  overflow: hidden;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price-table {
+  position: relative;
+  left: 50%
+  transform: translateX(-50%);
+  transition: left 0.4s linear;
+  width: 834px;
+}
+
+.price-table__header {
+  position: relative;
+  padding: 18px 0;
+  font-size: 18px;
+  color: #fff;
+  background-color: #283645;
+
+  &--hit {
+    background: url("../img/bg-hit.svg") no-repeat 0 0;
+
+  }
+}
+
+.price-table__license-type,
+.price-table__license-price {
+  display: block;
+}
+
+.price-table__license-type {
+  font-weight: bold;
+}
+
+.price-table__license-price {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.price-table__cell {
+  padding: 15px 18px 14px 22px;
+  border-right: 2px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
+  background-color: #fff;
+}
