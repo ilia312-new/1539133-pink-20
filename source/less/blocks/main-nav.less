@@ -21,6 +21,8 @@
   flex-basis: auto;
   padding: 0;
   margin-right: 183px;
+  display: flex;
+  justify-content: space-between;
   color: white;
   width: 74px;
   height: 23px;
@@ -32,8 +34,9 @@
 
 .header-logo__image {
   display: block;
-  width: 74px;
-  height: 23px;
+  align-self: flex-start;
+  flex-basis: 74px;
+  min-height: 23px;
 }
 
 .main-nav__toggle {
@@ -50,30 +53,4 @@
   &:active {
     color: #d22856;
   }
-}
-
-// меню при любых значениях выравнивания прижимается к правому краю
-
-.main-menu {
-  display: block;
-  box-sizing: border-box;
-  line-height: 32px;
-  width: 300px;
-}
-
-.main-menu__item {
-  display: block;
-  padding: 15px 20px;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #000;
-  text-align: center;
-}
-
-.main-menu__link {
-  display: inline;
-  font-size: 18px;
-  font-weight: 700;
-  color: inherit;
-  text-transform: uppercase;
-  text-decoration: none;
 }
