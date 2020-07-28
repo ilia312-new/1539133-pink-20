@@ -1,5 +1,6 @@
 .social-links {
   padding: 39px 0;
+  list-style: none;
 }
 
 .social-links__item {
@@ -8,33 +9,39 @@
 
 .social-links__link {
   display: block;
-  width: 45px;
-  height: 45px;
+  width: auto;
+  height: 48px;
+  padding: 5px 0;
+  padding-left: 48px;
   border: 3px solid #283645;
   border-radius: 50%;
   color: #d22856;
-  background-color: transparent;
-  pointer-events: none;
+  background-color: #D22856;
+  background-position: center;
 
   &:hover {
     border-color: #283645;
   }
+}
+.social-links__link-logo {
+  display: none;
+  margin: 0;
+  fill: currentColor;
+  pointer-events: none;
+  background-position: 50%;
 
   &--twitter {
     background-image: url("../img/icon-twitter.svg");
     background-repeat: no-repeat;
-    background-position: 0 0;
-  }
+    }
 
   &--fb {
     background-image: url("../img/icon-facebook.svg");
     background-repeat: no-repeat;
-    background-position: 0 0;
-  }
+    }
 
   &--youtube {
     background-image: url("../img/icon-youtube.svg");
     background-repeat: no-repeat;
-    background-position: 0 0;
-  }
+    }
 }
