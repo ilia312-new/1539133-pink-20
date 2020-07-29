@@ -1,12 +1,13 @@
 .store__content {
-//  display: flex;
-//  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   position: relative;
   padding: 0 20px;
   background-color: transparent;
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: 50% 176px;
+  background-position: 50% 0;
 }
 
 .store__title {
@@ -20,14 +21,14 @@
 }
 
 .store__button {
+  align-self: center;
   display: block;
   box-sizing: border-box;
   position: relative;
   top: 38px;
+  padding: 0 auto;
   padding-top: 21px;
   padding-bottom: 21px;
-  padding-left: 58px;
-  padding-right: 59px;
   border: 3px solid #ffffff;
   border-radius: 29px;
   color: #ffffff;
@@ -40,9 +41,6 @@
 }
 
 .store__list {
-//  display: flex;
-//  justify-content: space-around;
-//  align-items: center;
   list-style: none;
   padding: 0 58px;
   margin-top: 45px;

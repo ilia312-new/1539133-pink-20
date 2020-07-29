@@ -1,30 +1,43 @@
 // меню при любых значениях выравнивания прижимается к правому краю
 
 .main-menu {
-  display: block;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   box-sizing: border-box;
   line-height: 32px;
-  height: 325px;
+  list-style: none;
 }
 
 .main-menu__item {
-  display: block;
-  height: 63px;
+  flex-basis: 100%;
+  flex-grow: 1;
   padding: 25px 0;
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #000000;
   text-align: center;
-  background-color: #283645;
-  box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
-}
-
-.main-menu__link {
-  display: inline;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
-  color: #ffffff;
   text-transform: uppercase;
+  background-color: #283645;
+  box-shadow: 0 1px 0 #000000, inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.main-menu__item:nth-child(n+2) {
+  border-bottom: 1px solid #000000;
+}
+
+.main-menu__item a {
   text-decoration: none;
+  color: #ffffff;
+
+  &[href]:hover {
+        color: #d22856;
+      }
+
+  &[href]:active {
+        color: fade(#d22856, 30%);
+      }
 }
