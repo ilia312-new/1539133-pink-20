@@ -122,14 +122,14 @@
   margin: 0;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
 .form-feedback__checkbox {
   display: block;
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   width: 35px;
   height: 35px;
   background-color: #ffffff;
@@ -153,11 +153,14 @@
 .form-feedback__radio-sign {
   display: block;
   position: relative;
-  padding-left: 69px;
+  flex: auto;
+  margin-left: auto;
+  padding-right: 34px;
   padding-top: 5px;
   padding-bottom: 4px;
   font-size: 18px;
   line-height: 30px;
+  text-align: left;
 }
 
 .form-feedback__checkbox-sign {

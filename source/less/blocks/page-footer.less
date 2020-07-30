@@ -1,11 +1,16 @@
 .page-footer {
   margin: 0;
   padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .page-footer__content-wrapper {
-  margin: 0;
+  margin: auto 0;
   padding: 0;
+  flex: initial;
 }
 
 .page-footer__icon-wrapper {
@@ -29,20 +34,34 @@
 }
 
 .page-footer__copyright {
-  width: 155px;
+  flex: initial;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 0 10%;
+  width: auto;
 }
 
 .page-footer__copyright-text {
-  margin-right: 16px;
+  flex: auto;
+  flex-basis: 80%;
+  margin-right: auto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
   line-height: 18px;
 }
 
 .page-footer__copyright-link {
+  margin: 0;
+  flex: none;
   display: block;
   color: #d22856;
   width: 27px;
   height: 34px;
-  background-image: url("../source/img/logo-htmlacademy.svg");
+  background-color: @white;
+  background-image: url("../img/logo-htmlacademy.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
