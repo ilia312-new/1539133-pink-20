@@ -10,31 +10,30 @@
       <div class="page-header__nav-wrapper">
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
-            <a class="header-logo" title="Логотип Pink">
-              <svg class="header-logo__image">
-                <use href="img/logo-pink.svg"></use>
-              </svg>
+            <a class="main-nav__header-logo" aria-label="Логотип Pink">
+              <img src="img/logo-pink-white-mobile.svg" alt="Pink">
             </a>
 
-            <button class="main-nav__toggle" type="button" title="Меню"></button>
+            <button class="main-nav__toggle" type="button" aria-label="Меню"></button>
           </div>
 
           <ul class="main-menu">
             <li class="main-menu__item">
-              <a class="main-menu__link" href="">Главная</a>
+              <a href="index.html">Главная</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="photo.html">Фотографии</a>
+              <a href="photo.html">Фотографии</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="form.html">Конкурс</a>
+              <a href="form.html">Конкурс</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="https://htmlacademy.ru" title="HTML Academy">HTML Academy</a>
+              <a href="https://htmlacademy.ru" aria-label="HTML Academy">HTML Academy</a>
             </li>
           </ul>
         </nav>
       </div>
+
       <div class="page-header__title-wrapper content-wrapper">
         <h1 class="page-header__title">Фотографии пользователей Pink</h1>
       </div>
@@ -43,16 +42,16 @@
     <main class="page-inner">
       <div class="page-inner__title-wrapper content-wrapper">
         <p class="page-inner__title">Взгляните на фотографии, которые выкладывают пользователи!&thinsp;<br>Видите, как не хватает ваших?</p>
-
+<!-- не вижу другого способа переноса другую строчку, поиграюсь с шириной контейнера -->
       </div>
 
       <section class="gallery">
 
 <!-- <h2 class="visually-hidden">Галерея фотографий пользователей приложения</h2> -->
 
-        <figure class="photo">
+        <figure class="gallery__photo-hot">
           <a class="photo__link" href="#">
-            <img class="photo__image" src="img/content/1.jpg" alt="Фотография дня">
+            <img class="photo__image" src="img/panorama-mobile@1x.jpg" alt="Фотография дня">
           </a>
 
           <figcaption class="photo__content">
@@ -72,7 +71,7 @@
         <div class="gallery__photo-wrapper">
           <figure class="gallery__photo photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/content/2.jpg" alt="Фото 1">
+              <img class="photo__image" src="img/photo-car-mobile@1x.jpg" alt="Фото 1">
             </a>
 
             <figcaption class="photo__content">
@@ -92,7 +91,7 @@
 
           <figure class="gallery__photo photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/content/3.jpg" alt="Фото 2">
+              <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" alt="Фото 2">
             </a>
 
             <figcaption class="photo__content">
@@ -112,7 +111,7 @@
 
           <figure class="gallery__photo photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/content/4.jpg" alt="Фото 3">
+              <img class="photo__image" src="img/photo-window-mobile@1x.jpg" alt="Фото 3">
             </a>
 
             <figcaption class="photo__content">
@@ -132,7 +131,7 @@
 
           <figure class="gallery__photo photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/content/5.jpg" alt="Фото 4">
+              <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" alt="Фото 4">
             </a>
 
             <figcaption class="photo__content">
@@ -152,7 +151,7 @@
 
           <figure class="gallery__photo photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/content/6.jpg" alt="Фото 5">
+              <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" alt="Фото 5">
             </a>
 
             <figcaption class="photo__content">
@@ -172,7 +171,7 @@
 
           <figure class="gallery__photo photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/content/7.jpg" alt="Фото 6">
+              <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" alt="Фото 6">
             </a>
 
             <figcaption class="photo__content">
@@ -194,11 +193,12 @@
 
       <section class="photo-editor">
         <div class="photo-editor__top">
-          <p class="photo-editor__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+          <p class="photo-editor__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+          <!-- пограться с шириной котейнера -->
         </div>
         <div class="photo-editor__form-wrapper content-wrapper">
           <form class="form-photo" action="https://echo.htmlacademy.ru" method="post">
-            <input class="visually-hidden" type="file" name="image" value="">
+            <input class="visually-hidden" type="file" name="image">
             <label class="form-photo__image" for="image"></label>
 <!-- кнопки управления -->
             <div class="form-photo__controls">
@@ -232,31 +232,34 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer content-wrapper">
+      <div class="page-footer__content-wrapper">
         <div class="page-footer__icon-wrapper">
-          <img src="img/logo-pink.svg" alt="Логотип Pink">
-          <!-- место для ссылки -->
+          <a class="page-footer__logo">
+            <img src="source/img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
+          </a>
         </div>
-        <div class="page-footer__icon-wrapper">
-          <img src="img/logo-glasses.svg" alt="Логотип подвала">
-          <!-- место для ссылки -->
-        </div>
-<!-- сетка со ссылками -->
+
         <ul class="social-links">
           <li class="social-links__item">
-            <a class="social-links__link" href="https://twitter.com" aria-label="Twitter"></a>
+            <a class="link--twitter" href="https://twitter.com" aria-label="Twitter">
+              <img src="source/img/icon-twitter.svg" alt="Twitter">
+            </a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link" href="https://www.facebook.com" aria-label="Facebook"></a>
+            <a class="link--fb" href="https://www.facebook.com" aria-label="Facebook">
+              <img src="source/img/icon-facebook.svg" alt="Facebook">
+            </a>
           </li>
           <li class="social-links__item">
-            <a class="social-links__link" href="https://www.youtube.com" aria-label="Youtube"></a>
+            <a class="link--youtube" href="https://www.youtube.com" aria-label="Youtube">
+              <img src="source/img/icon-youtube.svg" alt="Youtube">
+            </a>
           </li>
         </ul>
 
         <div class="page-footer__copyright">
           <span class="page-footer__copyright-text">Разработано</span>
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru" aria-label="HTML Academy">HTML Academy</a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru" aria-label="HTML Academy"></a>
         </div>
       </div>
     </footer>

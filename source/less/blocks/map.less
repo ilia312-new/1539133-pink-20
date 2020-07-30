@@ -1,0 +1,27 @@
+.map {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  width: 320px;
+}
+
+.map__image {
+  position: absolute;
+  top: -222%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.map__marker {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -45%);
+  width: 35px;
+  height: 35px;
+  background-image: url("../img/icon-map-marker.svg");
+  background-repeat: no-repeat;
+  background-size: 35px 35px;
+}

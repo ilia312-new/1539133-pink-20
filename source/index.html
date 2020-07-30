@@ -11,63 +11,78 @@
       <div class="page-header__nav-wrapper">
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
-            <a class="header-logo" aria-label="Логотип Pink">
-              <svg class="header-logo__image">
-                <use href="img/logo-pink.svg"></use>
-              </svg>
+            <a class="main-nav__header-logo" aria-label="Логотип Pink">
+              <img src="img/logo-pink-white-mobile.svg" alt="Pink">
             </a>
 
-            <button class="main-nav__toggle" type="button" title="Меню"></button>
+            <button class="main-nav__toggle" type="button" aria-label="Меню"></button>
           </div>
 
           <ul class="main-menu">
             <li class="main-menu__item">
-              <a class="main-menu__link" href="">Главная</a>
+              <a href="index.html">Главная</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="photo.html">Фотографии</a>
+              <a href="photo.html">Фотографии</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="form.html">Конкурс</a>
+              <a href="form.html">Конкурс</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="https://htmlacademy.ru" aria-label="HTML Academy">HTML Academy</a>
+              <a href="https://htmlacademy.ru" aria-label="HTML Academy">HTML Academy</a>
             </li>
           </ul>
         </nav>
       </div>
 
-      <h1 class="visually-hidden">Приложение Pink</h1>
+  <!--    <h1 class="visually-hidden">Приложение Pink</h1> -->
 
-      <div class="page-header store">
+      <div class="page-header__store">
         <div class="store__content">
           <p class="store__title">Взгляни на жизнь иначе!</p>
 
-<!-- место для иконок магазинов -->
+          <a class="store__button" href="#">Скачать приложение</a>
 
-          <a class="store__button">Скачать приложение</a>
+          <ul class="store__list">
+            <li class="store__item">
+              <a class="store__link" href="#" aria-label="iOS">
+                <img src="img/logo-apple.svg" alt="iOS-sign">
+              </a>
+            </li>
+            <li class="store__item">
+              <a class="store__link" href="#" aria-label="Android">
+                <img src="img/logo-android.svg" alt="Android-logo">
+              </a>
+            </li>
+            <li class="store__item">
+              <a class="store__link" href="#" aria-label="Windows">
+                <img src="img/logo-microsoft.svg" alt="Windows-logo">
+              </a>
+            </li>
+          </ul>
 
           <p class="store__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </div>
     </header>
+
       <main class="page-main">
         <div class="page-main__titles">
-          <p class="page-main__title">Устали от серости мегаполиза?</p>
+          <p class="page-main__title">Устали от серости мегаполиса?</p>
           <p class="page-main__title">Нам есть, что вам предложить!</p>
         </div>
 
         <section class="features">
           <ul class="features__list">
-            <li class="features__item features__item--first">
+            <li class="features__item">
               <h2 class="features__item-title">Поднимает настроение</h2>
               <p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
-            <li>
+            <li class="features__item">
               <h2 class="features__item-title">Меняет мир вокруг</h2>
               <p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
-            <li>
+            <li class="features__item">
               <h2 class="features__item-title">Заводит новых друзей</h2>
               <p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
@@ -81,7 +96,8 @@
           <div class="slider-reviews__slide">
             <p class="slider-reviews__author">Николай Петров</p>
             <blockquote class="slider-reviews__quote">
-              <p class="slider-reviews__quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+              <p class="slider-reviews__quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+              </p>
             </blockquote>
           </div>
           <div class="slider-reviews__slider-controls slider-controls">
@@ -91,44 +107,45 @@
 -->
           </div>
         </section>
+
         <section class="price">
           <h3 class="visually-hidden">Стоимость предложения</h3>
 
           <div class="price__slider content-wrapper">
-            <table class="price__table table-price">
+            <table class="price-table">
               <thead>
                 <tr>
-                  <th class="table-price__header">
-                    <span class="table-price__license-type">База</span>
-                    <span class="table-price__license-price">1,99 USD</span>
+                  <th class="price-table__header">
+                    <span class="price-table__license-type">База</span>
+                    <span class="price-table__license-price">1,99 USD</span>
                   </th>
-                  <th>
+                  <th class="price-table__header--hit">
                     <!-- Сделать хит продаж в уголке в ленточке -->
-                    <span class="table-price__license-type">Стандарт</span>
-                    <span class="table-price__license-price">3,99 USD</span>
+                    <span class="price-table__license-type">Стандарт</span>
+                    <span class="price-table__license-price">3,99 USD</span>
                   </th>
-                  <th>
-                    <span class="table-price__license-type">Анлим</span>
-                    <span class="table-price__license-price">9,99 USD</span>
+                  <th class="price-table__header">
+                    <span class="price-table__license-type">Анлим</span>
+                    <span class="price-table__license-price">9,99 USD</span>
                   </th>
                 </tr>
               </thead>
 
               <tbody>
                 <tr>
-                  <td class="table-price__cell">Розовый фильтр</td>
-                  <td class="table-price__cell">Розовый фильтр</td>
-                  <td class="table-price__cell">Розовый фильтр</td>
+                  <td class="price-table__cell">Розовый фильтр</td>
+                  <td class="price-table__cell">Розовый фильтр</td>
+                  <td class="price-table__cell">Розовый фильтр</td>
                 </tr>
                 <tr>
-                  <td class="table-price__cell">Смайлики</td>
-                  <td class="table-price__cell">Смайлики</td>
-                  <td class="table-price__cell">Смайлики</td>
+                  <td class="price-table__cell">Смайлики</td>
+                  <td class="price-table__cell">Смайлики</td>
+                  <td class="price-table__cell">Смайлики</td>
                 </tr>
                 <tr>
-                  <td class="table-price__cell">Комментарии</td>
-                  <td class="table-price__cell">Комментарии</td>
-                  <td class="table-price__cell">Комментарии</td>
+                  <td class="price-table__cell">Комментарии</td>
+                  <td class="price-table__cell">Комментарии</td>
+                  <td class="price-table__cell">Комментарии</td>
                 </tr>
               </tbody>
             </table>
@@ -170,38 +187,42 @@
         </section>
 
         <div class="map">
-          <svg class="">
-            <use href="img/minimap.svg"></use>
-          </svg>
+          <picture>
+            <img class="map__image" src="img/bg-map-mobile@1x.png">
+          </picture>
           <div class="map__marker"></div>
         </div>
       </main>
+
       <footer class="page-footer">
-        <div class="page-footer content-wrapper">
+        <div class="page-footer__content-wrapper">
           <div class="page-footer__icon-wrapper">
-            <img src="img/logo-pink.svg" alt="Логотип Pink">
-            <!-- место для ссылки -->
+            <a class="page-footer__logo">
+              <img src="source/img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
+            </a>
           </div>
-          <div class="page-footer__icon-wrapper">
-            <img src="img/logo-glasses.svg" alt="Логотип подвала">
-            <!-- место для ссылки -->
-          </div>
-<!-- сетка со ссылками -->
+
           <ul class="social-links">
             <li class="social-links__item">
-              <a class="social-links__link" href="https://twitter.com" aria-label="Twitter"></a>
+              <a class="link--twitter" href="https://twitter.com" aria-label="Twitter">
+                <img src="source/img/icon-twitter.svg" alt="Twitter">
+              </a>
             </li>
             <li class="social-links__item">
-              <a class="social-links__link" href="https://www.facebook.com" aria-label="Facebook"></a>
+              <a class="link--fb" href="https://www.facebook.com" aria-label="Facebook">
+                <img src="source/img/icon-facebook.svg" alt="Facebook">
+              </a>
             </li>
             <li class="social-links__item">
-              <a class="social-links__link" href="https://www.youtube.com" aria-label="Youtube"></a>
+              <a class="link--youtube" href="https://www.youtube.com" aria-label="Youtube">
+                <img src="source/img/icon-youtube.svg" alt="Youtube">
+              </a>
             </li>
           </ul>
 
           <div class="page-footer__copyright">
             <span class="page-footer__copyright-text">Разработано</span>
-            <a class="page-footer__copyright-link" href="https://htmlacademy.ru" aria-label="HTML Academy">HTML Academy</a>
+            <a class="page-footer__copyright-link" href="https://htmlacademy.ru" aria-label="HTML Academy"></a>
           </div>
         </div>
       </footer>
