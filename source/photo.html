@@ -52,7 +52,8 @@
 
         <figure class="gallery__photo-hot">
           <a class="photo__link" href="#">
-            <img class="photo__image" src="img/panorama-mobile@1x.jpg" alt="Фотография дня">
+            <img class="photo__image photo__image--hot" src="img/panorama-mobile@1x.jpg" alt="Фотография дня">
+            <span>Панорама дня</span>
           </a>
 
           <figcaption class="photo__content">
@@ -193,7 +194,7 @@
       </section>
 
       <section class="photo-editor">
-        <div class="photo-editor__top">
+        <div class="photo-editor__content-wrapper">
           <p class="photo-editor__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
           <!-- пограться с шириной котейнера -->
         </div>
@@ -205,13 +206,13 @@
             <div class="form-photo__controls">
               <div class="form-photo__filters-buttons">
                 <button class="form-photo__filter-button" type="button" name="clipping">
-                  <img src="img/symbol-clipping.svg" alt="Обрезка">
+                  <img class="form-photo__filter-button--clipping" src="img/symbol-clipping.svg" alt="Обрезка">
                 </button>
-                <button type="button" name="fill">
-                  <img src="img/symbol-fill.svg" alt="Заливка">
+                <button class="form-photo__filter-button" type="button" name="fill">
+                  <img class="form-photo__filter-button--fill" src="img/symbol-fill.svg" alt="Заливка">
                 </button>
-                <button type="button" name="contrast">
-                  <img src="img/symbol-contrast.svg" alt="Контрастность">
+                <button class="form-photo__filter-button" type="button" name="contrast">
+                  <img class="form-photo__filter-button--contrast" src="img/symbol-contrast.svg" alt="Контрастность">
                 </button>
               </div>
 <!-- шкала кадрирования -->
@@ -223,8 +224,8 @@
                 </div>
 <!-- кнопки отправки -->
                 <div class="form-photo__buttons">
-                  <button class="form-photo__button button_rounded" type="submit">Запостить</button>
-                  <button class="form-photo__button button_rounded" type="reset">Отмена</button>
+                  <button class="form-photo__button form-photo__button--submit" type="submit">Запостить</button>
+                  <button class="form-photo__button form-photo__button--cancel" type="reset">Отмена</button>
                 </div>
               </div>
             </form>

@@ -1,0 +1,128 @@
+.form-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 29px;
+  background-color: inherit;
+}
+
+.form-photo__image {
+  display: block;
+  box-sizing: border-box;
+  width: 280px;
+  height: 374px;
+  background-image: url("../img/photo-road-mobile@1x.jpg");
+  background-position: 50% 0;
+  background-size: auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.form-photo__controls {
+  box-sizing: border-box;
+}
+
+.form-photo__filters-buttons {
+  padding: 42px 20px 38px;
+  width: 240px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-photo__filter-button {
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: 1px dotted @pink;
+
+  &:focus {
+    outline: 1px dashed @pink;
+  }
+}
+
+.form-photo__filter-button--clipping {
+  width: 44px;
+  height: 44px;
+}
+
+.form-photo__filter-button--fill {
+  width: 48px;
+  height: 43px;
+}
+
+.form-photo__filter-button--contrast {
+  width: 32px;
+  height: 32px;
+}
+
+.form-photo__filter {
+  position: relative;
+  height: 72px;
+}
+
+.form-photo__icon-wrapper {
+  display: none;
+}
+
+.form-photo__filter-range {
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  width: 100%;
+  height: 14px;
+  background-color: transparent;
+}
+
+.form-photo__buttons {
+  padding: 0;
+}
+
+.form-photo__button {
+  margin-bottom: 13px;
+  padding: 15px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.form-photo__button--submit {
+  color: @pink;
+  border: 3px solid #d22856;
+  border-radius: 30px;
+
+  &:hover {
+    color: @white;
+    background-color: #d22856;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
+}
+
+.form-photo__button--cancel {
+  color: #dddfe0;
+  border-width: 3px;
+  border-style: solid;
+  border-color: fade(#283645, 10%);
+  border-radius: 30px;
+
+  &:hover {
+    border-color: fade(#283645, 30%);
+    color: fade(#283645, 30%);
+  }
+
+  &:active {
+    border-color: fade(#283645, 0%);
+    color: fade(@white, 30%);
+    background-color: fade(#283645, 30%);
+  }
+}
