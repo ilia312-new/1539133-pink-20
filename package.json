@@ -38,6 +38,7 @@
     "node": "12.18.2"
   },
   "dependencies": {
+    "ignore": "^5.1.8",
     "normalize.css": "^8.0.1"
   }
 }
