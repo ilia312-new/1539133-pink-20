@@ -1,16 +1,41 @@
 .photo__link {
+  position: relative;
+  top: 0;
   display: block;
   overflow: hidden;
-  height: 180px;
+  height: auto;
   color: #ffffff;
   text-decoration: none;
+  text-align: center;
+}
+
+.photo__link span {
+  position: absolute;
+  top: 0;
+  left: 140px;
+  z-index: 999;
+  display: block;
+  padding: 14px 20px;
+  width: 120px;
+  height: 20px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: inherit;
+  background-color: @pink;
+  border: 0;
 }
 
 .photo__image {
-  display: block;
-  max-width: 100%;
-  height: auto;
   position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.photo__image--hot {
+  left: -20px;
+  width: calc(100% + 40px);
 }
 
 .photo__content {
@@ -25,6 +50,12 @@
 
 .photo__author-name {
   font-weight: 700;
+}
+
+.photo__likes {
+  display: flex;
+  justify-content: flex-start;
+  margin: auto;
 }
 
 .photo__date,
@@ -43,17 +74,11 @@
   margin-bottom: 9px;
 }
 
-.photo__likes {
-  margin-top: auto;
-}
-
 .photo__like-button {
-  display: block;
   padding: 0;
   width: 13px;
   height: 12px;
-  border: 0;
-  background-color: transparent;
+  background-color: @pink;
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
   background-position: center;

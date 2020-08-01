@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>HTML Academy: Пинк: Фотографии</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -10,7 +11,7 @@
       <div class="page-header__nav-wrapper">
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
-            <a class="main-nav__header-logo" aria-label="Логотип Pink">
+            <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
               <img src="img/logo-pink-white-mobile.svg" alt="Pink">
             </a>
 
@@ -51,7 +52,8 @@
 
         <figure class="gallery__photo-hot">
           <a class="photo__link" href="#">
-            <img class="photo__image" src="img/panorama-mobile@1x.jpg" alt="Фотография дня">
+            <img class="photo__image photo__image--hot" src="img/panorama-mobile@1x.jpg" alt="Фотография дня">
+            <span>Панорама дня</span>
           </a>
 
           <figcaption class="photo__content">
@@ -192,7 +194,7 @@
       </section>
 
       <section class="photo-editor">
-        <div class="photo-editor__top">
+        <div class="photo-editor__content-wrapper">
           <p class="photo-editor__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
           <!-- пограться с шириной котейнера -->
         </div>
@@ -204,13 +206,13 @@
             <div class="form-photo__controls">
               <div class="form-photo__filters-buttons">
                 <button class="form-photo__filter-button" type="button" name="clipping">
-                  <img src="img/symbol-clipping.svg" alt="Обрезка">
+                  <img class="form-photo__filter-button--clipping" src="img/symbol-clipping.svg" alt="Обрезка">
                 </button>
-                <button type="button" name="fill">
-                  <img src="img/symbol-fill.svg" alt="Заливка">
+                <button class="form-photo__filter-button" type="button" name="fill">
+                  <img class="form-photo__filter-button--fill" src="img/symbol-fill.svg" alt="Заливка">
                 </button>
-                <button type="button" name="contrast">
-                  <img src="img/symbol-contrast.svg" alt="Контрастность">
+                <button class="form-photo__filter-button" type="button" name="contrast">
+                  <img class="form-photo__filter-button--contrast" src="img/symbol-contrast.svg" alt="Контрастность">
                 </button>
               </div>
 <!-- шкала кадрирования -->
@@ -222,8 +224,8 @@
                 </div>
 <!-- кнопки отправки -->
                 <div class="form-photo__buttons">
-                  <button class="form-photo__button button_rounded" type="submit">Запостить</button>
-                  <button class="form-photo__button button_rounded" type="reset">Отмена</button>
+                  <button class="form-photo__button form-photo__button--submit" type="submit">Запостить</button>
+                  <button class="form-photo__button form-photo__button--cancel" type="reset">Отмена</button>
                 </div>
               </div>
             </form>
@@ -234,7 +236,7 @@
     <footer class="page-footer">
       <div class="page-footer__content-wrapper">
         <div class="page-footer__icon-wrapper">
-          <a class="page-footer__logo">
+          <a class="page-footer__logo" href="index.html">
             <img src="source/img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
           </a>
         </div>

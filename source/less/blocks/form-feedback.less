@@ -218,22 +218,34 @@
   padding: 29px 20px 15px;
 }
 
-.form-feedback__submit-button--squared {
+.form-feedback__submit-button {
+  margin: 0;
+  padding: 15px;
+  width: 100%;
   display: block;
   box-sizing: border-box;
-  padding: 16px 15px;
-  width: 100%;
-  border: none;
-  border-radius: 2px;
   font-size: 18px;
   font-weight: bold;
+  line-height: 18px;
   text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  line-height: 30px;
   text-transform: uppercase;
-  color: #ffffff;
+  text-decoration: none;
+  color: @white;
+  border: 0;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #2aab6d;
+  border-radius: 1px;
   background-color: #2aab6d;
+
+  &:hover {
+    border-color: #1c9b5e;
+    background-color: #1c9b5e;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
 }
 
 .form-feedback__notification {
