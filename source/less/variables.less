@@ -9,5 +9,18 @@
 // viewports
 
 @mobile-width: 320px;
-@tablte-width: 860px;
+@tablet-width: 660px;
 @desktop-width: 1200px;
+
+// extremules
+
+@tablet-min-width: (@tablet-width + 1);
+@tablet-max-width: (@desktop-width - 1);
+
+// !retina
+
+@retina-dpi: 144dpi;
+@retina: ~"(min-resolution: @{retina-dpi})";
+
+@tablet: ~"(min-width: @{tablet-width})";
+@desktop: ~"(min-width: @{desktop-width})";
