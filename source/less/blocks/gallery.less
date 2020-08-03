@@ -1,33 +1,64 @@
 .gallery {
   position: relative;
   padding-top: 15px;
+
+  @media @tablet {
+    padding-top: 39px;
+  }
 }
 
 .gallery__photo-hot {
   position: relative;
   left: -20px;
-  min-width: @mobile-width;
+  margin: 0 auto;
+  width: auto;
+  max-width: @mobile-width;
+
+  @media @tablet {
+    width: auto;
+    max-width: @tablet-width;
+  }
+
+  @media @desktop {
+    max-width: @desktop-width;
+  }
 }
 
 .gallery__photo-wrapper {
-  position: relative;
-  min-width: calc(@mobile-width - 10%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-self: center;
+  min-width: @mobile-width - 5%;
   margin: 20px 0 -20px;
   padding: 0 20px;
+  display: block;
+
+  @media @tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: @tablet-width - 20px;
+  }
+
+  @media @desktop {
+    margin-bottom: -54px;
+    padding: 0 10px;
+    width: @desktop-width - 200px;
+  }
 }
 
 .gallery__photo {
   margin: 0;
   margin-bottom: 20px;
-  flex: initial;
+
+  @media @tablet {
+    flex-grow: 1;
+    flex-basis: 20%;
+  }
+
+  @media @desktop {
+    margin-bottom: 54px;
+  }
 }
 
 .gallery__photo:last-child {
   margin-bottom: 0;
 }
-
-// добавить сетки на 4 модуле
