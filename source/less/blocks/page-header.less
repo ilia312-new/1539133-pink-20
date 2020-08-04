@@ -4,26 +4,92 @@
   color: #ffffff;
   background-color: #283645;
   background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: 50% 380px;
+  background-position: 50% 259px;
   background-repeat: no-repeat;
+
+  @media @retina {
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+  }
+
+  @media @tablet {
+    background-image: url("../img/bg-back-tablet@1x.jpg");
+    background-position: 50% 376px;
+
+    @media @retina {
+      background-image: url("../img/bg-back-tablet@1x.jpg");
+    }
+  }
+
+  @media @desktop {
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-position: 50% 376px;
+
+    @media @retina {
+      background-image: url("../img/bg-back-desktop@1x.jpg");
+    }
+  }
 }
 
 .page-header__nav-wrapper {
   background-color: #283645;
+
+  @media @desktop {
+    background-color: fade(@black, 30%);
+  }
 }
 
+// uncorrect width in media
+
 .page-header__store {
-  position: relative;
-  top: 0;
   margin: 0 auto;
-  padding: 0;
-  width: auto;
-  height: auto;
+  padding: 424px 20px 30px;
+  width: @mobile-width;
+  background-image: url("../img/iphone-hand-mobile@1x.png");
+  background-position: 50% 110px;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+  @media @retina {
+    background-image: url("../img/iphone-hand-mobile@1x.png");
+  }
+
+  @media @tablet {
+    padding-top: 93px;
+    padding-bottom: 110px;
+    width: @tablet-width;
+    background-image: url("../img/iphone-hand-tablet@1x.png");
+    background-position: -20px 74px;
+
+    @media @retina {
+      background-image: url("../img/iphone-hand-tablet@1x.png");
+    }
+  }
+
+  @media @desktop {
+    padding: 108px 10px 122px;
+    width: @desktop-width;
+    background-image: url("../img/iphone-hand-desktop@1x.png");
+    background-position: 26px 99px;
+
+    @media @retina {
+      background-image: url("../img/iphone-hand-desktop@1x.png");
+    }
+  }
 }
 
 .page-header__title-wrapper {
   padding: 15px 20px 40px;
-  height: auto;
+  min-height: auto;
+
+  @media @tablet {
+    padding-top: 36px;
+    padding-bottom: 46px;
+  }
+
+  @media @desktop {
+    padding-top: 29px;
+    padding-bottom: 67px;
+  }
 }
 
 .page-header__title {
@@ -32,4 +98,10 @@
   font-weight: 300;
   line-height: 28px;
   text-align: center;
+
+  @media @tablet {
+    margin: 34px 0;
+    font-size: 50px;
+    line-height: 60px;
+  }
 }

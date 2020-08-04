@@ -2,14 +2,38 @@
   flex: auto;
   display: flex;
   width: auto;
-  justify-content: space-around;
+  justify-content: center;
   padding: 39px 0;
   list-style: none;
+
+  @media @tablet {
+    padding: 0;
+  }
+
+  @media @desktop {
+    max-width: @desktop-width / 2;
+  }
 }
 
 .social-links__item {
-  margin: 0 auto;
+  .border-black-y;
+  margin: 0 6px;
   flex: auto;
-  border: 1px dotted @pink;
-  border-radius: 50%;
+
+  @media @tablet {
+    margin: 0 3px 0 9px;
+  }
+
+  @media @desktop {
+    margin: 0 2px 0 10px;
+  }
+}
+
+.social-link__link {
+  display: block;
+  width: 100%;
+  color: @black;
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
 }

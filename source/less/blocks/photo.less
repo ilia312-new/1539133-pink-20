@@ -1,12 +1,12 @@
 .photo__link {
   position: relative;
   top: 0;
-  display: block;
   overflow: hidden;
-  height: auto;
+  display: block;
+  width: 320px;
+  height: 137px;
   color: #ffffff;
   text-decoration: none;
-  text-align: center;
 }
 
 .photo__link span {
@@ -27,21 +27,46 @@
 }
 
 .photo__image {
-  position: relative;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
 
 .photo__image--hot {
   left: -20px;
-  width: calc(100% + 40px);
+  width: 100% + 40px;
 }
 
 .photo__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   box-sizing: border-box;
   padding: 18px 17px 21px;
   background-color: #f2f2f2;
+
+  @media @tablet {
+    padding: 23px 32px 24px 27px;
+  }
+}
+
+.photo__content--hot {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 280px;
+
+  @media @tablet {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 24px 29px 13px 27px;
+    width: @tablet-width - 40px;
+  }
+
+  @media @desktop {
+    padding: 24px 32px 12px 27px;
+    width: @desktop-width - 260px;
+  }
 }
 
 .photo__author {
@@ -54,14 +79,24 @@
 
 .photo__likes {
   display: flex;
-  justify-content: flex-start;
-  margin: auto;
+  align-items: center;
+  margin-top: auto;
+
+  @media @tablet {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }
 
 .photo__date,
 .photo__like-count {
   font-size: 12px;
   text-transform: uppercase;
+}
+
+.photo__date {
+  margin-left: 5px;
+  font-weight: 300;
 }
 
 .photo__like-count {
@@ -78,6 +113,8 @@
   padding: 0;
   width: 13px;
   height: 12px;
+  display: block;
+  border: 0;
   background-color: @pink;
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;

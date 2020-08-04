@@ -3,21 +3,42 @@
   display: block;
   padding: 0;
   width: inherit;
+
+  @media @desktop {
+    padding: 0 0 28px 0;
+  }
 }
 
 .photo-editor__content-wrapper {
   position: relative;
-  width: auto;
   padding-top: 43px;
   padding-bottom: 42px;
+
+  @media @tablet {
+    padding-top: 64px;
+    padding-bottom: 70px;
+  }
+
+  @media @desktop {
+    padding-top: 59px;
+    padding-bottom: 66px;
+  }
 }
 
 .photo-editor__title {
   margin: 0;
   line-height: 30px;
   text-align: center;
+
+  @media @tablet {
+    font-size: 18px;
+  }
 }
 
 .photo-editor__form-wrapper {
   background-color: @silver;
+
+  @media @desktop {
+    background-color: transparent;
+  }
 }

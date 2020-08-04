@@ -1,9 +1,19 @@
 .form-feedback {
-  width: 320px;
+  max-width: @desktop-width;
 }
 
 .form-feedback__name-wrapper {
   padding-bottom: 42px;
+
+  @media @tablet {
+    padding-top: 34px;
+    padding-bottom: 32px;
+  }
+
+  @media @desktop {
+    padding-top: 36px;
+    padding-bottom: 30px;
+  }
 }
 
 .form-feedback__fieldset-fullname {
@@ -75,6 +85,16 @@
   padding-top: 38px;
   padding-bottom: 4px;
   background-color: #f2f2f2;
+
+  @media @tablet {
+    padding-top: 34px;
+    padding-bottom: 30px;
+    background-color: @white;
+  }
+
+  @media @desktop {
+    width: 100%;
+  }
 }
 
 .form-feedback__fieldset-achivment {
@@ -172,6 +192,15 @@
 .form-feedback__contacts-wrapper {
   padding-top: 33px;
   padding-bottom: 41px;
+
+  @media @tablet {
+    padding-top: 34px;
+    padding-bottom: 30px;
+  }
+
+  @media @desktop {
+    width: 100%;
+  }
 }
 
 .form-feedback__fieldset-contacts {
@@ -185,6 +214,18 @@
   padding-top: 39px;
   padding-bottom: 8px;
   background-color: #f2f2f2;
+
+  @media @tablet {
+    padding-top: 34px;
+    padding-bottom: 30px;
+    background-color: @white;
+  }
+
+  @media @desktop {
+    margin-left: auto;
+    padding-top: 30px;
+    max-width: 435px;
+  }
 }
 
 .form-feedback__fieldset-platform {
