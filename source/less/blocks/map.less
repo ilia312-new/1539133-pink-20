@@ -1,14 +1,13 @@
 .map {
   position: relative;
+  box-sizing: content-box;
   overflow: hidden;
-  height: 200px;
-
-  @media @tablet {
-    height: 373px;
-  }
+  padding: 0 20px;
+  padding-top: 1%;
 
   @media @desktop {
-    height: 501px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   &::before {

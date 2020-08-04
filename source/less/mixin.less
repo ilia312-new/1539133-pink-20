@@ -17,3 +17,15 @@
   outline: @red solid 5px;
   outline-offset: -5px;
 }
+
+.content-wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  min-width: @mobile-width;
+  max-height: @desktop-width;
+
+  @media @desktop {
+    padding: 0 10px;
+  }
+}

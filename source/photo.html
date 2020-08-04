@@ -12,7 +12,11 @@
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
-              <img src="img/logo-pink-white-mobile.svg" srcset="img/logo-pink-white-mobile.svg 74w 1x, img/logo-pink-white-tablet.svg 146w 1x, img/logo-pink-white-desktop.svg 146w 1x" width="74px" height="23px" alt="Pink">
+              <picture>
+                <source src="#" media="(min-width: 660px;)" type="image/svg" srcset="img/logo-pink-white-tablet.svg 146w 1x">
+                <source src="#" media="(min-width: 1080px;)" type="image/svg" srcset="img/logo-pink-white-desktop.svg 146w 1x">
+                <img src="img/logo-pink-white-mobile.svg" srcset="img/logo-pink-white-mobile.svg 74w 1x, img/logo-pink-white-tablet.svg 146w 1x, img/logo-pink-white-desktop.svg 146w 1x" width="74px" height="23px" alt="Pink">
+              </picture>
             </a>
 
             <button class="main-nav__toggle" type="button" aria-label="Меню"></button>
