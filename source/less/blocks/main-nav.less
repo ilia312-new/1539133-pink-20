@@ -1,23 +1,18 @@
 .main-nav {
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
-  justify-content: flex-start;
-  align-items: center;
 
   @media @desktop {
     padding: 0 10px;
     width: calc(@desktop-width - 5%);
-    flex-wrap: nowrap;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     background-color: transparent;
   }
 }
 
 .main-nav__logo-wrapper {
-  align-self: flex-start;
-  flex: initial;
   padding: 21px 20px 21px;
   width: auto;
   display: flex;
@@ -37,8 +32,6 @@
 }
 
 .main-nav__header-logo {
-  padding: 0;
-  align-self: flex-start;
   flex-basis: 100%;
   flex-grow: 1;
   margin-right: auto;
@@ -60,11 +53,9 @@
 
 .main-nav__toggle {
   position: relative;
-  padding: 0;
+  width: auto;
   height: 24px;
-  align-self: flex-end;
-  flex-grow: 1;
-  display: block;
+  flex-shrink: 0;
   background-color: transparent;
   color: white;
 
@@ -76,4 +67,16 @@
   &:active {
     color: #d22856;
   }
+}
+
+.main-nav__toggle--burger {
+  background-image: url("../img/icon-menu-burger.svg");
+  background-position: 0 0;
+  background-repeat: no-no-repeat;
+}
+
+.main-nav__toggle--cross {
+  background-image: url("../img/icon-menu-cross.svg");
+  background-position: 0 0;
+  background-repeat: no-no-repeat;
 }
