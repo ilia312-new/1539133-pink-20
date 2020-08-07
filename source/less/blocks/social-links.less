@@ -16,7 +16,6 @@
 }
 
 .social-links__item {
-  .border-black-y;
   margin: 0 6px;
   flex: auto;
 
@@ -31,9 +30,23 @@
 
 .social-link__link {
   display: block;
-  width: 100%;
-  color: @black;
-  background-color: transparent;
+  width: 45px;
+  height: 45px;
+  color: @pink;
   text-align: center;
   text-decoration: none;
+  border-width: 3px;
+  border-style: solid;
+  border-color: fade(@dark-blue, 10%);
+  border-radius: 50%;
+  background-color: transparent;
+
+  &:hover {
+    border-color: @dark-blue;
+  }
+
+  &:active {
+    border-color: fade(@dark-blue, 40%);
+    opacity: 0.3;
+  }
 }

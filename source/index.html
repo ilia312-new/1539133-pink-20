@@ -13,7 +13,11 @@
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
-              <img src="img/logo-pink-white-mobile.svg" srcset="img/logo-pink-white-mobile.svg 74w 1x, img/logo-pink-white-tablet.svg 146w 1x, img/logo-pink-white-desktop.svg 146w 1x" width="74px" height="23px" alt="Pink">
+              <picture>
+                <source src="img/logo-pink-white-tablet.svg 146w 1x" media="(min-width: 660px;)" type="image/svg">
+                <source src="img/logo-pink-white-desktop.svg 146w 1x" media="(min-width: 1080px;)" type="image/svg">
+                <img src="img/logo-pink-white-mobile.svg" srcset="img/logo-pink-white-mobile.svg 74w 1x, img/logo-pink-white-tablet.svg 146w 1x, img/logo-pink-white-desktop.svg 146w 1x" width="74px" height="23px" alt="Pink">
+              </picture>
             </a>
 
             <button class="main-nav__toggle" type="button" aria-label="Меню"></button>
@@ -104,7 +108,7 @@
           </div>
         </section>
 
-        <section class="slider-reviews content-wrapper">
+        <section class="slider-reviews">
 
           <div class="slider-reviews__slide">
             <p class="slider-reviews__author">Николай Петров</p>
@@ -124,7 +128,7 @@
         <section class="price">
           <h4 class="visually-hidden">Стоимость предложения</h4>
 
-          <div class="price__slider content-wrapper">
+          <div class="price__slider">
             <table class="price-table">
               <thead>
                 <tr>
@@ -201,7 +205,7 @@
 
         <div class="map">
           <picture>
-            <img class="map__image" src="img/bg-map-mobile@1x.png">
+            <img class="map__image" src="img/bg-map-mobile@1x.png" width="320px" height="645px">
           </picture>
           <div class="map__marker"></div>
         </div>
@@ -211,7 +215,10 @@
         <div class="page-footer__content-wrapper">
           <div class="page-footer__icon-wrapper">
             <a class="page-footer__logo" href="index.html">
-              <img src="img/logo-pink-blue-mobile.svg" srcset="img/logo-pink-blue-mobile.svg 1x, img/logo-pink-blue-desktop.svg 1x" width="146" height="40" alt="Логотип Pink">
+              <picture>
+                <source media="(min-width: 660px)" src="img/logo-pink-blue-desktop.svg 1x" type="img/svg">
+                <img src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
+              </picture>
             </a>
           </div>
 

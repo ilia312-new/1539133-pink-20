@@ -1,5 +1,16 @@
-.form-feedback {
+.page-inner__form-feedback {
   max-width: @desktop-width;
+
+  @media @tablet {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  @media @desktop {
+    flex-flow: row wrap;
+    padding: 0 10px;
+  }
 }
 
 .form-feedback__name-wrapper {
@@ -13,61 +24,100 @@
   @media @desktop {
     padding-top: 36px;
     padding-bottom: 30px;
+    width: @desktop-width / 3;
+    order: 0;
   }
 }
 
 .form-feedback__fieldset-fullname {
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0 20px;
   border: none;
+
+  @media @tablet {
+    padding: 0;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+  }
 }
 
 // первая форма отправки
 
+.form-feedback__contacts-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media @tablet {
+    padding: 0 20%;
+    justify-content: space-between;
+  }
+}
+
+.form-feedback__contacts-item {
+  @media @tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-feedback__contacts-item input {
+  @media @tablet {
+    width: @tablet-width - 40%;
+    order: 0;
+    background-color: #e5e5e5;
+
+    &:nth-child(1) {
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(2) {
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
 .form-feedback__label {
-  align-self: stretch;
-  flex-basis: 100%;
-  flex-shrink: 0;
+  flex: initial;
   display: block;
   margin-left: 22px;
   margin-bottom: 5px;
   line-height: 30px;
   color: #d22856;
   text-transform: uppercase;
+}
 
-  &:nth-child(2) {
-    margin-right: 66px;
-  }
-
-  &:nth-child(3) {
-    margin-bottom: 0;
-  }
+.form-feedback__label--fullname {
+  display: inline-block;
+  margin-right: 20px;
 }
 
 .form-feedback__label--contacts {
-  margin-bottom: 17px;
-
-  &:nth-child(1) {
-    background-image: url("../img/icon-phone.svg");
-    background-repeat: no-repeat;
-  }
-
-  &:nth-child(2) {
-    background-image: url("../img/icon-mail.svg");
-    background-repeat: no-repeat;
-    margin-bottom: 0;
-  }
+  margin: 9px 0;
+  order: 1;
 }
 
 .form-feedback__input {
+  display: block;
   color: #283645;
   font-size: 18px;
   line-height: 30px;
 
+  @media @tablet {
+    display: inline;
+  }
 
   &:hover {
     border-color: #283645;
@@ -84,6 +134,7 @@
 .form-feedback__achivment-wrapper {
   padding-top: 38px;
   padding-bottom: 4px;
+  display: block;
   background-color: #f2f2f2;
 
   @media @tablet {
@@ -94,43 +145,80 @@
 
   @media @desktop {
     width: 100%;
+    order: 2;
   }
 }
 
 .form-feedback__fieldset-achivment {
   position: relative;
   margin: 0;
-  padding: 38px 20px;
-  border: none;
+  padding: 38px 0;
+
+  @media @tablet {
+    padding: 52px 58px 49px;
+  }
+
+  @media @desktop {
+    padding: 52px 8px 13px 58px;
+  }
 }
 
 .form-feedback__legend {
   display: block;
   box-sizing: border-box;
-  padding: 0 24px;
-  width: 100%;
   line-height: 18px;
   color: #d22856;
   text-transform: uppercase;
   text-align: center;
   background-color: transparent;
+
+  @media @tablet {
+    transform: translateY(-50%);
+  }
 }
 
 .form-feedback__legend--contacts {
   display: none;
+
+  @media @tablet {
+    display: block;
+    position: sticky;
+    background-color: @white;
+  }
 }
 
 .form-feedback__achivments-list,
 .form-feedback__platform-list {
-  margin: 0;
-  width: 100%;
   list-style: none;
   display: flex;
   flex-direction: column;
+
+  @media @tablet {
+    justify-content: space-between;
+  }
+}
+
+.form-feedback__achivments-list {
+  @media @desktop {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
 }
 
 .form-feedback__achivment-item {
   margin-bottom: 43px;
+
+  @media @desktop {
+    width: 260px;
+
+    &:nth-child(even) {
+      order: 2;
+    }
+
+    &:nth-child(2n+3) {
+      order: 1;
+    }
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -147,18 +235,18 @@
 }
 
 .form-feedback__checkbox {
-  display: block;
-  position: relative;
-  margin: 0;
   width: 35px;
   height: 35px;
-  background-color: #ffffff;
-  border: 2px solid #e5e5e5;
-  border-radius: 1px;
 
   &:focus + .form-feedback__checkbox-sign {
     outline: 1px dashed #d22856;
     outline-offset: 2px;
+  }
+
+  &:checked + .form-feedback__checkbox-sign {
+    &::after {
+      content: "";
+    }
   }
 
   &:disabled + .form-feedback__checkbox-sign {
@@ -171,11 +259,9 @@
 
 .form-feedback__checkbox-sign,
 .form-feedback__radio-sign {
-  display: block;
-  position: relative;
   flex: auto;
   margin-left: auto;
-  padding-right: 34px;
+  padding: 0 17px;
   padding-top: 5px;
   padding-bottom: 4px;
   font-size: 18px;
@@ -192,6 +278,7 @@
 .form-feedback__contacts-wrapper {
   padding-top: 33px;
   padding-bottom: 41px;
+  display: block;
 
   @media @tablet {
     padding-top: 34px;
@@ -200,14 +287,23 @@
 
   @media @desktop {
     width: 100%;
+    order: 3;
   }
 }
 
 .form-feedback__fieldset-contacts {
   position: relative;
   margin: 0;
-  padding: 0 20px;
-  border: none;
+
+  @media @tablet {
+    padding: 46px 58px 26px;
+    border: 2px solid #e5e5e5;
+    border-radius: 1px;
+  }
+
+  @media desktop {
+    padding: 43px 58px 13px;
+  }
 }
 
 .form-feedback__platform-wrapper {
@@ -222,17 +318,25 @@
   }
 
   @media @desktop {
-    margin-left: auto;
     padding-top: 30px;
     max-width: 435px;
+    order: 1;
   }
 }
 
 .form-feedback__fieldset-platform {
   position: relative;
   margin: 0;
-  padding: 34px 20px;
-  border: none;
+  padding: 34px 0;
+
+  @media @tablet {
+    padding: 52px 58px 55px;
+  }
+
+  @media @desktop {
+    padding: 54px 50px 56px 74px;
+    width: auto;
+  }
 }
 
 .form-feedback__platform-item {
@@ -246,6 +350,10 @@
 .form-feedback__emotions-wrapper {
   padding-top: 39px;
   padding-bottom: 20px;
+
+  @media @desktop {
+    order: 4;
+  }
 }
 
 .form-feedback__textarea {
@@ -257,6 +365,10 @@
 
 .form-feedback__submit-wrapper {
   padding: 29px 20px 15px;
+
+  @media @desktop {
+    order: 5;
+  }
 }
 
 .form-feedback__submit-button {

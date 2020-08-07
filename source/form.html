@@ -13,7 +13,11 @@
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
-              <img src="img/logo-pink-white-mobile.svg" srcset="img/logo-pink-white-mobile.svg 74w 1x, img/logo-pink-white-tablet.svg 146w 1x, img/logo-pink-white-desktop.svg 146w 1x" width="74px" height="23px" alt="Pink">
+              <picture>
+                <source src="img/logo-pink-white-tablet.svg 146w 1x" media="(min-width: 660px;)" type="image/svg">
+                <source src="img/logo-pink-white-desktop.svg 146w 1x" media="(min-width: 1080px;)" type="image/svg">
+                <img src="img/logo-pink-white-mobile.svg" srcset="img/logo-pink-white-mobile.svg 74w 1x, img/logo-pink-white-tablet.svg 146w 1x, img/logo-pink-white-desktop.svg 146w 1x" width="74px" height="23px" alt="Pink">
+              </picture>
             </a>
 
             <button class="main-nav__toggle" type="button" aria-label="Меню"></button>
@@ -46,16 +50,16 @@
         <p class="page-inner__title">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000миль на вашу бонусную карту</p>
       </div>
 <!-- формы отправки -->
-      <form class="page-inner__form-feedback form-feedback" action="https://echo.htmlacademy.ru" method="post">
+      <form class="page-inner__form-feedback" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-feedback__name-wrapper">
           <fieldset class="form-feedback__fieldset-fullname">
-            <label class="form-feedback__label">Фамилия:
+            <label class="form-feedback__label form-feedback__label--fullname">Фамилия:
               <input class="form-feedback__input" type="text" name="lastname" placeholder="Укажите фамилию *" required>
             </label>
-            <label class="form-feedback__label">Имя:
+            <label class="form-feedback__label form-feedback__label--fullname">Имя:
               <input class="form-feedback__input" type="text" name="firstname" placeholder="Введите ваше имя *" required>
             </label>
-            <label class="form-feedback__label">Отчество:
+            <label class="form-feedback__label form-feedback__label--fullname">Отчество:
               <input class="form-feedback__input" type="text" name="middlename" placeholder="Ну и отчество тоже">
             </label>
           </fieldset>
@@ -114,12 +118,16 @@
               Контактная информация
             </legend>
 
-            <label class="form-feedback__label form-feedback__label--contacts">Номер телефона
-              <input class="form-feedback__input" type="tel" name="phone" placeholder="Номер, пожалуйста">
-            </label>
-            <label class="form-feedback__label form-feedback__label--contacts">Номер email
-              <input class="form-feedback__input" type="email" name="email" placeholder="Ведите почту *" required>
-            </label>
+            <ul class="form-feedback__contacts-list">
+              <li class="form-feedback__contacts-item">
+                <label class="form-feedback__label form-feedback__label--contacts" for="phone">Номер телефона</label>
+                  <input class="form-feedback__input" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
+              </li>
+              <li class="form-feedback__contacts-item">
+                <label class="form-feedback__label form-feedback__label--contacts" for="email">Номер email</label>
+                  <input class="form-feedback__input" type="email" id="email" name="email" placeholder="Ведите почту *" required>
+              </li>
+            </ul>
           </fieldset>
         </div>
 
@@ -174,7 +182,10 @@
       <div class="page-footer__content-wrapper">
         <div class="page-footer__icon-wrapper">
           <a class="page-footer__logo" href="index.html">
-            <img src="img/logo-pink-blue-mobile.svg" srcset="img/logo-pink-blue-mobile.svg 1x, img/logo-pink-blue-desktop.svg 1x" width="146" height="40" alt="Логотип Pink">
+            <picture>
+              <source media="(min-width: 660px)" src="img/logo-pink-blue-desktop.svg 1x" type="img/svg">
+              <img src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
+            </picture>
           </a>
         </div>
 

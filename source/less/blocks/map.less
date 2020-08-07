@@ -1,14 +1,14 @@
 .map {
   position: relative;
+  box-sizing: content-box;
   overflow: hidden;
-  height: 200px;
-
-  @media @tablet {
-    height: 373px;
-  }
+  padding: 0 20px;
+  min-width: @mobile-width;
+  max-width: @desktop-width;
 
   @media @desktop {
-    height: 501px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   &::before {
@@ -39,13 +39,18 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: auto;
 
   @media @tablet {
     top: -93%;
+    background-image: url("../img/bg-map-tablet@1x.jpg");
   }
 
   @media @desktop {
     top: -53%;
+    background-image: url("../img/bg-map-desktop@1x.jpg");
   }
 }
 
