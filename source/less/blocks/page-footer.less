@@ -31,6 +31,10 @@
   width: 146px;
   height: 40px;
   color: #283645;
+
+  @media @tablet {
+    margin-right: auto;
+  }
 }
 
 .page-footer__logo {
@@ -53,9 +57,13 @@
   flex: initial;
   margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 155px;
+
+  @media @tablet {
+    margin-left: auto;
+  }
 }
 
 .page-footer__copyright-text {
