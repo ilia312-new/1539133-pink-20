@@ -1,5 +1,5 @@
 .page-inner__title-wrapper {
-  margin: 0 auto;
+  margin: 0;
   padding-top: 45px;
   padding-bottom: 34px;
 
@@ -11,16 +11,21 @@
   @media @desktop {
     padding-bottom: 49px;
   }
+
+  .content-wrapper;
 }
 
 .page-inner__title {
-  padding: 0;
   max-width: 500px;
   line-height: 30px;
   text-align: center;
 
   @media @tablet {
     font-size: 18px;
+  }
+
+  @media @desktop {
+    max-width: @desktop-width - 300;
   }
 }
 

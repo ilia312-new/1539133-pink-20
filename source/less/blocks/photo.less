@@ -7,6 +7,28 @@
   height: 137px;
   color: #ffffff;
   text-decoration: none;
+
+  @media @tablet {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+  }
+}
+
+.photo__link--hot {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: auto;
+  max-width: @mobile-width;
+
+  @media @tablet {
+    max-width: @tablet-width + 40px;
+  }
+
+  @media @desktop {
+    max-width: @desktop-width;
+  }
 }
 
 .photo__link span {
@@ -33,8 +55,19 @@
 }
 
 .photo__image--hot {
-  left: -20px;
-  width: 100% + 40px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  width: auto;
+  max-width: @mobile-width;
+
+  @media @tablet {
+    max-width: @tablet-width + 40px;
+  }
+
+  @media @desktop {
+    max-width: @desktop-width;
+  }
 }
 
 .photo__content {

@@ -12,11 +12,10 @@
 }
 
 .page-footer__content-wrapper {
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: stretch;
 
   @media @tablet {
     padding: 0 20px;
@@ -28,8 +27,7 @@
 
 .page-footer__icon-wrapper {
   display: block;
-  width: 146px;
-  height: 40px;
+  flex-basis: 10%;
   color: #283645;
 
   @media @tablet {
@@ -38,8 +36,10 @@
 }
 
 .page-footer__logo {
+  position: relative;
+  top: 25%;
   display: block;
-  width: 146px;
+  box-sizing: border-box;
   height: 40px;
   color: #283645;
   pointer-events: none;
@@ -55,7 +55,7 @@
 
 .page-footer__copyright {
   flex: initial;
-  margin: auto;
+  margin-left: auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;

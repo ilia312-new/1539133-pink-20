@@ -1,6 +1,8 @@
 .social-links {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 30%;
   display: flex;
-  width: 172px;
   justify-content: center;
   padding: 39px 0;
   list-style: none;
@@ -28,7 +30,9 @@
 }
 
 .social-links__link {
+  position: relative;
   display: block;
+  padiing: auto;
   width: 45px;
   height: 45px;
   color: @pink;
@@ -51,8 +55,6 @@
 }
 
 .social-links__link img {
-  position: relative;
-  display: block;
-  top: 25%;
-  left: 50%;
+  margin: auto;
+  transform: translateY(50%);
 }

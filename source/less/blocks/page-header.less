@@ -41,9 +41,9 @@
 // uncorrect width in media
 
 .page-header__store {
-  margin: 0 auto;
+  margin: 0;
   padding: 30px 20px;
-  width: @mobile-width;
+  width: 100%;
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-position: 50% 120px;
   background-size: auto;
@@ -56,7 +56,7 @@
   @media @tablet {
     padding-top: 93px;
     padding-bottom: 110px;
-    width: @tablet-width;
+    max-width: @tablet-max-width;
     background-image: url("../img/iphone-hand-tablet@1x.png");
     background-position: -20px bottom;
 
@@ -67,7 +67,7 @@
 
   @media @desktop {
     padding: 108px 10px 122px;
-    width: @desktop-width;
+    min-width: @desktop-width;
     background-image: url("../img/iphone-hand-desktop@1x.png");
     background-position: 26px 99px;
 
