@@ -2,15 +2,17 @@
   position: relative;
   display: block;
   padding: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: @mobile-width;
 
   @media @tablet {
-    width: @tablet-width - 60;
+    width: 100vw;
   }
 
   @media @desktop {
     padding-bottom: 28px;
-    width: @tablet-width - 60;
+    width: @desktop-width - 280;
   }
 }
 

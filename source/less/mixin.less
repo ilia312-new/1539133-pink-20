@@ -32,20 +32,91 @@
 }
 
 // применение базовых стилей для input
+.track(@track-w; @track-h) {
+  box-sizing: border-box;
+  border: 0;
+  width: @track-w;
+  height: @track-h;
+}
 
-.style-reset--input {
+.thumb(@thumb-d) {
+  box-sizing: border-box;
+  border: 2px solid @pink;
+  width: @thumb-d;
+  height: @thumb-d;
+  border-radius: 50%;
+  background-color: @white;
+  cursor: pointer;
+}
+
+.range-active() {
+  background-color: @pink;
+}
+
+.range-focus() {
+  outline: @pink dashed 1px;
+  outline-offset: 0;
+}
+
+.style-reset--input(@track-w; @track-h; @thumb-d) {
   padding: 0;
   margin: 0;
-  width: 100%;
-  border: 0;
-  border-radius: 0;
   box-shadow: none;
   background: transparent;
   color: inherit;
   overflow: visible;
   letter-spacing: inherit;
 
+  &,
+  &::-webkit-slider-thumb {
+    appearance: none;
+  }
+
+  &:active {
+    &::-webkit-slider-thumb {
+      .range-active();
+    }
+
+    &::-moz-range-thumb {
+      .range-active();
+    }
+
+    &::-ms-thumb {
+      .range-active();
+    }
+  }
+
   &:focus {
-    outline: none;
+    .range-focus();
+  }
+
+  &::-webkit-slider-runnable-track {
+    .track(@track-w; @track-h);
+  }
+
+  &::-moz-range-track {
+    .track(@track-w; @track-h);
+  }
+
+  &::-ms-track {
+    color: transparent;
+    .track(@track-w; @track-h);
+  }
+
+  &::-webkit-slider-thumb {
+    .thumb(@thumb-d);
+  }
+
+  &::-moz-range-thumb {
+    .thumb(@thumb-d);
+  }
+
+  &::-ms-thumb {
+    margin-top: 0;
+    .thumb(@thumb-d);
+  }
+
+  &::-moz-focus-outer {
+    border: none;
   }
 }

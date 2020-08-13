@@ -250,20 +250,34 @@
                   </button>
                 </div>
   <!-- шкала кадрирования -->
+                <div class="form-photo__filter form-photo__filter--mobile">
+                    <div class="form-photo__icon-wrapper">
+                      <img class="form-photo__icon form-photo__icon--crop" src="img/icon-editor-crop.svg" alt="" width="44" height="44">
+                    </div>
+                    <input class="form-photo__filter-range" type="range" min="1" max="100" name="crop" value="85">
+                </div>
+
                 <div class="form-photo__filter">
                     <div class="form-photo__icon-wrapper">
-                      <img class="form-photo__icon" src="img/symbol-crop.svg" alt="Кадрировать">
+                      <img class="form-photo__icon form-photo__icon--fill" src="img/icon-editor-fill.svg" alt="" width="48" height="48">
                     </div>
-                    <input class="form-photo__filter-range" type="range" min="" max="" name="fill" value="">
+                    <input class="form-photo__filter-range" type="range" min="1" max="100" name="fill" value="14">
                 </div>
+
+                <div class="form-photo__filter">
+                    <div class="form-photo__icon-wrapper">
+                      <img class="form-photo__icon form-photo__icon--contrast" src="img/icon-editor-contrast.svg" alt="" width="32" height="32">
+                    </div>
+                    <input class="form-photo__filter-range" type="range" min="1" max="100" name="contrast" value="51">
+                </div>
+              </div>
   <!-- кнопки отправки -->
                 <div class="form-photo__buttons">
                     <button class="form-photo__button form-photo__button--submit" type="submit">Запостить</button>
                     <button class="form-photo__button form-photo__button--cancel" type="reset">Отмена</button>
                 </div>
-                </div>
-            </div>
-            </form>
+              </div>
+          </form>
         </div>
       </section>
     </main>

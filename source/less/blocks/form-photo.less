@@ -15,7 +15,7 @@
   }
 
   @media @desktop {
-    padding: 41px 60px 57px 80px;
+    padding: 21px 40px 37px 60px;
   }
 }
 
@@ -87,8 +87,13 @@
   padding: 0;
   width: 48px;
   height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   background-color: transparent;
-  border: 1px dotted @pink;
+  border: 0;
+  cursor: pointer;
 
   &:focus {
     outline: 1px dashed @pink;
@@ -112,36 +117,104 @@
 
 .form-photo__filter {
   position: relative;
+  display: none;
+  align-items: center;
   height: 72px;
+
+  @media @tablet {
+    display: flex;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -40px;
+    bottom: 0;
+    width: 100% + 40px * 2;
+    height: 1px;
+    background-color: #dddfe0;
+
+    @media @tablet {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.form-photo__filter--mobile {
+  display: flex;
 }
 
 .form-photo__icon-wrapper {
   display: none;
+  justify-content: center;
+  align-items: center;
+
+  @media @tablet {
+    display: flex;
+    width: 27px;
+    height: 27px;
+  }
+
+  @media @desktop {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.form-photo__icon-wrapper & .form-photo__icon {
+  fill: @pink;
 }
 
 .form-photo__filter-range {
-  .style-reset--input;
+  .style-reset--input(100%; 2px; 14px);
+
   margin-left: auto;
+  width: 100%;
   height: 14px;
 
+  @media @tablet {
+    margin-right: 18px;
+    width: 202px;
+  }
 
+  @media @desktop {
+    margin-right: 30px;
+    width: 288px;
+  }
 }
 
 .form-photo__buttons {
   padding: 0;
+
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .form-photo__button {
-  margin-bottom: 13px;
-  padding: 15px;
-  width: 100%;
   display: block;
   box-sizing: border-box;
+  margin-bottom: 13px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
   font-size: 18px;
   font-weight: bold;
   line-height: 18px;
   text-align: center;
   text-decoration: none;
+
+  @media @tablet {
+    margin-bottom: 26px;
+    width: 260px;
+  }
+
+  @media @desktop {
+    margin-bottom: 0;
+    width: 45%;
+  }
 }
 
 .form-photo__button--submit {

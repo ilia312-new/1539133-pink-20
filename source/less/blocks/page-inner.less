@@ -1,14 +1,9 @@
 .page-inner {
   padding: 0 10px;
-  min-width: @mobile-width - 60;
-
-  @media @tablet {
-    width: @tablet-width - 20;
-  }
-
-  @media @desktop {
-    max-width: @desktop-width / 2 + 60;
-  }
+  width: auto;
+  min-width: @mobile-width - 20;
+  max-width: @desktop-width;
+  background-color: inherit;
 }
 
 .page-inner__title-wrapper {
