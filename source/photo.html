@@ -54,24 +54,24 @@
 
 <!-- <h2 class="visually-hidden">Галерея фотографий пользователей приложения</h2> -->
 
-        <figure class="gallery__photo-hot">
+        <figure class="galley__photo gallery__photo-hot">
           <a class="photo__link photo__link--hot" href="#">
             <picture>
-              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x" type="image/jpg">
-              <source media="(min-width: 1080px)" srcset="img/panorama-desktop@1x.jpg 1x" type="image/jpg">
-              <img class="photo__image photo__image--hot" src="img/panorama-mobile@1x.jpg" alt="Фотография дня">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg">
+              <source media="(min-width: 1080px)" srcset="img/panorama-desktop@1x.jpg">
+              <img class="photo__image" src="img/panorama-mobile@1x.jpg" alt="Фотография дня">
             </picture>
 
             <span>Панорама дня</span>
           </a>
 
           <figcaption class="photo__content photo__content--hot">
-            <p class="photo__author">
+            <p class="photo__author photo__author--hot">
               <b class="photo__author-name">Анна</b>
               <time class="photo__date" datetime="">(5 минут назад)</time>
             </p>
-            <p class="photo__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-            <div class="photo__likes">
+            <p class="photo__text photo__text--hot">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <div class="photo__likes photo__likes--hot">
               <button class="photo__like-button" type="button">
               </button>
               <span class="photo__like-count">Нравится: 215</span>
@@ -80,9 +80,13 @@
         </figure>
 
         <div class="gallery__photo-wrapper">
-          <figure class="gallery__photo photo">
+          <figure class="gallery__photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/photo-car-mobile@1x.jpg" alt="Фото 1">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg">
+                <source media="(min-width: 1080px)" srcset="img/photo-car-desktop@1x.jpg">
+                <img class="photo__image" src="img/photo-car-mobile@1x.jpg" alt="Фото 1">
+              </picture>
             </a>
 
             <figcaption class="photo__content">
@@ -100,9 +104,13 @@
             </figcaption>
           </figure>
 
-          <figure class="gallery__photo photo">
+          <figure class="gallery__photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" alt="Фото 2">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg">
+                <source media="(min-width: 1080px)" srcset="img/photo-drumset-desktop@1x.jpg">
+                <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" alt="Фото 2">
+              </picture>
             </a>
 
             <figcaption class="photo__content">
@@ -120,9 +128,13 @@
             </figcaption>
           </figure>
 
-          <figure class="gallery__photo photo">
+          <figure class="gallery__photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/photo-window-mobile@1x.jpg" alt="Фото 3">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg">
+                <source media="(min-width: 1080px)" srcset="img/photo-window-desktop@1x.jpg">
+                <img class="photo__image" src="img/photo-window-mobile@1x.jpg" alt="Фото 3">
+              </picture>
             </a>
 
             <figcaption class="photo__content">
@@ -140,9 +152,13 @@
             </figcaption>
           </figure>
 
-          <figure class="gallery__photo photo">
+          <figure class="gallery__photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" alt="Фото 4">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg">
+                <source media="(min-width: 1080px)" srcset="img/photo-fair-desktop@1x.jpg">
+                <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" alt="Фото 4">
+              </picture>
             </a>
 
             <figcaption class="photo__content">
@@ -160,9 +176,13 @@
             </figcaption>
           </figure>
 
-          <figure class="gallery__photo photo">
+          <figure class="gallery__photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" alt="Фото 5">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg">
+                <source media="(min-width: 1080px)" srcset="img/photo-pov-desktop@1x.jpg">
+                <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" alt="Фото 5">
+              </picture>
             </a>
 
             <figcaption class="photo__content">
@@ -180,9 +200,13 @@
             </figcaption>
           </figure>
 
-          <figure class="gallery__photo photo">
+          <figure class="gallery__photo">
             <a class="photo__link" href="#">
-              <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" alt="Фото 6">
+              <picture>
+                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg">
+                <source media="(min-width: 1080px)" srcset="img/photo-wing-desktop@1x.jpg">
+                <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" alt="Фото 6">
+              </picture>
             </a>
 
             <figcaption class="photo__content">
@@ -213,30 +237,32 @@
             <label class="form-photo__image" for="image"></label>
 <!-- кнопки управления -->
             <div class="form-photo__controls">
-              <div class="form-photo__filters-buttons">
-                <button class="form-photo__filter-button" type="button" name="clipping">
-                  <img class="form-photo__filter-button form-photo__filter-button--clipping" src="img/symbol-clipping.svg" alt="Обрезка">
-                </button>
-                <button class="form-photo__filter-button" type="button" name="fill">
-                  <img class="form-photo__filter-button form-photo__filter-button--fill" src="img/symbol-fill.svg" alt="Заливка">
-                </button>
-                <button class="form-photo__filter-button" type="button" name="contrast">
-                  <img class="form-photo__filter-button form-photo__filter-button--contrast" src="img/symbol-contrast.svg" alt="Контрастность">
-                </button>
-              </div>
-<!-- шкала кадрирования -->
+              <div class="form-photo__filters">
+                <div class="form-photo__filters-buttons">
+                  <button class="form-photo__filter-button" type="button" name="clipping">
+                    <img class="form-photo__filter-button form-photo__filter-button--clipping" src="img/symbol-clipping.svg" alt="Обрезка">
+                  </button>
+                  <button class="form-photo__filter-button" type="button" name="fill">
+                    <img class="form-photo__filter-button form-photo__filter-button--fill" src="img/symbol-fill.svg" alt="Заливка">
+                  </button>
+                  <button class="form-photo__filter-button" type="button" name="contrast">
+                    <img class="form-photo__filter-button form-photo__filter-button--contrast" src="img/symbol-contrast.svg" alt="Контрастность">
+                  </button>
+                </div>
+  <!-- шкала кадрирования -->
                 <div class="form-photo__filter">
-                  <div class="form-photo__icon-wrapper">
-                    <img class="form-photo__icon" src="img/symbol-crop.svg" alt="Кадрировать">
-                  </div>
-                  <input class="form-photo__filter-range" type="range" min="" max="" name="fill" value="">
+                    <div class="form-photo__icon-wrapper">
+                      <img class="form-photo__icon" src="img/symbol-crop.svg" alt="Кадрировать">
+                    </div>
+                    <input class="form-photo__filter-range" type="range" min="" max="" name="fill" value="">
                 </div>
-<!-- кнопки отправки -->
+  <!-- кнопки отправки -->
                 <div class="form-photo__buttons">
-                  <button class="form-photo__button form-photo__button--submit" type="submit">Запостить</button>
-                  <button class="form-photo__button form-photo__button--cancel" type="reset">Отмена</button>
+                    <button class="form-photo__button form-photo__button--submit" type="submit">Запостить</button>
+                    <button class="form-photo__button form-photo__button--cancel" type="reset">Отмена</button>
                 </div>
-              </div>
+                </div>
+            </div>
             </form>
         </div>
       </section>

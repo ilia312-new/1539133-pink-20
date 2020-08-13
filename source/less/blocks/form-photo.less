@@ -6,6 +6,17 @@
   padding-top: 20px;
   padding-bottom: 29px;
   background-color: inherit;
+
+  @media @tablet {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 29px;
+  }
+
+  @media @desktop {
+    padding: 41px 60px 57px 80px;
+  }
 }
 
 .form-photo__image {
@@ -18,17 +29,58 @@
   background-size: auto;
   background-repeat: no-repeat;
   cursor: pointer;
+
+  @media @tablet {
+    margin-top: 16px;
+    margin-left: auto;
+    width: 300px;
+    height: 400px;
+    background-image: url("../img/photo-road-tablet@1x.jpg");
+  }
+
+  @media @desktop {
+    margin-left: 0;
+    background-image: url("../img/photo-road-desktop@1x.jpg");
+  }
 }
 
 .form-photo__controls {
   box-sizing: border-box;
+
+  @media @tablet {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 275px;
+  }
+
+  @media @desktop {
+    margin-right: 0;
+    width: 410px;
+  }
+}
+
+.form-photo__filters {
+  padding: 42px 20px 38px;
+
+  @media @tablet {
+    margin-bottom: 66px;
+    padding: 0;
+  }
+
+  @media @desktop {
+    margin-bottom: 145px;
+  }
 }
 
 .form-photo__filters-buttons {
-  padding: 42px 20px 38px;
-  width: 240px;
   display: flex;
   justify-content: space-around;
+  width: 240px;
+
+  @media @tablet {
+    display: none;
+  }
 }
 
 .form-photo__filter-button {
@@ -68,12 +120,11 @@
 }
 
 .form-photo__filter-range {
-  margin: 0;
-  padding: 0;
+  .style-reset--input;
   margin-left: auto;
-  width: 100%;
   height: 14px;
-  background-color: transparent;
+
+
 }
 
 .form-photo__buttons {

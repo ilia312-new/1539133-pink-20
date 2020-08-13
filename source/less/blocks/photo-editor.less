@@ -2,15 +2,19 @@
   position: relative;
   display: block;
   padding: 0;
-  width: inherit;
+  width: @mobile-width;
+
+  @media @tablet {
+    width: @tablet-width - 60;
+  }
 
   @media @desktop {
-    padding: 0 0 28px 0;
+    padding-bottom: 28px;
+    width: @tablet-width - 60;
   }
 }
 
 .photo-editor__content-wrapper {
-  position: relative;
   padding-top: 43px;
   padding-bottom: 42px;
 

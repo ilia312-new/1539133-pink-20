@@ -7,10 +7,13 @@
     "autoprefixer": "9.8.4",
     "browser-sync": "^2.26.10",
     "gulp": "4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-less": "4.0.1",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
     "gulp-sourcemaps": "2.6.5",
+    "rename": "^1.0.4",
     "stylelint": "13.6.1",
     "stylelint-config-htmlacademy": "0.1.4"
   },
@@ -38,7 +41,9 @@
     "node": "12.18.2"
   },
   "dependencies": {
+    "csso": "^4.0.3",
     "ignore": "^5.1.8",
+    "imagemin": "^7.0.1",
     "normalize.css": "^8.0.1"
   }
 }
