@@ -1,11 +1,25 @@
 .visually-hidden:not(:focus):not(:active),
-input[type="checkbox"] .visually-hidden,
-input[type="radio"] .visually-hidden {
+input[type="checkbox"]:checked .visually-hidden,
+input[type="checkbox"]:not(:checked) .visually-hidden,
+input[type="radio"]:checked .visually-hidden,
+input[type="radio"]:not(:checked) .visually-hidden {
+  position: absolute;
   overflow: hidden;
-  margin: 0;
+  visibility: hidden;
   border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+input[type="checkbox"]:checked .visually-hidden + label,
+input[type="checkbox"]:not(:checked) .visually-hidden + label,
+input[type="radio"]:checked .visually-hidden + label,
+input[type="radio"]:not(:checked) .visually-hidden + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
 }

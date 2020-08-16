@@ -71,21 +71,10 @@
   }
 }
 
-.form-feedback__contacts-item input {
+.form-feedback__contacts-item input[type=email] {
   @media @tablet {
-    width: @tablet-width - 40%;
-    order: 0;
-    background-color: #e5e5e5;
-
-    &:nth-child(1) {
-      background-image: url("../img/icon-phone.svg");
-      background-repeat: no-repeat;
-    }
-
-    &:nth-child(2) {
-      background-image: url("../img/icon-mail.svg");
-      background-repeat: no-repeat;
-    }
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
   }
 }
 
@@ -100,8 +89,11 @@
 }
 
 .form-feedback__label--fullname {
-  display: inline-block;
   margin-right: 20px;
+
+  @media @tablet {
+    display: inline-flex;
+  }
 }
 
 .form-feedback__label--contacts {
@@ -116,7 +108,9 @@
   line-height: 30px;
 
   @media @tablet {
-    display: inline;
+    flex-basis: 100%;
+    background-repeat: no-repeat;
+    background-position: right;
   }
 
   &:hover {
@@ -126,6 +120,20 @@
   &:focus {
     outline: 0;
     border-color: #d22856;
+  }
+}
+
+.form-feedback__input--phone {
+  @media @tablet {
+    background-color:  #e5e5e5;
+    background-image: url("../img/icon-phone.svg");
+  }
+}
+
+.form-feedback__input--email {
+  @media @tablet {
+    background-color: #e5e5e5;
+    background-image: url("../img/icon-mail.svg");
   }
 }
 
@@ -207,6 +215,7 @@
 
 .form-feedback__achivment-item {
   margin-bottom: 43px;
+  padding: 0 20px;
 
   @media @desktop {
     width: 260px;
@@ -225,7 +234,6 @@
   }
 }
 
-.form-feedback__achivment-layout,
 .form-feedback__platform-layout {
   margin: 0;
   padding: 0 20px;
@@ -235,8 +243,6 @@
 }
 
 .form-feedback__checkbox {
-  width: 35px;
-  height: 35px;
 
   &:focus + .form-feedback__checkbox-sign {
     outline: 1px dashed #d22856;
@@ -260,7 +266,7 @@
 .form-feedback__checkbox-sign,
 .form-feedback__radio-sign {
   flex: auto;
-  margin-left: auto;
+  margin-left: 0;
   padding: 0 17px;
   padding-top: 5px;
   padding-bottom: 4px;
@@ -270,8 +276,30 @@
 }
 
 .form-feedback__checkbox-sign {
+  &::before {
+    content: "";
+    margin-right: 22px;
+    width: 35px;
+    height: 35px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: @light-gray;
+    border-radius: 1px;
+  }
+
   &:hover::before {
     border-color: #283645;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 16px;
+    border-radius: 1px;
+    border-left: 2px solid @pink;
+    border-bottom: 2px solid @pink;
+    transform: rotate(-45deg);
   }
 }
 
