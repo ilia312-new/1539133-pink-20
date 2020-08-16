@@ -1,9 +1,9 @@
 .main-nav {
-  width: 100vw;
+  width: 100%;
+  height: 325px;
 
   @media @desktop {
-    padding: 0 130px;
-    width: @desktop-width - 260px;
+    padding: 0 100px;
     height: 110px;
     display: flex;
     justify-content: space-between;
@@ -13,7 +13,9 @@
 }
 
 .main-nav__logo-wrapper {
-  padding: 21px 20px 21px;
+  padding: 0 20px;
+  padding-top: 21px;
+  height: 69px;
   display: flex;
   justify-content: space-between;
 
@@ -33,7 +35,6 @@
   flex-grow: 0;
   margin-right: auto;
   background-color: transparent;
-  height: 23px;
 
   @media @tablet {
     height: 40px;
@@ -49,7 +50,8 @@
 }
 
 .main-nav__toggle {
-  height: 24px;
+  height: auto;
+  align-self: flex-end;
   flex: 0 0 auto;
   border: 0;
   background-color: transparent;

@@ -1,6 +1,8 @@
 // меню при любых значениях выравнивания прижимается к правому краю
 
 .main-menu {
+  margin: 0;
+  height: auto;
   padding-left: 0;
   box-sizing: border-box;
   border-top: 1px solid @black;
@@ -16,7 +18,7 @@
   @media @desktop {
     flex-flow: row nowrap;
     justify-content: space-between;
-    width: @desktop-width - 460;
+    flex-basis: 80%;
     line-height: 18px;
   }
 }
@@ -26,6 +28,10 @@
 }
 
 .main-menu__item {
+  flex-basis: 20%;
+  padding: 0;
+  height: 62px;
+  flex-shrink: 0;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -45,12 +51,14 @@
   border-bottom: 1px solid #000000;
 
   @media @desktop {
-    margin-right: 80px;
+    margin-right: 40px;
   }
 }
 
 .main-menu__item a {
-  padding: 15px 20px;
+  padding: 0 20px;
+  padding-top: 15px;
+  padding-bottom: 0;
   display: block;
   text-decoration: none;
   color: #ffffff;
