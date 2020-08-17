@@ -1,5 +1,6 @@
 .store__content {
   box-sizing: border-box;
+  padding: 0 20px;
   width: 100%;
   background-color: transparent;
 
@@ -11,7 +12,7 @@
 .store__title {
   padding: 0 20px 0 20px;
   margin: 0;
-  margin-bottom: 340px;
+  margin-bottom: 335px;
   box-sizing: border-box;
   top: 0;
   font-size: 24px;
@@ -35,8 +36,7 @@
   position: relative;
   display: block;
   box-sizing: border-box;
-  padding: 21px 18px;
-  width: auto;
+  padding: 20px 18px;
   font-size: 18px;
   font-weight: bold;
   line-height: 18px;
@@ -64,11 +64,13 @@
 .store__list {
   position: relative;
   margin-top: 32px;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
+  margin-left: 20px;
   padding-left: 0;
+  width: @mobile-width - 80;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   list-style: none;
 
   @media @tablet {
@@ -89,8 +91,8 @@
 
 .store__link {
   display: block;
-  width: 56px;
-  height: 56px;
+  width: 55px;
+  height: 55px;
 }
 
 .store__link img {
