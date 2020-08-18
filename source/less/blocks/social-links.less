@@ -1,7 +1,8 @@
 .social-links {
-  flex: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 30%;
   display: flex;
-  width: auto;
   justify-content: center;
   padding: 39px 0;
   list-style: none;
@@ -28,8 +29,10 @@
   }
 }
 
-.social-link__link {
+.social-links__link {
+  position: relative;
   display: block;
+  padiing: auto;
   width: 45px;
   height: 45px;
   color: @pink;
@@ -49,4 +52,9 @@
     border-color: fade(@dark-blue, 40%);
     opacity: 0.3;
   }
+}
+
+.social-links__link img {
+  margin: auto;
+  transform: translateY(50%);
 }

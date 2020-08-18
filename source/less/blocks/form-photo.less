@@ -6,6 +6,17 @@
   padding-top: 20px;
   padding-bottom: 29px;
   background-color: inherit;
+
+  @media @tablet {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 29px;
+  }
+
+  @media @desktop {
+    padding: 21px 40px 37px 60px;
+  }
 }
 
 .form-photo__image {
@@ -18,25 +29,71 @@
   background-size: auto;
   background-repeat: no-repeat;
   cursor: pointer;
+
+  @media @tablet {
+    margin-top: 16px;
+    margin-left: auto;
+    width: 300px;
+    height: 400px;
+    background-image: url("../img/photo-road-tablet@1x.jpg");
+  }
+
+  @media @desktop {
+    margin-left: 0;
+    background-image: url("../img/photo-road-desktop@1x.jpg");
+  }
 }
 
 .form-photo__controls {
   box-sizing: border-box;
+
+  @media @tablet {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 275px;
+  }
+
+  @media @desktop {
+    margin-right: 0;
+    width: 410px;
+  }
+}
+
+.form-photo__filters {
+  padding: 42px 20px 38px;
+
+  @media @tablet {
+    margin-bottom: 66px;
+    padding: 0;
+  }
+
+  @media @desktop {
+    margin-bottom: 145px;
+  }
 }
 
 .form-photo__filters-buttons {
-  padding: 42px 20px 38px;
-  width: 240px;
   display: flex;
   justify-content: space-around;
+  width: 240px;
+
+  @media @tablet {
+    display: none;
+  }
 }
 
 .form-photo__filter-button {
   padding: 0;
   width: 48px;
   height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   background-color: transparent;
-  border: 1px dotted @pink;
+  border: 0;
+  cursor: pointer;
 
   &:focus {
     outline: 1px dashed @pink;
@@ -60,37 +117,106 @@
 
 .form-photo__filter {
   position: relative;
+  top: 0;
+  display: none;
+  align-items: center;
   height: 72px;
+
+  @media @tablet {
+    display: flex;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: -40px;
+    bottom: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: #dddfe0;
+
+    @media @tablet {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.form-photo__filter--mobile {
+  display: flex;
 }
 
 .form-photo__icon-wrapper {
   display: none;
+  justify-content: center;
+  align-items: center;
+
+  @media @tablet {
+    display: flex;
+    width: 27px;
+    height: 27px;
+  }
+
+  @media @desktop {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.form-photo__icon-wrapper & .form-photo__icon {
+  fill: @pink;
 }
 
 .form-photo__filter-range {
-  margin: 0;
-  padding: 0;
+  .style-reset--input(100%; 2px; 14px);
+
   margin-left: auto;
   width: 100%;
   height: 14px;
-  background-color: transparent;
+  background-color: #283645;
+
+  @media @tablet {
+    margin-right: 18px;
+    width: 202px;
+  }
+
+  @media @desktop {
+    margin-right: 30px;
+    width: 288px;
+  }
 }
 
 .form-photo__buttons {
   padding: 0;
+
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .form-photo__button {
-  margin-bottom: 13px;
-  padding: 15px;
-  width: 100%;
   display: block;
   box-sizing: border-box;
+  margin-bottom: 13px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
   font-size: 18px;
   font-weight: bold;
   line-height: 18px;
   text-align: center;
   text-decoration: none;
+
+  @media @tablet {
+    margin-bottom: 26px;
+    width: 260px;
+  }
+
+  @media @desktop {
+    margin-bottom: 0;
+    width: 45%;
+  }
 }
 
 .form-photo__button--submit {

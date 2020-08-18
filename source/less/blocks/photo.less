@@ -1,12 +1,38 @@
 .photo__link {
-  position: relative;
-  top: 0;
-  overflow: hidden;
   display: block;
-  width: 320px;
-  height: 137px;
+  overflow: hidden;
+  width: @mobile-width - 40;
+  height: 180px;
   color: #ffffff;
   text-decoration: none;
+
+  @media @tablet {
+    width: @mobile-width - 20;
+    height: 300px;
+  }
+
+  @media @desktop {
+    height: 400px;
+  }
+}
+
+.photo__link--hot {
+  position: relative;
+  width: @mobile-width;
+  height: 137px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media @tablet {
+    width: auto;
+    max-width: @tablet-width + 40px;
+    height: 509px;
+  }
+
+  @media @desktop {
+    max-width: @desktop-width;
+    height: 506px;
+  }
 }
 
 .photo__link span {
@@ -24,17 +50,17 @@
   color: inherit;
   background-color: @pink;
   border: 0;
+
+  @media @tablet {
+    top: 20px;
+    left: 460px;
+  }
 }
 
 .photo__image {
   max-width: 100%;
   height: auto;
   display: block;
-}
-
-.photo__image--hot {
-  left: -20px;
-  width: 100% + 40px;
 }
 
 .photo__content {
@@ -73,18 +99,41 @@
   margin: 0;
 }
 
+.photo__author--hot {
+  @media @tablet {
+    order: 0;
+  }
+}
+
 .photo__author-name {
   font-weight: 700;
 }
 
+.photo__text {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.photo__text--hot {
+  @media @tablet {
+    order: 2;
+  }
+}
+
 .photo__likes {
+  width: auto;
   display: flex;
   align-items: center;
-  margin-top: auto;
 
   @media @tablet {
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+}
+
+.photo__likes--hot {
+  @media @tablet {
+    order: 1;
   }
 }
 
@@ -102,11 +151,10 @@
 .photo__like-count {
   margin-left: 19px;
   color: #d22856;
-}
 
-.photo__text {
-  margin-top: 0;
-  margin-bottom: 9px;
+  @media @tablet {
+    margin-left: 0;
+  }
 }
 
 .photo__like-button {
@@ -115,7 +163,7 @@
   height: 12px;
   display: block;
   border: 0;
-  background-color: @pink;
+  background-color: transparent;
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
   background-position: center;

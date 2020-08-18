@@ -41,11 +41,11 @@
 // uncorrect width in media
 
 .page-header__store {
-  margin: 0 auto;
-  padding: 424px 20px 30px;
-  width: @mobile-width;
+  margin: 0;
+  padding: 25px 0;
+  width: 100%;
   background-image: url("../img/iphone-hand-mobile@1x.png");
-  background-position: 50% 110px;
+  background-position: left 110px;
   background-size: auto;
   background-repeat: no-repeat;
 
@@ -56,9 +56,9 @@
   @media @tablet {
     padding-top: 93px;
     padding-bottom: 110px;
-    width: @tablet-width;
+    max-width: @tablet-max-width;
     background-image: url("../img/iphone-hand-tablet@1x.png");
-    background-position: -20px 74px;
+    background-position: -20px bottom;
 
     @media @retina {
       background-image: url("../img/iphone-hand-tablet@1x.png");
@@ -67,7 +67,7 @@
 
   @media @desktop {
     padding: 108px 10px 122px;
-    width: @desktop-width;
+    min-width: @desktop-width;
     background-image: url("../img/iphone-hand-desktop@1x.png");
     background-position: 26px 99px;
 

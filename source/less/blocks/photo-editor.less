@@ -2,15 +2,21 @@
   position: relative;
   display: block;
   padding: 0;
-  width: inherit;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width;
+
+  @media @tablet {
+    width: 100vw;
+  }
 
   @media @desktop {
-    padding: 0 0 28px 0;
+    padding-bottom: 28px;
+    width: @desktop-width - 280;
   }
 }
 
 .photo-editor__content-wrapper {
-  position: relative;
   padding-top: 43px;
   padding-bottom: 42px;
 

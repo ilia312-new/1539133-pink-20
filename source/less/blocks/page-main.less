@@ -1,12 +1,11 @@
 .page-main {
-  margin: 0;
-  padding: 0;
+  width: inherit;
 }
 
 .page-main__titles {
   margin: 0 auto;
   padding: 41px 20px 32px;
-  max-width: 940px;
+  max-width: @desktop-width - 260;
 
   @media @tablet {
     padding: 49px 20px 48px;
@@ -20,6 +19,7 @@
 .page-main__title {
   margin: 0 auto;
   margin-bottom: 31px;
+  box-sizing: border-box;
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;

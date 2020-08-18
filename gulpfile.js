@@ -49,3 +49,16 @@ const watcher = () => {
 exports.default = gulp.series(
   styles, server, watcher
 );
+
+
+// imageoptimize
+
+const imagemin = require("gulp-imagemin");
+
+const image = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+  ]))
+}
