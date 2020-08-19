@@ -1,6 +1,6 @@
 .price-table {
   position: relative;
-  left: 50%;
+  left: 0;
   box-sizing: content-box;
   width: 834px;
   border-spacing: 0;
@@ -43,6 +43,13 @@
   @media @desktop {
     background-image: url("../img/bg-hit.svg");
   }
+}
+
+.price-table__header--hit span:first-child {
+  position: absolute;
+  font-size: 14px;
+  transform: rotate(-45deg);
+  left: 5px;
 }
 
 .price-table__license-type,

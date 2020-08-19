@@ -9,17 +9,18 @@
 
 .gallery__photo-hot {
   position: relative;
-  left: -20px;
-  margin: 0 auto;
-  width: auto;
-  max-width: @mobile-width;
+  margin: 0;
+  width: @mobile-width;
 
   @media @tablet {
+    margin: 0 auto;
     width: auto;
     max-width: @tablet-width;
   }
 
   @media @desktop {
+    position: relative;
+    margin: 0;
     max-width: @desktop-width;
   }
 }

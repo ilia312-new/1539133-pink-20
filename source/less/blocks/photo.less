@@ -20,8 +20,6 @@
   position: relative;
   width: @mobile-width;
   height: 137px;
-  left: 50%;
-  transform: translateX(-50%);
 
   @media @tablet {
     width: auto;
@@ -55,6 +53,10 @@
     top: 20px;
     left: 460px;
   }
+
+  @media @desktop {
+    left: 880px;
+  }
 }
 
 .photo__image {
@@ -85,13 +87,12 @@
   @media @tablet {
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 24px 29px 13px 27px;
-    width: @tablet-width - 40px;
+    padding: 1.7em 2.3em 0.9em 1.9em;
+    width: @tablet-width - 20;
   }
 
   @media @desktop {
-    padding: 24px 32px 12px 27px;
-    width: @desktop-width - 260px;
+    width: @desktop-width - 130;
   }
 }
 

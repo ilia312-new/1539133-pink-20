@@ -18,10 +18,11 @@
   height: 69px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media @tablet {
     padding-top: 27px;
-    padding-bottom: 43px;
+    height: 82px;
   }
 
   @media @desktop {
@@ -31,8 +32,7 @@
 }
 
 .main-nav__header-logo {
-  flex-basis: 25%;
-  flex-grow: 0;
+  align-self: flex-start;
   margin-right: auto;
   background-color: transparent;
 
@@ -50,9 +50,8 @@
 }
 
 .main-nav__toggle {
-  height: auto;
+  height: 50px;
   align-self: flex-end;
-  flex: 0 0 auto;
   border: 0;
   background-color: transparent;
   color: white;
