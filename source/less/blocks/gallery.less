@@ -28,7 +28,7 @@
   width: @mobile-width - 40;
   margin: 0;
   margin-top: 20px;
-  padding: 0 20px;
+  padding: 0 10px;
 
   @media @tablet {
     display: flex;
@@ -42,7 +42,6 @@
 
   @media @desktop {
     margin-bottom: -54px;
-    padding: 0 10px;
     width: @desktop-width - 150px;
   }
 }
@@ -57,14 +56,12 @@
     flex-direction: column;
     width: @mobile-width - 20;
   }
-
-  @media @desktop {
-    margin-bottom: 54px;
-  }
 }
 
 .gallery__photo:last-child {
-  margin-bottom: 0;
+  @media @tablet {
+    margin-bottom: 0;
+  }
 }
 
 .gallery__photo--hot {

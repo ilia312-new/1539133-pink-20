@@ -178,7 +178,7 @@
   background-color: transparent;
 
   @media @tablet {
-    transform: translateY(-50%);
+    transform: translateY(0);
   }
 }
 
@@ -441,6 +441,13 @@
 .form-feedback__submit-wrapper {
   padding: 29px 20px 15px;
 
+  @media @tablet {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+
   @media @desktop {
     order: 5;
   }
@@ -449,7 +456,7 @@
 .form-feedback__submit-button {
   margin: 0;
   padding: 15px;
-  width: 100%;
+  flex: none;
   display: block;
   box-sizing: border-box;
   font-size: 18px;
@@ -482,4 +489,8 @@
   line-height: 30px;
   text-align: center;
   text-transform: uppercase;
+
+  @media @tablet {
+    margin-top: 0;
+  }
 }
