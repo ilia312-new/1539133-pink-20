@@ -53,15 +53,20 @@
       <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-feedback__name-wrapper">
           <fieldset class="form-feedback__fieldset-fullname">
-            <label class="form-feedback__label form-feedback__label--fullname">Фамилия:
-              <input class="form-feedback__input" type="text" name="lastname" placeholder="Укажите фамилию *" required>
-            </label>
-            <label class="form-feedback__label form-feedback__label--fullname">Имя:
-              <input class="form-feedback__input" type="text" name="firstname" placeholder="Введите ваше имя *" required>
-            </label>
-            <label class="form-feedback__label form-feedback__label--fullname">Отчество:
-              <input class="form-feedback__input" type="text" name="middlename" placeholder="Ну и отчество тоже">
-            </label>
+            <ul class="form-feedback__name-list">
+              <li class="form-feedback__name-item">
+                <label class="form-feedback__label form-feedback__label--fullname" for="lastname">Фамилия:</label>
+                <input class="form-feedback__input form-feedback__input--fullname" type="text" name="lastname" placeholder="Укажите фамилию *" required>
+              </li>
+              <li class="form-feedback__name-item">
+                <label class="form-feedback__label form-feedback__label--fullname" for="lastname">Имя:</label>
+                <input class="form-feedback__input form-feedback__input--fullname" type="text" name="firstname" placeholder="Введите ваше имя *" required>
+              </li>
+              <li class="form-feedback__name-item">
+                <label class="form-feedback__label form-feedback__label--fullname" for="lastname">Отчество:</label>
+                <input class="form-feedback__input form-feedback__input--fullname" type="text" name="middlename" placeholder="Ну и отчество тоже">
+              </li>
+            </ul>
           </fieldset>
         </div>
 
@@ -161,12 +166,12 @@
         </div>
 
         <div class="form-feedback__emotions-wrapper">
-          <fieldset class="form-feedback__fieldset">
+          <fieldset class="form-feedback__fieldset-emotion">
             <legend class="form-feedback__legend">
               Опишите свои эмоции
             </legend>
 
-            <textarea class="form-feedback__textarea form-feedback__input" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="form-feedback__textarea" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
         </div>
 

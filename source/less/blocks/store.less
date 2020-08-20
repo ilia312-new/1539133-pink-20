@@ -5,7 +5,13 @@
   background-color: transparent;
 
   @media @tablet {
-    width: @tablet-width - 360px;
+    padding: 0 15px;
+    width: @tablet-width / 2;
+  }
+
+  @media @desktop {
+    padding: 0;
+    width: @mobile-width;
   }
 }
 
