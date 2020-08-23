@@ -51,16 +51,16 @@
           <ul class="store__list">
             <li class="store__item">
               <a class="store__link" href="#" aria-label="iOS">
-                <img src="img/logo-apple.svg" alt="iOS-sign">
+                <img src="img/logo-apple.svg" alt="iOS-sign" width="46" height="57">
               </a>
             </li>
             <li class="store__item">
-              <a class="store__link" href="#" aria-label="Android">
+              <a class="store__link" href="#" aria-label="Android" width="42" height="47">
                 <img src="img/logo-android.svg" alt="Android-logo">
               </a>
             </li>
             <li class="store__item">
-              <a class="store__link" href="#" aria-label="Windows">
+              <a class="store__link" href="#" aria-label="Windows" width="44" height="42">
                 <img src="img/logo-microsoft.svg" alt="Windows-logo">
               </a>
             </li>
@@ -126,12 +126,13 @@
         </section>
 
         <section class="price">
-          <h4 class="visually-hidden">Стоимость предложения</h4>
+          <h4 class="price-title">Стоимость предложения</h4>
 
           <div class="price__slider">
             <table class="price-table">
               <thead>
                 <tr>
+                  <th class="price-table__header"></th>
                   <th class="price-table__header">
                     <span class="price-table__license-type">База</span>
                     <span class="price-table__license-price">1,99 USD</span>
@@ -151,32 +152,34 @@
               <tbody>
                 <tr>
                   <td class="price-table__cell">Розовый фильтр</td>
-                  <td class="price-table__cell">Розовый фильтр</td>
-                  <td class="price-table__cell">Розовый фильтр</td>
+                  <td class="price-table__cell"><div class="price-table__option" data-option="Розовый фильтр"><span class="price-table__option-value price-table__option-value--on"></span></div></td>
+                  <td class="price-table__cell"><div class="price-table__option" data-option="Розовый фильтр"><span class="price-table__option-value price-table__option-value--on"></span></div></td>
+                  <td class="price-table__cell"><div class="price-table__option" data-option="Розовый фильтр"><span class="price-table__option-value price-table__option-value--on"></span></div></td>
                 </tr>
                 <tr>
                   <td class="price-table__cell">Смайлики</td>
-                  <td class="price-table__cell">Смайлики</td>
-                  <td class="price-table__cell">Смайлики</td>
+                  <td class="price-table__cell"><div class="price-table__option" data-option="Смайлики"><span class="price-table__option-value price-table__option-value--off"></span></div></td>
+                  <td class="price-table__cell"><div class="price-table__option" data-option="Смайлики"><span class="price-table__option-value price-table__option-value--on"></span></div></td>
+                  <td class="price-table__cell"><div class="price-table__option" data-option="Смайлики"><span class="price-table__option-value price-table__option-value--on"></span></div></td>
                 </tr>
                 <tr>
                   <td class="price-table__cell">Комментарии</td>
-                  <td class="price-table__cell">Комментарии</td>
-                  <td class="price-table__cell">Комментарии</td>
+                  <td class="price-table__cell"><div class="price-table__option" data-option="Комментарии"><span class="price-table__option-value price-table__option-value--off"></span></div></td>
+                  <td class="price-table__cell"><div class="price-table__option" data-option="Комментарии"><span class="price-table__option-value price-table__option-value--off"></span></div></td>
+                  <td class="price-table__cell"><div class="price-table__option" data-option="Комментарии"><span class="price-table__option-value price-table__option-value--on"></span></div></td>
                 </tr>
               </tbody>
             </table>
             <div class="price__slider-controls slider-controls">
-<!--        <button class="slider-controls__button" type="button" aria-label="1"></button>
-            <button class="slider-controls__button" type="button" aria-label="2"></button>
-            <button class="slider-controls__button" type="button" aria-label="3"></button>
--->
+              <button class="slider-controls__button" type="button" aria-label="1"></button>
+              <button class="slider-controls__button slider-controls__button--current" type="button" aria-label="2"></button>
+              <button class="slider-controls__button" type="button" aria-label="3"></button>
             </div>
           </div>
         </section>
 
         <section class="contacts">
-          <h5 class="visually-hidden">Контакты</h5>
+          <h5>Контакты</h5>
 
           <p class="contacts__title">Остались вопросы?<br>Свяжитесь с нами!</p>
 
@@ -205,7 +208,9 @@
 
         <div class="map">
           <picture>
-            <img class="map__image" src="img/bg-map-mobile@1x.png" width="320px" height="645px">
+            <source media="(min-width: 1080px)" srcset="img/bg-map-desktop@1x.jpg">
+            <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg">
+            <img class="map__image" srcset="img/bg-map-mobile@1x.png" width="320px" height="645px">
           </picture>
           <div class="map__marker"></div>
         </div>

@@ -28,10 +28,9 @@
 }
 
 .main-menu__item {
-  flex-basis: 20%;
+  flex-basis: 21%;
   padding: 0;
-  height: 62px;
-  flex-shrink: 0;
+  flex-grow: 1;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
@@ -48,7 +47,7 @@
 }
 
 .main-menu__item:last-child {
-  border-bottom: 1px solid #000000;
+  border-bottom: 0;
 
   @media @desktop {
     margin-right: 40px;
@@ -56,9 +55,7 @@
 }
 
 .main-menu__item a {
-  padding: 0 20px;
-  padding-top: 15px;
-  padding-bottom: 0;
+  padding: 15px 20px;
   display: block;
   text-decoration: none;
   color: #ffffff;

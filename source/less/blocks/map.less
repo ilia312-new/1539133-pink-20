@@ -5,7 +5,11 @@
   padding: 0;
   min-width: @mobile-width;
   max-width: @desktop-width;
-  height: 20vh;
+  height: 24vh;
+
+  @media @tablet {
+    height: 35vh;
+  }
 
   @media @desktop {
     padding-left: 10px;
@@ -15,7 +19,10 @@
   &::before {
     content: "";
     position: absolute;
-    z-index: 10;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: @mobile-width;
     height: 33px;
     background-image: url("../img/bg-triangle-white-footer.svg");
     background-repeat: no-repeat;
@@ -23,11 +30,13 @@
     background-size: 100% 33px;
 
     @media @tablet {
+      width: @tablet-width;
       height: 67px;
       background-size: 100% 67px;
     }
 
     @media @desktop {
+      width: auto;
       height: 104px;
       background-size: 100% 104px;
     }
@@ -36,23 +45,12 @@
 
 .map__image {
   position: absolute;
-  top: -222%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: auto;
-
-  @media @tablet {
-    top: -93%;
-    background-image: url("../img/bg-map-tablet@1x.jpg");
-  }
-
-  @media @desktop {
-    top: -53%;
-    background-image: url("../img/bg-map-desktop@1x.jpg");
-  }
 }
 
 .map__marker {

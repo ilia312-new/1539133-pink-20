@@ -1,7 +1,7 @@
 .store__content {
   box-sizing: border-box;
-  padding: 0 20px;
-  width: 100%;
+  padding: 0;
+  width: auto;
   background-color: transparent;
 
   @media @tablet {
@@ -16,9 +16,9 @@
 }
 
 .store__title {
-  padding: 0 20px 0 20px;
-  margin: 0;
-  margin-bottom: 335px;
+  padding: 0 30px;
+  padding-top: 0;
+  margin-bottom: 340px;
   box-sizing: border-box;
   top: 0;
   font-size: 24px;
@@ -39,10 +39,9 @@
 }
 
 .store__button {
-  position: relative;
   display: block;
   box-sizing: border-box;
-  padding: 20px 18px;
+  padding: 15px;
   font-size: 18px;
   font-weight: bold;
   line-height: 18px;
@@ -68,14 +67,11 @@
 }
 
 .store__list {
-  position: relative;
   margin-top: 32px;
-  margin-bottom: 21px;
+  margin-bottom: 23px;
   margin-left: 20px;
   padding-left: 0;
-  width: @mobile-width - 80;
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   list-style: none;
 
@@ -96,9 +92,11 @@
 }
 
 .store__link {
-  display: block;
-  width: 55px;
-  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 56px;
+  height: 56px;
 }
 
 .store__link img {

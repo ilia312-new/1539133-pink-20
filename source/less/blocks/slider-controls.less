@@ -1,0 +1,34 @@
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12px;
+}
+
+.slider-controls__button {
+  box-sizing: content-box;
+  margin-left: 9px;
+  margin-right: 10px;
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  border: 0;
+  border-radius: 50%;
+  font-style: inherit;
+  background-color: fade(@dark-blue, 30%);
+  cursor: pointer;
+}
+
+.slider-controls__button--current {
+  box-shadow: 0 0 0 3px @dark-blue;
+  background-color: transparent;
+  cursor: default;
+}
+
+.slider-controls__button--current:hover {
+  background-color: fade(@dark-blue, 60%);
+}
+
+.slider-controls__button--current:active {
+  background-color: fade(@dark-blue, 10%);
+}

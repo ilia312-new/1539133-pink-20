@@ -42,10 +42,10 @@
 
 .page-header__store {
   margin: 0;
-  padding: 20px 0;
-  width: 100%;
+  padding: 0 20px 30px;
+  width: @mobile-width - 40;
   background-image: url("../img/iphone-hand-mobile@1x.png");
-  background-position: 50% 110px;
+  background-position: 0 90px;
   background-size: auto;
   background-repeat: no-repeat;
 
@@ -54,7 +54,9 @@
   }
 
   @media @tablet {
+    margin-bottom: -10px;
     padding: 93px 0 110px;
+    width: @tablet-width - 40;
     max-width: @tablet-max-width;
     background-image: url("../img/iphone-hand-tablet@1x.png");
     background-position: -20px bottom;
