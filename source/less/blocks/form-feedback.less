@@ -177,8 +177,6 @@
 }
 
 .form-feedback__legend {
-  .outline-layout-green;
-
   margin-left: auto;
   margin-right: auto;
   padding: 0;
@@ -189,6 +187,7 @@
   background-color: transparent;
 
   @media @tablet {
+    content: "";
     transform: translateY(0);
   }
 }
@@ -464,6 +463,7 @@
   width: auto;
 
   @media @tablet {
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
