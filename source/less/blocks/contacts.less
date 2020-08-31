@@ -13,11 +13,6 @@
   }
 }
 
-.contacts h5 {
-  position: absolute;
-  top: -62.8px;
-}
-
 .contacts__title {
   margin-top: 24px;
   margin-bottom: 35px;
@@ -67,6 +62,8 @@
   }
 
   @media @desktop {
+    width: auto;
+    flex-basis: 25%;
     margin-bottom: 0;
   }
 
@@ -92,7 +89,9 @@
 }
 
 .contacts__item--address {
-  padding: 0 20%;
+  @media @tablet {
+    width: @tablet-width;
+  }
 
   @media @desktop {
     order: 2;

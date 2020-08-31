@@ -14,7 +14,7 @@
   @media @tablet {
     background-color: inherit;
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: 50% 369px;
+    background-position: 50% 259px;
 
     @media @retina {
       background-image: url("../img/bg-back-tablet@1x.jpg");
@@ -40,6 +40,20 @@
   }
 }
 
+.page-header__logo {
+  width: 146px;
+  height: 40px;
+
+  @media @tablet {
+    width: auto;
+    height: auto;
+  }
+
+  @media @desktop {
+    width: auto;
+  }
+}
+
 // uncorrect width in media
 
 .page-header__store {
@@ -57,7 +71,7 @@
 
   @media @tablet {
     margin-bottom: -10px;
-    padding: 93px 0 110px;
+    padding: 90px 0 105px;
     width: @tablet-width - 40;
     max-width: @tablet-max-width;
     background-image: url("../img/iphone-hand-tablet@1x.png");
@@ -69,10 +83,10 @@
   }
 
   @media @desktop {
-    padding: 108px 122px;
+    padding: 108px 122px 124px;
     min-width: @desktop-width - 20;
     background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-position: 50% bottom;
+    background-position: 39% bottom;
 
     @media @retina {
       background-image: url("../img/iphone-hand-desktop@1x.png");
