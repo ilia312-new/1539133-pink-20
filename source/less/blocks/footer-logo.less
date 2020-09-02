@@ -1,0 +1,18 @@
+.footer-logo__image {
+  display: block;
+  pointer-events: none;
+}
+
+.footer-logo__image--mobile {
+  @media @desktop {
+    display: none;
+  }
+}
+
+.footer-logo__image--desktop {
+  display: none;
+
+  @media @desktop {
+    display: block;
+  }
+}

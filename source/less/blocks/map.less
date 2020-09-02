@@ -5,11 +5,16 @@
   padding: 0;
   min-width: @mobile-width;
   max-width: @desktop-width;
-  height: 490px;
+  height: 193px;
+
+  @media @tablet {
+    height: 393px;
+  }
 
   @media @desktop {
     padding-left: 10px;
     padding-right: 10px;
+    height: 495px;
   }
 
   &::before {

@@ -22,20 +22,24 @@
 }
 
 .gallery__photo-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: auto;
   margin: 0;
   margin-top: 20px;
   padding: 0;
+  row-gap: 1rem;
 
   @media @tablet {
-    display: flex;
-    flex-wrap: wrap;
     width: 90%;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    row-gap: 1rem;
   }
 
   @media @desktop {
@@ -61,7 +65,7 @@
 .gallery__photo--hot {
   position: relative;
   overflow: hidden;
-  margin: 0 auto;
+  margin: 0;
   width: auto;
   max-width: 100vw;
 }
