@@ -22,14 +22,15 @@
 
 .slider-reviews__slide {
   display: block;
-  flex-flow: column wrap;
-  align-items: center;
-  height: 238px;
+  box-sizing: border-box;
   line-height: 30px;
 
   @media @tablet {
+    padding-top: 26px;
     display: flex;
-    height: 187px;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
   }
 
   @media @desktop {
@@ -40,22 +41,38 @@
 }
 
 .slider-reviews__author {
-  margin: 13px 0;
+  margin: 5% 0;
+  flex-basis: 10%;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
 
   @media @tablet {
     order: 1;
-    margin-top: 20px;
-    margin-bottom: 0;
     font-size: 20px;
   }
 
   @media @desktop {
-    margin-top: 21px;
+    margin-top: 5%;
+    margin-bottom: 0;
     font-size: 24px;
     font-weight: 700;
+  }
+}
+
+
+.slider-reviews__author-description {
+  display: none;
+
+  @media @tablet {
+    order: 2;
+    margin: 0;
+    flex-basis: 10%;
+    display: block;
+  }
+
+  @media @desktop {
+    font-size: 18px;
   }
 }
 
@@ -67,13 +84,13 @@
 
   @media @tablet {
     order: 0;
-    margin-bottom: 13px;
+    flex-basis: 70%;
     max-height: 90px;
     font-size: 18px;
   }
 
   @media @desktop {
-    position: relative;
+    padding-top: 20px;
   }
 }
 
