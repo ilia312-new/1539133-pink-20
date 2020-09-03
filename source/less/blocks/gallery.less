@@ -30,10 +30,11 @@
   margin: 0;
   margin-top: 20px;
   padding: 0;
-  row-gap: 1rem;
+  row-gap: 1.5rem;
 
   @media @tablet {
-    width: 90%;
+    width: 94%;
+    height: 1410px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
@@ -43,6 +44,8 @@
   }
 
   @media @desktop {
+    width: 79%;
+    height: 1165px;
     margin-bottom: 0;
   }
 }
@@ -52,13 +55,13 @@
   width: auto;
 
   @media @tablet {
-    flex-basis: 40%;
+    flex-basis: calc(45% + 20px);
     display: flex;
     flex-direction: column;
   }
 
   @media @desktop {
-    flex-basis: 30%;
+    flex-basis: 32%;
   }
 }
 

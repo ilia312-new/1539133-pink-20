@@ -37,7 +37,7 @@
   left: 140px;
   z-index: 999;
   display: block;
-  padding: 14px 20px;
+  padding: 10px;
   width: auto;
   height: auto;
   font-style: normal;
@@ -48,12 +48,12 @@
   border: 0;
 
   @media @tablet {
-    top: 20px;
-    left: 460px;
+    top: 50px;
+    left: 490px;
   }
 
   @media @desktop {
-    left: 880px;
+    left: 930px;
   }
 }
 
@@ -67,7 +67,7 @@
 }
 
 .photo__image--hot {
-  width: auto;
+  width: 100vw;
   margin: 0 auto;
 }
 
@@ -93,11 +93,15 @@
   margin: 0 auto;
 
   @media @tablet {
-    width: 90%;
+    width: 94%;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 1.7em 2.3em 0.9em 1.9em;
+    padding: 1.6em 2.3em 0.9em 1.9em;
     margin: 0 auto;
+  }
+
+  @media @desktop {
+    width: 79%;
   }
 }
 

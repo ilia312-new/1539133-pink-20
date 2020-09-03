@@ -7,12 +7,11 @@
   width: @mobile-width;
 
   @media @tablet {
-    width: 100vw;
+    width: auto;
   }
 
   @media @desktop {
     padding-bottom: 28px;
-    width: @desktop-width - 280;
   }
 }
 
@@ -37,15 +36,19 @@
   text-align: center;
 
   @media @tablet {
-    width: @tablet-width / 2;
     font-size: 18px;
   }
 }
 
 .photo-editor__form-wrapper {
+  width: @mobile-width;
   background-color: @silver;
 
+  @media @tablet {
+    width: auto;
+  }
+
   @media @desktop {
-    background-color: transparent;
+    width: 79%;
   }
 }
