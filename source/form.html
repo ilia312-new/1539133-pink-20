@@ -13,11 +13,15 @@
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
-              <picture>
-                <source media="(min-width: 1080px)" srcset="img/logo-pink-white-desktop.svg" type="image/svg+xml">
-                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg" type="image/svg+xml">
-                <img srcset="img/logo-pink-white-mobile.svg" alt="Pink">
-              </picture>
+              <svg class="header-logo__image header-logo__image--desktop" width="146" height="40">
+                <use xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
+              </svg>
+              <svg class="header-logo__image header-logo__image--tablet" width="146" height="40">
+                <use xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
+              </svg>
+              <svg class="header-logo__image header-logo__image--mobile" width="74" height="23">
+                <use xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
+              </svg>
             </a>
 
           <button class="main-nav__toggle main-nav__toggle--cross" type="button" aria-label="Меню"></button>
@@ -187,38 +191,52 @@
     <footer class="page-footer">
       <div class="page-footer__content-wrapper">
         <div class="page-footer__icon-wrapper">
-          <a class="page-footer__logo" href="index.html">
-            <picture>
-              <source media="(min-width: 1080px)" srcset="img/logo-pink-black-desktop.svg" type="image/svg+xml">
-              <img src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
-            </picture>
+          <a class="page-footer__logo" href="index.html" aria-label="Логотип сайта Пинк">
+            <svg class="footer-logo__image footer-logo__image--mobile" width="146" height="40">
+              <use xlink:href="img/symbols.svg#logo-pink-blue-mobile"></use>
+            </svg>
+            <svg class="footer-logo__image footer-logo__image--desktop" width="146" height="40">
+              <use xlink:href="img/symbols.svg#logo-pink-blue-desktop"></use>
+            </svg>
           </a>
         </div>
 
         <ul class="social-links">
           <li class="social-links__item">
             <a class="social-links__link" href="https://twitter.com" aria-label="Twitter">
-              <img src="img/icon-twitter.svg" width="18px" height="15px" alt="Twitter">
+              <svg width="17" height="14">
+                <use xlink:href="img/symbols.svg#icon-twitter"></use>
+              </svg>
+      <!--        <img src="img/icon-twitter.svg" width="18px" height="15px" alt="Twitter"> -->
             </a>
           </li>
           <li class="social-links__item">
             <a class="social-links__link" href="https://www.facebook.com" aria-label="Facebook">
-              <img src="img/icon-facebook.svg" width="9px" height="19px" alt="Facebook">
+              <svg width="8" height="18">
+                <use xlink:href="img/symbols.svg#icon-facebook"></use>
+              </svg>
+      <!--        <img src="img/icon-facebook.svg" width="9px" height="19px" alt="Facebook"> -->
             </a>
           </li>
           <li class="social-links__item">
             <a class="social-links__link" href="https://www.youtube.com" aria-label="Youtube">
-              <img src="img/icon-youtube.svg" width="15px" height="14px" alt="Youtube">
+              <svg width="14" height="13">
+                <use xlink:href="img/symbols.svg#icon-youtube"></use>
+              </svg>
+        <!--      <img src="img/icon-youtube.svg" width="15px" height="14px" alt="Youtube"> -->
             </a>
           </li>
         </ul>
 
         <div class="page-footer__copyright">
           <span class="page-footer__copyright-text">Разработано</span>
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru" aria-label="HTML Academy"></a>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru" aria-label="HTML Academy">
+            <svg width="27" height="34">
+              <use xlink:href="img/symbols.svg#htmlacademylink"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </footer>
-
   </body>
 </html>
