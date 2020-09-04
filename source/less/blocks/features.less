@@ -2,7 +2,7 @@
   width: 100%;
   background-color: #f2f2f2;
   background-image: url("../img/bg-triangle-white.svg");
-  background-size: 100% 32px;
+  background-size: 100% 25px;
   background-position: 0 0;
   background-repeat: no-repeat;
 
@@ -24,7 +24,8 @@
   justify-content: center;
   background-color: transparent;
   background-image: url("../img/iphone-screen-mobile@1x.png");
-  background-position: 50% bottom;
+  background-position: 50% (100% + 10px);
+  background-size: auto;
   background-repeat: no-repeat;
 
   @media @retina {
@@ -60,14 +61,14 @@
 
 .features__item {
   margin-bottom: 13px;
-  width: 80%;
+  width: @mobile-width - 40;
   text-align: center;
   background-position: 50% 0;
   background-repeat: no-repeat;
 
   @media @tablet {
     margin-bottom: 0;
-    width: 45%;
+    width: @mobile-width - 10;
     text-align: left;
   }
 
@@ -105,6 +106,7 @@
 }
 
 .features__item-title {
+  visibility: visible;
   margin-top: 18px;
   margin-bottom: 12px;
   box-sizing: border-box;

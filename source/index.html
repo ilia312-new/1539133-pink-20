@@ -13,11 +13,20 @@
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
-              <picture>
-                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg" type="image/svg+xml">
+              <svg class="header-logo__image header-logo__image--desktop" width="146" height="40">
+                <use xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
+              </svg>
+              <svg class="header-logo__image header-logo__image--tablet" width="146" height="40">
+                <use xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
+              </svg>
+              <svg class="header-logo__image header-logo__image--mobile" width="74" height="23">
+                <use xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
+              </svg>
+            <!--  <picture>
                 <source media="(min-width: 1080px)" srcset="img/logo-pink-white-desktop.svg" type="image/svg+xml">
-                <img src="img/logo-pink-white-mobile.svg" alt="Pink">
-              </picture>
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg" type="image/svg+xml">
+                <img srcset="img/logo-pink-white-mobile.svg" alt="Pink">
+              </picture> -->
             </a>
 
             <button class="main-nav__toggle main-nav__toggle--cross" type="button" aria-label="Меню"></button>
@@ -51,17 +60,17 @@
           <ul class="store__list">
             <li class="store__item">
               <a class="store__link" href="#" aria-label="iOS">
-                <img src="img/logo-apple.svg" alt="iOS-sign">
+                <img src="img/logo-apple.svg" alt="iOS-sign" width="46" height="57">
               </a>
             </li>
             <li class="store__item">
               <a class="store__link" href="#" aria-label="Android">
-                <img src="img/logo-android.svg" alt="Android-logo">
+                <img src="img/logo-android.svg" alt="Android-logo" width="42" height="47">
               </a>
             </li>
             <li class="store__item">
               <a class="store__link" href="#" aria-label="Windows">
-                <img src="img/logo-microsoft.svg" alt="Windows-logo">
+                <img src="img/logo-microsoft.svg" alt="Windows-logo" width="44" height="42">
               </a>
             </li>
           </ul>
@@ -100,7 +109,7 @@
               <span class="advantage__image-text">24</span>
             </div>
             <div class="advantage__description">
-              <h3 class="advantage__title">эффект 24 часа!</h3>
+              <h3 class="advantage__title">Эффект <span>на</span>24 часа!</h3>
               <p class="advantage__text">Британские ученые провели исследования и доказали,
 что положительный эффект от использования приложения длится целые сутки!</p>
               <a class="advantage__link" href="#">Узнать больше об исследовании</a>
@@ -112,32 +121,33 @@
 
           <div class="slider-reviews__slide">
             <p class="slider-reviews__author">Николай Петров</p>
+            <p class="slider-reviews__author-description">25 лет, водитель трамвая</p>
             <blockquote class="slider-reviews__quote">
               <p class="slider-reviews__quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
               </p>
             </blockquote>
           </div>
           <div class="slider-reviews__slider-controls slider-controls">
-<!--        <button class="slider-controls__button" type="button" aria-label="1"></button>
+            <button class="slider-controls__button" type="button" aria-label="1"></button>
             <button class="slider-controls__button" type="button" aria-label="2"></button>
             <button class="slider-controls__button" type="button" aria-label="3"></button>
--->
           </div>
         </section>
 
         <section class="price">
-          <h4 class="visually-hidden">Стоимость предложения</h4>
+          <h4 class="price__title">Стоимость предложения</h4>
 
           <div class="price__slider">
             <table class="price-table">
               <thead>
                 <tr>
+                  <th class="price-table__header"></th>
                   <th class="price-table__header">
                     <span class="price-table__license-type">База</span>
                     <span class="price-table__license-price">1,99 USD</span>
                   </th>
                   <th class="price-table__header price-table__header--hit">
-                    <!-- Сделать хит продаж в уголке в ленточке -->
+                    <span>хит</span>
                     <span class="price-table__license-type">Стандарт</span>
                     <span class="price-table__license-price">3,99 USD</span>
                   </th>
@@ -151,26 +161,73 @@
               <tbody>
                 <tr>
                   <td class="price-table__cell">Розовый фильтр</td>
-                  <td class="price-table__cell">Розовый фильтр</td>
-                  <td class="price-table__cell">Розовый фильтр</td>
+                  <td class="price-table__cell">
+                    <div class="price-table__option" data-option="Розовый фильтр">
+                      <span class="price-table__option-value price-table__option-value--on">
+                      </span>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__option" data-option="Розовый фильтр">
+                      <span class="price-table__option-value price-table__option-value--on">
+                      </span>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__option" data-option="Розовый фильтр">
+                      <span class="price-table__option-value price-table__option-value--on">
+                      </span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td class="price-table__cell">Смайлики</td>
-                  <td class="price-table__cell">Смайлики</td>
-                  <td class="price-table__cell">Смайлики</td>
+                  <td class="price-table__cell">
+                    <div class="price-table__option" data-option="Смайлики">
+                      <span class="price-table__option-value price-table__option-value--off">
+                      </span>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__option" data-option="Смайлики">
+                      <span class="price-table__option-value price-table__option-value--on">
+                      </span>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__option" data-option="Смайлики">
+                      <span class="price-table__option-value price-table__option-value--on">
+                      </span>
+                    </div>
+                  </td>
                 </tr>
                 <tr>
                   <td class="price-table__cell">Комментарии</td>
-                  <td class="price-table__cell">Комментарии</td>
-                  <td class="price-table__cell">Комментарии</td>
+                  <td class="price-table__cell">
+                    <div class="price-table__option" data-option="Комментарии">
+                      <span class="price-table__option-value price-table__option-value--off">
+                      </span>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__option" data-option="Комментарии">
+                      <span class="price-table__option-value price-table__option-value--off">
+                      </span>
+                    </div>
+                  </td>
+                  <td class="price-table__cell">
+                    <div class="price-table__option" data-option="Комментарии">
+                      <span class="price-table__option-value price-table__option-value--on">
+                      </span>
+                    </div>
+                  </td>
                 </tr>
               </tbody>
             </table>
             <div class="price__slider-controls slider-controls">
-<!--        <button class="slider-controls__button" type="button" aria-label="1"></button>
-            <button class="slider-controls__button" type="button" aria-label="2"></button>
-            <button class="slider-controls__button" type="button" aria-label="3"></button>
--->
+              <button class="slider-controls__button" type="button" aria-label="1"></button>
+              <button class="slider-controls__button slider-controls__button--current" type="button" aria-label="2"></button>
+              <button class="slider-controls__button" type="button" aria-label="3"></button>
             </div>
           </div>
         </section>
@@ -205,7 +262,9 @@
 
         <div class="map">
           <picture>
-            <img class="map__image" src="img/bg-map-mobile@1x.png" width="320px" height="645px">
+            <source media="(min-width: 1080px)" srcset="img/bg-map-desktop@1x.jpg">
+            <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg">
+            <img class="map__image" srcset="img/bg-map-mobile@1x.png" width="320px" height="645px">
           </picture>
           <div class="map__marker"></div>
         </div>
@@ -214,11 +273,13 @@
       <footer class="page-footer">
         <div class="page-footer__content-wrapper">
           <div class="page-footer__icon-wrapper">
-            <a class="page-footer__logo" href="index.html">
-              <picture>
-                <source media="(min-width: 660px)" srcset="img/logo-pink-blue-desktop.svg 1x" type="img/svg+xml">
-                <img src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
-              </picture>
+            <a class="page-footer__logo" href="index.html" aria-label="Логотип сайта Пинк">
+              <svg class="footer-logo__image footer-logo__image--mobile" width="146" height="40">
+                <use xlink:href="img/symbols.svg#logo-pink-blue-mobile"></use>
+              </svg>
+              <svg class="footer-logo__image footer-logo__image--desktop" width="146" height="40">
+                  <use xlink:href="img/symbols.svg#logo-pink-blue-desktop"></use>
+              </svg>
             </a>
           </div>
 

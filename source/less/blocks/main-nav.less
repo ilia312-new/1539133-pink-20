@@ -1,9 +1,8 @@
 .main-nav {
-  height: 325px;
   box-sizing: border-box;
 
   @media @desktop {
-    padding: 0 100px;
+    padding: 0 130px;
     height: 110px;
     display: flex;
     justify-content: space-between;
@@ -13,13 +12,14 @@
 }
 
 .main-nav__logo-wrapper {
-  padding: 0 20px;
-  padding-top: 21px;
-  height: 69px;
+  padding: 21px 20px 21px;
+  height: 27px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   @media @tablet {
+    height: 39px;
     padding-top: 27px;
     padding-bottom: 43px;
   }
@@ -31,14 +31,7 @@
 }
 
 .main-nav__header-logo {
-  flex-basis: 25%;
-  flex-grow: 0;
-  margin-right: auto;
   background-color: transparent;
-
-  @media @tablet {
-    height: 40px;
-  }
 
   &:hover {
     color: #d22856;
@@ -50,9 +43,10 @@
 }
 
 .main-nav__toggle {
-  height: auto;
+  padding: 0;
+  width: 23px;
+  height: 27px;
   align-self: flex-end;
-  flex: 0 0 auto;
   border: 0;
   background-color: transparent;
   color: white;
@@ -68,14 +62,12 @@
 }
 
 .main-nav__toggle--burger {
-  width: 50px;
   background-image: url("../img/icon-menu-burger.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
 }
 
 .main-nav__toggle--cross {
-  width: 50px;
   background-image: url("../img/icon-menu-cross.svg");
   background-position: 0 0;
   background-repeat: no-repeat;

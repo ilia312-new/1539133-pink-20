@@ -13,13 +13,13 @@
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
               <picture>
-                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg" type="image/svg+xml">
                 <source media="(min-width: 1080px)" srcset="img/logo-pink-white-desktop.svg" type="image/svg+xml">
-                <img src="img/logo-pink-white-mobile.svg" alt="Pink">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg" type="image/svg+xml">
+                <img srcset="img/logo-pink-white-mobile.svg" alt="Pink">
               </picture>
             </a>
 
-            <button class="main-nav__toggle main-nav__toggle--burger" type="button" aria-label="Меню"></button>
+            <button class="main-nav__toggle main-nav__toggle--cross" type="button" aria-label="Меню"></button>
           </div>
 
           <ul class="main-menu">
@@ -46,8 +46,7 @@
 
     <main class="page-inner">
       <div class="page-inner__title-wrapper content-wrapper">
-        <p class="page-inner__title">Взгляните на фотографии, которые выкладывают пользователи!&thinsp;<br>Видите, как не хватает ваших?</p>
-<!-- не вижу другого способа переноса другую строчку, поиграюсь с шириной контейнера -->
+        <p class="page-inner__title">Взгляните на фотографии, которые выкладывают пользователи!&thinsp;Видите, как не хватает ваших?</p>
       </div>
 
       <section class="gallery">
@@ -57,9 +56,9 @@
         <figure class="galley__photo gallery__photo-hot">
           <a class="photo__link photo__link--hot" href="#">
             <picture>
-              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg">
               <source media="(min-width: 1080px)" srcset="img/panorama-desktop@1x.jpg">
-              <img class="photo__image" src="img/panorama-mobile@1x.jpg" alt="Фотография дня">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg">
+              <img class="photo__image photo__image--hot" src="img/panorama-mobile@1x.jpg" alt="Фотография дня">
             </picture>
 
             <span>Панорама дня</span>
@@ -83,8 +82,8 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
-                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg">
                 <source media="(min-width: 1080px)" srcset="img/photo-car-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg">
                 <img class="photo__image" src="img/photo-car-mobile@1x.jpg" alt="Фото 1">
               </picture>
             </a>
@@ -107,8 +106,8 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
-                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg">
                 <source media="(min-width: 1080px)" srcset="img/photo-drumset-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg">
                 <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" alt="Фото 2">
               </picture>
             </a>
@@ -131,8 +130,8 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
-                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg">
                 <source media="(min-width: 1080px)" srcset="img/photo-window-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg">
                 <img class="photo__image" src="img/photo-window-mobile@1x.jpg" alt="Фото 3">
               </picture>
             </a>
@@ -155,8 +154,8 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
-                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg">
                 <source media="(min-width: 1080px)" srcset="img/photo-fair-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg">
                 <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" alt="Фото 4">
               </picture>
             </a>
@@ -179,8 +178,8 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
-                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg">
                 <source media="(min-width: 1080px)" srcset="img/photo-pov-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg">
                 <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" alt="Фото 5">
               </picture>
             </a>
@@ -203,8 +202,8 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
-                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg">
                 <source media="(min-width: 1080px)" srcset="img/photo-wing-desktop@1x.jpg">
+                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg">
                 <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" alt="Фото 6">
               </picture>
             </a>
@@ -228,7 +227,7 @@
 
       <section class="photo-editor">
         <div class="photo-editor__content-wrapper">
-          <p class="photo-editor__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+          <p class="photo-editor__title">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
           <!-- пограться с шириной котейнера -->
         </div>
         <div class="photo-editor__form-wrapper content-wrapper">
@@ -252,7 +251,7 @@
   <!-- шкала кадрирования -->
                 <div class="form-photo__filter form-photo__filter--mobile">
                     <div class="form-photo__icon-wrapper">
-                      <img class="form-photo__icon form-photo__icon--crop" src="img/icon-editor-crop.svg" alt="" width="44" height="44">
+                      <img class="form-photo__icon form-photo__icon--crop" src="img/icon-editor-crop.svg" alt="" width="48" height="48">
                     </div>
                     <input class="form-photo__filter-range" type="range" min="1" max="100" name="crop" value="85">
                 </div>
@@ -287,7 +286,7 @@
         <div class="page-footer__icon-wrapper">
           <a class="page-footer__logo" href="index.html">
             <picture>
-              <source media="(min-width: 660px)" src="img/logo-pink-blue-desktop.svg 1x" type="img/svg">
+              <source media="(min-width: 1080px)" srcset="img/logo-pink-black-desktop.svg" type="image/svg+xml">
               <img src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
             </picture>
           </a>

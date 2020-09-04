@@ -42,9 +42,8 @@
 
   @media @tablet {
     justify-content: space-around;
-    margin-left: -10px;
-    margin-right: -10px;
-    padding-top: 42px;
+    margin: 0;
+    padding-top: 30px;
   }
 
   @media @desktop {
@@ -58,10 +57,13 @@
   width: 280px;
 
   @media @tablet {
+    padding-top: 10px;
     margin-bottom: 43px;
   }
 
   @media @desktop {
+    width: auto;
+    flex-basis: 25%;
     margin-bottom: 0;
   }
 
@@ -87,6 +89,10 @@
 }
 
 .contacts__item--address {
+  @media @tablet {
+    width: @tablet-width;
+  }
+
   @media @desktop {
     order: 2;
   }

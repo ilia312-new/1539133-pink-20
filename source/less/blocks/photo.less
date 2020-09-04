@@ -7,7 +7,7 @@
   text-decoration: none;
 
   @media @tablet {
-    width: @mobile-width - 20;
+    width: auto;
     height: 300px;
   }
 
@@ -18,19 +18,15 @@
 
 .photo__link--hot {
   position: relative;
-  width: @mobile-width;
+  width: auto;
   height: 137px;
-  left: 50%;
-  transform: translateX(-50%);
 
   @media @tablet {
-    width: auto;
-    max-width: @tablet-width + 40px;
+
     height: 509px;
   }
 
   @media @desktop {
-    max-width: @desktop-width;
     height: 506px;
   }
 }
@@ -41,9 +37,9 @@
   left: 140px;
   z-index: 999;
   display: block;
-  padding: 14px 20px;
-  width: 120px;
-  height: 20px;
+  padding: 10px;
+  width: auto;
+  height: auto;
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
@@ -52,27 +48,42 @@
   border: 0;
 
   @media @tablet {
-    top: 20px;
-    left: 460px;
+    top: 50px;
+    left: 490px;
+  }
+
+  @media @desktop {
+    left: 930px;
   }
 }
 
 .photo__image {
-  max-width: 100%;
-  height: auto;
   display: block;
+
+  @media @tablet {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.photo__image--hot {
+  width: 100vw;
+  margin: 0 auto;
 }
 
 .photo__content {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  width: @mobile-width - 40;
   box-sizing: border-box;
   padding: 18px 17px 21px;
   background-color: #f2f2f2;
 
   @media @tablet {
     padding: 23px 32px 24px 27px;
+    width: auto;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -80,18 +91,17 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 280px;
 
   @media @tablet {
+    width: 94%;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 24px 29px 13px 27px;
-    width: @tablet-width - 40px;
+    padding: 1.6em 2.3em 0.9em 1.9em;
+    margin: 0 auto;
   }
 
   @media @desktop {
-    padding: 24px 32px 12px 27px;
-    width: @desktop-width - 260px;
+    width: 79%;
   }
 }
 
@@ -132,6 +142,8 @@
 }
 
 .photo__likes--hot {
+  flex-basis: 20%;
+
   @media @tablet {
     order: 1;
   }

@@ -9,13 +9,14 @@
 
   @media @tablet {
     flex-direction: row;
-    align-items: flex-start;
-    padding-top: 40px;
-    padding-bottom: 29px;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 57px;
+    padding-bottom: 54px;
   }
 
   @media @desktop {
-    padding: 21px 40px 37px 60px;
+    padding: 57px 43px 37px 73px;
   }
 }
 
@@ -31,15 +32,12 @@
   cursor: pointer;
 
   @media @tablet {
-    margin-top: 16px;
-    margin-left: auto;
     width: 300px;
     height: 400px;
     background-image: url("../img/photo-road-tablet@1x.jpg");
   }
 
   @media @desktop {
-    margin-left: 0;
     background-image: url("../img/photo-road-desktop@1x.jpg");
   }
 }
@@ -48,15 +46,16 @@
   box-sizing: border-box;
 
   @media @tablet {
-    margin-top: 0;
     margin-left: auto;
-    margin-right: auto;
-    width: 275px;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
   }
 
   @media @desktop {
-    margin-right: 0;
-    width: 410px;
+    width: 50%;
   }
 }
 
@@ -64,12 +63,11 @@
   padding: 42px 20px 38px;
 
   @media @tablet {
-    margin-bottom: 66px;
+    flex-basis: 50%;
+    display: flex;
+    flex-wrap: wrap;
     padding: 0;
-  }
-
-  @media @desktop {
-    margin-bottom: 145px;
+    row-gap: 1rem;
   }
 }
 
@@ -119,10 +117,12 @@
   position: relative;
   top: 0;
   display: none;
+  justify-content: space-between;
   align-items: center;
-  height: 72px;
+  height: auto;
 
   @media @tablet {
+    flex-basis: 100%;
     display: flex;
   }
 
@@ -131,7 +131,7 @@
     position: absolute;
     left: -40px;
     bottom: 0;
-    width: 100vw;
+    width: calc(100% + 80px);
     height: 1px;
     background-color: #dddfe0;
 
@@ -152,14 +152,7 @@
   align-items: center;
 
   @media @tablet {
-    display: flex;
-    width: 27px;
-    height: 27px;
-  }
-
-  @media @desktop {
-    width: 28px;
-    height: 28px;
+    display: block;
   }
 }
 
@@ -170,9 +163,8 @@
 .form-photo__filter-range {
   .style-reset--input(100%; 2px; 14px);
 
-  margin-left: auto;
   width: 100%;
-  height: 14px;
+  height: 2px;
   background-color: #283645;
 
   @media @tablet {
@@ -181,7 +173,7 @@
   }
 
   @media @desktop {
-    margin-right: 30px;
+    margin-right: 40px;
     width: 288px;
   }
 }
@@ -189,9 +181,18 @@
 .form-photo__buttons {
   padding: 0;
 
-  @media @desktop {
+  @media @tablet {
     display: flex;
+    flex-basis: 33%;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  @media @desktop {
+    flex-basis: 10%;
+    flex-direction: row;
+    align-items: stretch;
   }
 }
 
@@ -209,13 +210,13 @@
   text-decoration: none;
 
   @media @tablet {
-    margin-bottom: 26px;
+    margin: 0 auto;
+    margin-bottom: 0;
     width: 260px;
   }
 
   @media @desktop {
-    margin-bottom: 0;
-    width: 45%;
+    width: 40%;
   }
 }
 

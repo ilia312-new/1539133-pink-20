@@ -14,13 +14,13 @@
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
               <picture>
-                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg" type="image/svg+xml">
                 <source media="(min-width: 1080px)" srcset="img/logo-pink-white-desktop.svg" type="image/svg+xml">
-                <img src="img/logo-pink-white-mobile.svg" alt="Pink">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg" type="image/svg+xml">
+                <img srcset="img/logo-pink-white-mobile.svg" alt="Pink">
               </picture>
             </a>
 
-            <button class="main-nav__toggle main-nav__toggle--burger" type="button" aria-label="Меню"></button>
+          <button class="main-nav__toggle main-nav__toggle--cross" type="button" aria-label="Меню"></button>
           </div>
 
           <ul class="main-menu">
@@ -47,21 +47,27 @@
 
     <main class="page-inner">
       <div class="page-inner__title-wrapper content-wrapper">
-        <p class="page-inner__title">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000миль на вашу бонусную карту</p>
+        <p class="page-inner__title">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту! <span>Пожалуйста заполните форму ниже:</span></p>
       </div>
 <!-- формы отправки -->
       <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-feedback__name-wrapper">
           <fieldset class="form-feedback__fieldset-fullname">
-            <label class="form-feedback__label form-feedback__label--fullname">Фамилия:
-              <input class="form-feedback__input" type="text" name="lastname" placeholder="Укажите фамилию *" required>
-            </label>
-            <label class="form-feedback__label form-feedback__label--fullname">Имя:
-              <input class="form-feedback__input" type="text" name="firstname" placeholder="Введите ваше имя *" required>
-            </label>
-            <label class="form-feedback__label form-feedback__label--fullname">Отчество:
-              <input class="form-feedback__input" type="text" name="middlename" placeholder="Ну и отчество тоже">
-            </label>
+            <legend class="form-feedback__legend form-feedback__legend--fullname">&nbsp;</legend>
+            <ul class="form-feedback__name-list">
+              <li class="form-feedback__name-item">
+                <label class="form-feedback__label form-feedback__label--fullname" for="lastname">Фамилия:</label>
+                <input class="form-feedback__input form-feedback__input--fullname" type="text" name="lastname" placeholder="Укажите фамилию *" required>
+              </li>
+              <li class="form-feedback__name-item">
+                <label class="form-feedback__label form-feedback__label--fullname" for="lastname">Имя:</label>
+                <input class="form-feedback__input form-feedback__input--fullname" type="text" name="firstname" placeholder="Введите ваше имя *" required>
+              </li>
+              <li class="form-feedback__name-item">
+                <label class="form-feedback__label form-feedback__label--fullname" for="lastname">Отчество:</label>
+                <input class="form-feedback__input form-feedback__input--fullname" type="text" name="middlename" placeholder="Ну и отчество тоже">
+              </li>
+            </ul>
           </fieldset>
         </div>
 
@@ -161,19 +167,19 @@
         </div>
 
         <div class="form-feedback__emotions-wrapper">
-          <fieldset class="form-feedback__fieldset">
+          <fieldset class="form-feedback__fieldset-emotion">
             <legend class="form-feedback__legend">
               Опишите свои эмоции
             </legend>
 
-            <textarea class="form-feedback__textarea form-feedback__input" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <textarea class="form-feedback__textarea" name="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
           </fieldset>
         </div>
 
         <div class="form-feedback__submit-wrapper">
           <button class="form-feedback__submit-button" type="submit">Отправить форму</button>
 
-          <p class="form-feedback__notification">* - обязательные для заполнения поля</p>
+          <p class="form-feedback__notification">* - обязательные <span>для заполнения</span> поля</p>
         </div>
       </form>
     </main>
@@ -183,7 +189,7 @@
         <div class="page-footer__icon-wrapper">
           <a class="page-footer__logo" href="index.html">
             <picture>
-              <source media="(min-width: 660px)" src="img/logo-pink-blue-desktop.svg 1x" type="img/svg">
+              <source media="(min-width: 1080px)" srcset="img/logo-pink-black-desktop.svg" type="image/svg+xml">
               <img src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Логотип Pink">
             </picture>
           </a>
