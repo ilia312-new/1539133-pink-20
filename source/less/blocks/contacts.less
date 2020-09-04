@@ -35,7 +35,7 @@
 
 .contacts__list {
   display: flex;
-  width: 100%;
+  min-width: @mobile-width;
   box-sizing: content-box;
   flex-wrap: wrap;
   justify-content: center;
@@ -43,12 +43,13 @@
 
   @media @tablet {
     justify-content: space-around;
-    margin: 0;
+    max-width: @tablet-max-width;
+    margin: 0 auto;
     padding-top: 30px;
   }
 
   @media @desktop {
-    margin: 0;
+    max-width: @desktop-width;
     padding-top: 56px;
   }
 }

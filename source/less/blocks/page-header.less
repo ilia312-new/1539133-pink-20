@@ -59,7 +59,7 @@
 
 .page-header__store {
   margin: 0 auto;
-  width: auto;
+  min-width: @mobile-width;
   padding: 0 20px;
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-position: 0 110px;
@@ -83,7 +83,7 @@
 
   @media @desktop {
     padding: 108px 122px 124px;
-    max-width: 1440px;
+    max-width: @desktop-width;
     background-image: url("../img/iphone-hand-desktop@1x.png");
     background-position: 100% bottom;
 
@@ -94,10 +94,14 @@
 }
 
 .page-header__title-wrapper {
+  margin: 0;
   padding: 15px 20px 40px;
+  min-width: @mobile-width;
   min-height: auto;
 
   @media @tablet {
+    margin: 0 auto;
+    max-width: tablet-max-width;
     padding-top: 36px;
     padding-bottom: 46px;
     min-height: 330px;
@@ -106,6 +110,9 @@
   @media @desktop {
     padding-top: 29px;
     padding-bottom: 67px;
+    padding-left: 132px;
+    padding-right: 132px;
+    max-width: @desktop-width;
     min-height: 284px;
   }
 }
