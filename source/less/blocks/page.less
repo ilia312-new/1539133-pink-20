@@ -1,7 +1,6 @@
 .page {
   margin: 0 auto;
   min-width: @mobile-width;
-  max-width: @mobile-max-width;
   height: auto;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
@@ -10,7 +9,10 @@
   background-color: @white;
 
   @media @tablet {
-    min-width: @tablet-min-width;
     max-width: @tablet-max-width;
+  }
+
+  @media @desktop {
+    max-width: none;
   }
 }

@@ -2,21 +2,14 @@
   width: 100%;
   background-color: #f2f2f2;
   background-image: url("../img/bg-triangle-white.svg");
-  background-size: 100% 25px;
+  background-size: 100%;
   background-position: 0 0;
   background-repeat: no-repeat;
-
-  @media @tablet {
-    background-size: 100% 50px;
-  }
-
-  @media @desktop {
-    background-size: 100% 92px;
-  }
 }
 
 .features__list {
   margin: 0 auto;
+  max-width: @desktop-width;
   padding: 64px 20px 305px;
   list-style-type: none;
   display: flex;
@@ -34,7 +27,6 @@
 
   @media @tablet {
     padding: 55px 20px 27px;
-    width: @tablet-width - 40px;
     flex-direction: column;
     align-items: flex-end;
     background-image: url("../img/iphone-screen-3-tablet@1x.png");
@@ -49,8 +41,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: stretch;
-    padding: 0 0 34px;
-    width: @desktop-width - 240px;
+    padding: 0 0 34px 0;
     background: none;
 
     @media @retina {

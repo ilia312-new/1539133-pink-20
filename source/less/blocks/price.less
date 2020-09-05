@@ -5,20 +5,18 @@
   padding-bottom: 32px;
   background-color: #f2f2f2;
   background-image: url("../img/bg-triangle-white.svg");
-  background-size: 100% 25px;
+  background-size: 100%;
   background-position: 0 0;
   background-repeat: no-repeat;
 
   @media @tablet {
     padding-top: 60px;
     padding-bottom: 0;
-    background-size: 100% 50px;
   }
 
   @media @desktop {
     padding-top: 112px;
     padding-bottom: 15px;
-    background-size: 100% 80px;
   }
 }
 
@@ -34,6 +32,8 @@
 }
 
 .price__slider {
+  margin: 0 auto;
+  max-width: @desktop-width;
   overflow: hidden;
   line-height: 30px;
   text-transform: uppercase;

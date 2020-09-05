@@ -1,18 +1,16 @@
 .form-feedback {
   width: auto;
-
-  @media @tablet {
-    display: flex;
-    flex-direction: column;
-    column-gap: 1em;
-    padding: 0 20px;
-  }
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  padding: 0 22px;
 
   @media @desktop {
-    flex-flow: row wrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-    row-gap: 2em;
-    padding: 0 10px;
+    padding: 0 132px;
   }
 }
 
@@ -30,14 +28,13 @@
   @media @desktop {
     padding-top: 36px;
     padding-bottom: 30px;
-    max-width: 40%;
+    flex-basis: 45%;
   }
 }
 
 .form-feedback__achivment-wrapper {
   padding-top: 38px;
   padding-bottom: 4px;
-  width: 100%;
   background-color: #f2f2f2;
 
   @media @tablet {
@@ -48,12 +45,12 @@
 
   @media @desktop {
     order: 2;
+    flex-basis: 100%;
   }
 }
 
 .form-feedback__contacts-wrapper {
   padding-bottom: 41px;
-  width: 100%;
   box-sizing: border-box;
 
   @media @tablet {
@@ -63,6 +60,7 @@
   }
 
   @media @desktop {
+    flex-basis: 100%;
     order: 3;
   }
 }
@@ -80,26 +78,26 @@
 
   @media @desktop {
     padding-top: 27px;
-    max-width: 40%;
+    flex-basis: 45%;
   }
 }
 
 .form-feedback__emotions-wrapper {
   padding-bottom: 20px;
-  width: 100%;
 
   @media @tablet {
     padding-top: 30px;
     padding-bottom: 40px;
     order: 4;
+    flex-basis: 100%;
   }
 }
 
 .form-feedback__submit-wrapper {
   padding: 29px 0 15px;
-  width: 100%;
 
   @media @tablet {
+    flex-basis: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -115,7 +113,6 @@
 // списки
 
 .form-feedback__name-list,
-.form-feedback__achivments-list,
 .form-feedback__contacts-list,
 .form-feedback__platform-list {
   list-style: none;
@@ -140,7 +137,11 @@
 }
 
 .form-feedback__achivments-list {
+  list-style: none;
+  margin: 0;
+
   @media @tablet {
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -173,10 +174,12 @@
 // пункты списков
 
 .form-feedback__name-item {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 29px;
 
   @media @tablet {
-    display: flex;
+    flex-direction: row;
     align-items: baseline;
     margin-bottom: 56px;
 
@@ -364,7 +367,6 @@
 .form-feedback__radio-sign {
   position: relative;
   flex: none;
-  left: 10%;
   padding: 0 17px;
   padding-top: 5px;
   padding-bottom: 4px;

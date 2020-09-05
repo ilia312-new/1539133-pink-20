@@ -20,13 +20,10 @@
 }
 
 .social-links__link {
-  position: relative;
-  display: block;
+  display: flex;
   width: 44px;
   height: 43px;
   color: @pink;
-  text-align: center;
-  text-decoration: none;
   border-width: 3px;
   border-style: solid;
   border-color: fade(@dark-blue, 10%);
@@ -43,7 +40,7 @@
   }
 }
 
-.social-links__link img {
+.social-links__link svg {
+  display: block;
   margin: auto;
-  transform: translateY(50%);
 }

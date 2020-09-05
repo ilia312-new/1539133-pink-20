@@ -6,28 +6,29 @@
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: 50% 279px;
   background-repeat: no-repeat;
+  background-size: image-size("../img/bg-back-mobile@1x.jpg");
 
   @media @retina {
-    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-image: url("../img/bg-back-mobile@2x.jpg");
   }
 
   @media @tablet {
-    background-color: inherit;
+    background-color: transparent;
     background-image: url("../img/bg-back-tablet@1x.jpg");
     background-position: 50% 259px;
+    background-size: cover;
 
     @media @retina {
-      background-image: url("../img/bg-back-tablet@1x.jpg");
+      background-image: url("../img/bg-back-tablet@2x.jpg");
     }
   }
 
   @media @desktop {
-    background-color: transparent;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-position: 50% 0;
 
     @media @retina {
-      background-image: url("../img/bg-back-desktop@1x.jpg");
+      background-image: url("../img/bg-back-desktop@2x.jpg");
     }
   }
 }
@@ -58,10 +59,10 @@
 
 .page-header__store {
   margin: 0 auto;
-  width: auto;
-  padding: 0 20px 30px;
+  min-width: @mobile-width;
+  padding: 0 20px;
   background-image: url("../img/iphone-hand-mobile@1x.png");
-  background-position: 50% 110px;
+  background-position: 0 110px;
   background-size: auto;
   background-repeat: no-repeat;
 
@@ -82,7 +83,7 @@
 
   @media @desktop {
     padding: 108px 122px 124px;
-    max-width: 1440px;
+    max-width: @desktop-width;
     background-image: url("../img/iphone-hand-desktop@1x.png");
     background-position: 100% bottom;
 
@@ -93,10 +94,14 @@
 }
 
 .page-header__title-wrapper {
+  margin: 0;
   padding: 15px 20px 40px;
+  min-width: @mobile-width;
   min-height: auto;
 
   @media @tablet {
+    margin: 0 auto;
+    max-width: tablet-max-width;
     padding-top: 36px;
     padding-bottom: 46px;
     min-height: 330px;
@@ -105,6 +110,9 @@
   @media @desktop {
     padding-top: 29px;
     padding-bottom: 67px;
+    padding-left: 132px;
+    padding-right: 132px;
+    max-width: @desktop-width;
     min-height: 284px;
   }
 }
