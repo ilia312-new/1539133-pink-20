@@ -9,8 +9,8 @@
 
 .features__list {
   margin: 0 auto;
-  max-width: @desktop-width;
   padding: 64px 20px 305px;
+  box-sizing: border-box;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -27,6 +27,7 @@
 
   @media @tablet {
     padding: 55px 20px 27px;
+    max-width: 660px;
     flex-direction: column;
     align-items: flex-end;
     background-image: url("../img/iphone-screen-3-tablet@1x.png");
@@ -38,10 +39,11 @@
   }
 
   @media @desktop {
+    padding: 0 10px 34px;
+    max-width: @desktop-width;
     flex-direction: row;
     justify-content: space-around;
     align-items: stretch;
-    padding: 0 0 34px 0;
     background: none;
 
     @media @retina {
@@ -52,20 +54,18 @@
 
 .features__item {
   margin-bottom: 13px;
-  width: @mobile-width - 40;
+  max-width: @mobile-width;
   text-align: center;
   background-position: 50% 0;
   background-repeat: no-repeat;
 
   @media @tablet {
     margin-bottom: 0;
-    width: @mobile-width - 10;
     text-align: left;
   }
 
   @media @desktop {
     padding-top: 339px;
-    width: 30%;
     line-height: 30px;
     text-align: center;
     background-size: 292px 302px;

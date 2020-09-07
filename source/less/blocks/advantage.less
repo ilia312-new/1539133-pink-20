@@ -20,13 +20,14 @@
   width: auto;
 
   @media @tablet {
+    max-width: @tablet-width;
     display: flex;
     justify-content: space-between;
   }
 
   @media @desktop {
     padding: 17px 10px 66px;
-    width: @desktop-width - 240px;
+    max-width: @desktop-width;
   }
 }
 
