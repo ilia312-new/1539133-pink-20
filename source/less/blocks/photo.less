@@ -90,7 +90,7 @@
   margin: 0 auto;
 
   @media @tablet {
-    width: 94%;
+    max-width: @tablet-width - 40;
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 1.6em 2.3em 0.9em 1.9em;
@@ -98,7 +98,7 @@
   }
 
   @media @desktop {
-    width: 79%;
+    max-width: @desktop-width - 260;
   }
 }
 
