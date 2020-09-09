@@ -37,11 +37,12 @@
   display: flex;
   min-width: @mobile-width;
   box-sizing: content-box;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   list-style: none;
 
   @media @tablet {
+    flex-flow: row wrap;
     justify-content: space-around;
     max-width: @tablet-max-width;
     margin: 0 auto;
