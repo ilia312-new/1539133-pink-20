@@ -12,15 +12,18 @@
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
-              <svg class="header-logo__image header-logo__image--desktop" width="146" height="40">
+              <svg class="header-logo__image" width="146" height="40">
                 <use xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
-              </svg>
-              <svg class="header-logo__image header-logo__image--tablet" width="146" height="40">
+
                 <use xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
-              </svg>
-              <svg class="header-logo__image header-logo__image--mobile" width="74" height="23">
+
                 <use xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
               </svg>
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                  <img class="header-logo__image--mobile-only" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
+              </picture>
             </a>
 
             <button class="main-nav__toggle main-nav__toggle--cross" type="button" aria-label="Меню"></button>
@@ -298,11 +301,10 @@
       <div class="page-footer__content-wrapper">
         <div class="page-footer__icon-wrapper">
           <a class="page-footer__logo" href="index.html" aria-label="Логотип сайта Пинк">
-            <svg class="footer-logo__image footer-logo__image--mobile" width="146" height="40">
-              <use xlink:href="img/symbols.svg#logo-pink-blue-mobile"></use>
-            </svg>
-            <svg class="footer-logo__image footer-logo__image--desktop" width="146" height="40">
-              <use xlink:href="img/symbols.svg#logo-pink-blue-desktop"></use>
+            <svg class="footer-logo__image" width="146" height="40">
+              <use xlink:href="img/logo-pink-footer-adaptive.svg#logo-pink-blue-mobile"></use>
+
+              <use xlink:href="img/logo-pink-footer-adaptive.svg#logo-pink-blue-desktop"></use>
             </svg>
           </a>
         </div>

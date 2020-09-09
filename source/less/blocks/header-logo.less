@@ -10,13 +10,15 @@
   }
 }
 
-.header-logo__image--mobile {
-  @media @tablet {
-    display: none;
+.header-logo__image use:nth-child(1) {
+  display: none;
+
+  @media @desktop {
+    display: block;
   }
 }
 
-.header-logo__image--tablet {
+.header-logo__image use:nth-child(2) {
   display: none;
 
   @media @tablet {
@@ -28,10 +30,14 @@
   }
 }
 
-.header-logo__image--desktop {
-  display: none;
+.header-logo__image use:nth-child(3) {
+  display: block;
 
-  @media @desktop {
-    display: block;
+  @media @tablet {
+    display: none;
   }
+}
+
+.header-logo__image--mobile-only {
+  display: none;
 }

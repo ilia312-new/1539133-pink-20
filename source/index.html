@@ -13,15 +13,18 @@
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
-              <svg class="header-logo__image header-logo__image--desktop" width="146" height="40">
+              <svg class="header-logo__image" width="146" height="40">
                 <use xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
-              </svg>
-              <svg class="header-logo__image header-logo__image--tablet" width="146" height="40">
+
                 <use xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
-              </svg>
-              <svg class="header-logo__image header-logo__image--mobile" width="74" height="23">
+
                 <use xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
               </svg>
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                  <img class="header-logo__image--mobile-only" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
+              </picture>
             </a>
 
             <button class="main-nav__toggle main-nav__toggle--cross" type="button" aria-label="Меню"></button>
@@ -119,15 +122,19 @@
         </section>
 
         <section class="slider-reviews">
-
-          <div class="slider-reviews__slide">
-            <p class="slider-reviews__author">Николай Петров</p>
-            <p class="slider-reviews__author-description">25 лет, водитель трамвая</p>
-            <blockquote class="slider-reviews__quote">
-              <p class="slider-reviews__quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-              </p>
-            </blockquote>
+          <div class="slider-reviews__slide-wrapper">
+            <div class="slider-reviews__slide">
+              <p class="slider-reviews__author">Николай Петров</p>
+              <p class="slider-reviews__author-description">25 лет, водитель трамвая</p>
+              <blockquote class="slider-reviews__quote">
+                <p class="slider-reviews__quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+                </p>
+              </blockquote>
+            </div>
+            <button class="slider-reviews__button slider-reviews__button--back"></button>
+            <button class="slider-reviews__button slider-reviews__button--forward"></button>
           </div>
+
           <div class="slider-reviews__slider-controls slider-controls">
             <button class="slider-controls__button" type="button" aria-label="1"></button>
             <button class="slider-controls__button" type="button" aria-label="2"></button>
@@ -271,13 +278,13 @@
         </section>
 
         <div class="map">
-          <picture>
-            <source media="(min-width: 1080px)" srcset="img/bg-map-desktop@1x.jpg">
-            <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg">
-            <img class="map__image" srcset="img/bg-map-mobile@1x.png" width="320px" height="645px">
-          </picture>
-          <div class="map__marker"></div>
-        </div>
+
+            <iframe class="map__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586871!2d30.320853351933284!3d59.93871648178722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1599649536225!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+
+            <div class="map__marker"></div>
+
+          </div>
       </main>
 
       <footer class="page-footer">
