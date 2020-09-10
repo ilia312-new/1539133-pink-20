@@ -457,8 +457,8 @@
     position: absolute;
     left: -38px;
     margin-top: 7px;
-    width: 22px;
-    height: 16px;
+    width: 20px;
+    height: 14px;
     border-radius: 1px;
     border-left: 2px solid @pink;
     border-bottom: 2px solid @pink;
@@ -488,11 +488,11 @@
   &::after {
     content: "";
     position: absolute;
-    top: 12px;
-    left: -38px;
+    top: 14px;
+    left: -35px;
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     background-color: @pink;
     border-radius: 50%;
   }
@@ -578,9 +578,12 @@
   min-height: 200px;
   resize: vertical;
   border-color: #e5e5e5;
+  color: #283645;
 
   @media @tablet {
     margin-top: 0;
+    font-size: 18px;
+    line-height: 30px;
   }
 }
 
@@ -610,6 +613,12 @@
 
   &:active {
     color: fade(@white, 30%);
+  }
+
+  &:disabled {
+    color: @white;
+    background-color: #e5e5e5;
+    border: 2px solid #e5e5e5;
   }
 
   @media @tablet {

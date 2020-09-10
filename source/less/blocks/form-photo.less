@@ -13,13 +13,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
-    padding-top: 57px;
-    padding-bottom: 54px;
+    padding: 0;
   }
 
   @media @desktop {
     max-width: @desktop-width - 400;
-    padding: 57px 43px 37px 73px;
   }
 }
 
@@ -125,6 +123,7 @@
   @media @tablet {
     flex-basis: 100%;
     display: flex;
+    justify-content: space-around;
   }
 
   &::after {
@@ -209,12 +208,10 @@
   background-color: #283645;
 
   @media @tablet {
-    margin-right: 18px;
     width: 202px;
   }
 
   @media @desktop {
-    margin-right: 40px;
     width: 288px;
   }
 }

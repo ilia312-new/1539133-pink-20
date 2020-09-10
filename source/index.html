@@ -277,9 +277,9 @@
           </dl>
         </section>
 
-        <div class="map">
+        <div class="map" id="map">
 
-            <iframe class="map__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586871!2d30.320853351933284!3d59.93871648178722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1599649536225!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            <iframe class="map__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586871!2d30.320853351933284!3d59.93871648178722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1599649536225!5m2!1sru!2sru" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0">
             </iframe>
 
             <div class="map__marker"></div>
@@ -333,6 +333,19 @@
           </div>
         </div>
       </footer>
-  </body>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-4UG20Q0dZnu6rNphfT24eAmJ9RBNLmw&callback=initMap">
+        function initMap() {
+          var coordinates = {lat:59.938825, lng:30.323006},
 
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: coordinates
+          }),
+
+          marker = new google.maps.Marker({
+            position: coordinates,
+            map: map
+          });
+        }
+      </script>
+  </body>
 </html>

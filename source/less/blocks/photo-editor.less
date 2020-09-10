@@ -46,6 +46,13 @@
   background-color: @silver;
 
   @media @tablet {
-    width: auto;
+    padding-top: 57px;
+    padding-bottom: 54px;
+    width: @tablet-width + 40;
+  }
+
+  @media @desktop {
+    padding: 57px 0;
+    width: @desktop-width - 260;
   }
 }
