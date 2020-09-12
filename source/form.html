@@ -14,16 +14,16 @@
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
               <svg class="main-nav__header-image" width="146" height="40">
-                <use xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
+                <use class="main-nav__image" xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
 
-                <use xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
+                <use class="main-nav__image" xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
 
-                <use xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
+                <use class="main-nav__image" xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
               </svg>
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
                 <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-                  <img class="main-nav__header-image--mobile-only" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
+                  <img class="main-nav__header-image main-nav__header-image--mobile-only" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
               </picture>
             </a>
 
@@ -38,7 +38,7 @@
               <a class="main-menu__link" href="photo.html">Фотографии</a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link--current" href="form.html">Конкурс</a>
+              <a class="main-menu__link main-menu__link--current" href="form.html">Конкурс</a>
             </li>
             <li class="main-menu__item">
               <a class="main-menu__link" href="https://htmlacademy.ru" aria-label="HTML Academy">HTML Academy</a>
@@ -60,7 +60,7 @@
       <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-feedback__name-wrapper">
           <fieldset class="form-feedback__fieldset-fullname">
-    <!--        <legend class="form-feedback__legend form-feedback__legend--fullname">&nbsp;</legend> -->
+            <legend class="form-feedback__legend form-feedback__legend--fullname">&nbsp;</legend>
             <ul class="form-feedback__name-list">
               <li class="form-feedback__name-item">
                 <label class="form-feedback__label form-feedback__label--fullname" for="lastname">Фамилия:</label>
