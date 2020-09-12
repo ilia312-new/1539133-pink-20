@@ -5,6 +5,7 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const webp = require('gulp-webp');
 
 // Styles
 
@@ -56,9 +57,11 @@ exports.default = gulp.series(
 const imagemin = require("gulp-imagemin");
 
 const image = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
   ]))
 }
+
+// convert webp
