@@ -12,7 +12,7 @@
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
-              <svg class="header-logo__image" width="146" height="40">
+              <svg class="main-nav__header-image" width="146" height="40">
                 <use xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
 
                 <use xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
@@ -22,7 +22,7 @@
               <picture>
                 <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
                 <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-                  <img class="header-logo__image--mobile-only" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
+                  <img class="main-nav__header-image--mobile-only" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
               </picture>
             </a>
 
@@ -31,16 +31,16 @@
 
           <ul class="main-menu">
             <li class="main-menu__item">
-              <a href="index.html">Главная</a>
+              <a class="main-menu__link" href="index.html">Главная</a>
             </li>
             <li class="main-menu__item">
-              <a href="photo.html">Фотографии</a>
+              <a class="main-menu__link--current" href="photo.html">Фотографии</a>
             </li>
             <li class="main-menu__item">
-              <a href="form.html">Конкурс</a>
+              <a class="main-menu__link" href="form.html">Конкурс</a>
             </li>
             <li class="main-menu__item">
-              <a href="https://htmlacademy.ru" aria-label="HTML Academy">HTML Academy</a>
+              <a class="main-menu__link" href="https://htmlacademy.ru" aria-label="HTML Academy">HTML Academy</a>
             </li>
           </ul>
         </nav>
@@ -58,9 +58,17 @@
 
       <section class="gallery">
 
-        <figure class="galley__photo gallery__photo-hot">
+        <figure class="gallery__photo gallery__photo-hot">
           <a class="photo__link photo__link--hot" href="#">
             <picture>
+              <!-- webp -->
+              <source type="image/webp" media="(min-width: 1080px)"
+              srcset="img/webp/panorama-desktop@1x.webp 1x, panorama-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 660px)"
+              srcset="img/webp/panorama-tablet@1x.webp 1x, panorama-tablet@2x.webp 2x">
+              <source type="image/webp"
+              srcset="img/webp/panorama-mobile@1x.webp 1x, panorama-mobile@2x.webp 2x">
+              <!-- support old brosers -->
               <source media="(min-width: 1080px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
               <img class="photo__image photo__image--hot" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-tablet@2x.jpg 2x" alt="Фотография дня">
@@ -87,6 +95,13 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1080px)"
+                srcset="img/webp/photo-car-desktop@1x.webp 1x, photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                srcset="img/webp/photo-car-tablet@1x.webp 1x, photo-car-tablet@2x.webp 2x">
+                <source type="image/webp"
+                srcset="img/webp/photo-car-mobile@1x.webp 1x, photo-car-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1080px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
                 <img class="photo__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фото 1">
@@ -111,6 +126,13 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1080px)"
+                srcset="img/webp/photo-drumset-desktop@1x.webp 1x, photo-drumset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                srcset="img/webp/photo-drumset-tablet@1x.webp 1x, photo-drumset-tablet@2x.webp 2x">
+                <source type="image/webp"
+                srcset="img/webp/photo-drumset-mobile@1x.webp 1x, photo-drumset-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1080px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
                 <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фото 2">
@@ -135,6 +157,13 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1080px)"
+                srcset="img/webp/photo-window-desktop@1x.webp 1x, photo-window-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                srcset="img/webp/photo-window-tablet@1x.webp 1x, photo-window-tablet@2x.webp 2x">
+                <source type="image/webp"
+                srcset="img/webp/photo-window-mobile@1x.webp 1x, photo-window-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1080px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
                 <img class="photo__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фото 3">
@@ -159,6 +188,13 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1080px)"
+                srcset="img/webp/photo-fair-desktop@1x.webp 1x, photo-fair-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                srcset="img/webp/photo-fair-tablet@1x.webp 1x, photo-fair-tablet@2x.webp 2x">
+                <source type="image/webp"
+                srcset="img/webp/photo-fair-mobile@1x.webp 1x, photo-fair-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1080px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
                 <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фото 4">
@@ -183,6 +219,13 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1080px)"
+                srcset="img/webp/photo-pov-desktop@1x.webp 1x, photo-pov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                srcset="img/webp/photo-pov-tablet@1x.webp 1x, photo-pov-tablet@2x.webp 2x">
+                <source type="image/webp"
+                srcset="img/webp/photo-pov-mobile@1x.webp 1x, photo-pov-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1080px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
                 <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фото 5">
@@ -207,6 +250,13 @@
           <figure class="gallery__photo">
             <a class="photo__link" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 1080px)"
+                srcset="img/webp/photo-wing-desktop@1x.webp 1x, photo-wing-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)"
+                srcset="img/webp/photo-wing-tablet@1x.webp 1x, photo-wing-tablet@2x.webp 2x">
+                <source type="image/webp"
+                srcset="img/webp/photo-wing-mobile@1x.webp 1x, photo-wing-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1080px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
                 <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фото 6">
@@ -301,7 +351,7 @@
       <div class="page-footer__content-wrapper">
         <div class="page-footer__icon-wrapper">
           <a class="page-footer__logo" href="index.html" aria-label="Логотип сайта Пинк">
-            <svg class="footer-logo__image" width="146" height="40">
+            <svg class="page-footer__logo-image" width="146" height="40">
               <use xlink:href="img/logo-pink-footer-adaptive.svg#logo-pink-blue-mobile"></use>
 
               <use xlink:href="img/logo-pink-footer-adaptive.svg#logo-pink-blue-desktop"></use>
