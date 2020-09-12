@@ -2,10 +2,10 @@
   margin: 0 auto;
   position: relative;
   box-sizing: content-box;
+  border: none;
   overflow: hidden;
   padding: 0;
   min-width: @mobile-width;
-  max-width: @desktop-width;
   min-height: 200px;
 
   @media @tablet {
@@ -33,20 +33,18 @@
 
 .map__image {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   width: 100%;
+  height: 100%;
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: auto;
 }
 
 .map__marker {
+  visibility: hidden;
   position: absolute;
   z-index: 20;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -45%);
   width: 35px;
   height: 35px;
   background-image: url("../img/icon-map-marker.svg");

@@ -12,15 +12,18 @@
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
-              <svg class="header-logo__image header-logo__image--desktop" width="146" height="40">
+              <svg class="header-logo__image" width="146" height="40">
                 <use xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
-              </svg>
-              <svg class="header-logo__image header-logo__image--tablet" width="146" height="40">
+
                 <use xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
-              </svg>
-              <svg class="header-logo__image header-logo__image--mobile" width="74" height="23">
+
                 <use xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
               </svg>
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                  <img class="header-logo__image--mobile-only" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
+              </picture>
             </a>
 
             <button class="main-nav__toggle main-nav__toggle--cross" type="button" aria-label="Меню"></button>
@@ -54,8 +57,6 @@
       </div>
 
       <section class="gallery">
-
-<!-- <h2 class="visually-hidden">Галерея фотографий пользователей приложения</h2> -->
 
         <figure class="galley__photo gallery__photo-hot">
           <a class="photo__link photo__link--hot" href="#">
@@ -232,49 +233,60 @@
       <section class="photo-editor">
         <div class="photo-editor__content-wrapper">
           <p class="photo-editor__title">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
-          <!-- пограться с шириной котейнера -->
         </div>
         <div class="photo-editor__form-wrapper content-wrapper">
           <form class="form-photo" action="https://echo.htmlacademy.ru" method="post">
             <input class="visually-hidden" type="file" name="image">
             <label class="form-photo__image" for="image"></label>
-<!-- кнопки управления -->
+
             <div class="form-photo__controls">
               <div class="form-photo__filters">
                 <div class="form-photo__filters-buttons">
                   <button class="form-photo__filter-button" type="button" name="clipping">
-                    <img class="form-photo__filter-button form-photo__filter-button--clipping" src="img/icon-editor-crop.svg" alt="Обрезка">
+                    <svg class="form-photo__icon" width="44" height="44">
+                      <use xlink:href="img/symbols.svg#icon-editor-crop"></use>
+                    </svg>
                   </button>
                   <button class="form-photo__filter-button" type="button" name="fill">
-                    <img class="form-photo__filter-button form-photo__filter-button--fill" src="img/icon-editor-fill.svg" alt="Заливка">
+                    <svg class="form-photo__icon" width="48" height="48">
+                      <use xlink:href="img/symbols.svg#icon-editor-fill"></use>
+                    </svg>
                   </button>
                   <button class="form-photo__filter-button" type="button" name="contrast">
-                    <img class="form-photo__filter-button form-photo__filter-button--contrast" src="img/icon-editor-contrast.svg" alt="Контрастность">
+                    <svg class="form-photo__icon" width="32" height="32">
+                      <use xlink:href="img/symbols.svg#icon-editor-contrast"></use>
+                    </svg>
                   </button>
                 </div>
-  <!-- шкала кадрирования -->
+
                 <div class="form-photo__filter form-photo__filter--mobile">
                     <div class="form-photo__icon-wrapper">
-                      <img class="form-photo__icon form-photo__icon--crop" src="img/icon-editor-crop.svg" alt="" width="48" height="48">
+                      <svg class="form-photo__icon form-photo__icon--crop" width="44" height="44">
+                        <use xlink:href="img/symbols.svg#icon-editor-crop"></use>
+                      </svg>
                     </div>
                     <input class="form-photo__filter-range" type="range" min="1" max="100" name="crop" value="85">
                 </div>
 
                 <div class="form-photo__filter">
                     <div class="form-photo__icon-wrapper">
-                      <img class="form-photo__icon form-photo__icon--fill" src="img/icon-editor-fill.svg" alt="" width="48" height="48">
+                      <svg class="form-photo__icon form-photo__icon--fill" width="48" height="48">
+                        <use xlink:href="img/symbols.svg#icon-editor-fill"></use>
+                      </svg>
                     </div>
                     <input class="form-photo__filter-range" type="range" min="1" max="100" name="fill" value="14">
                 </div>
 
                 <div class="form-photo__filter">
                     <div class="form-photo__icon-wrapper">
-                      <img class="form-photo__icon form-photo__icon--contrast" src="img/icon-editor-contrast.svg" alt="" width="32" height="32">
+                      <svg class="form-photo__icon form-photo__icon--contrast" width="32" height="32">
+                        <use xlink:href="img/symbols.svg#icon-editor-contrast"></use>
+                      </svg>
                     </div>
                     <input class="form-photo__filter-range" type="range" min="1" max="100" name="contrast" value="51">
                 </div>
               </div>
-  <!-- кнопки отправки -->
+
                 <div class="form-photo__buttons">
                     <button class="form-photo__button form-photo__button--submit" type="submit">Запостить</button>
                     <button class="form-photo__button form-photo__button--cancel" type="reset">Отмена</button>
@@ -289,11 +301,10 @@
       <div class="page-footer__content-wrapper">
         <div class="page-footer__icon-wrapper">
           <a class="page-footer__logo" href="index.html" aria-label="Логотип сайта Пинк">
-            <svg class="footer-logo__image footer-logo__image--mobile" width="146" height="40">
-              <use xlink:href="img/symbols.svg#logo-pink-blue-mobile"></use>
-            </svg>
-            <svg class="footer-logo__image footer-logo__image--desktop" width="146" height="40">
-              <use xlink:href="img/symbols.svg#logo-pink-blue-desktop"></use>
+            <svg class="footer-logo__image" width="146" height="40">
+              <use xlink:href="img/logo-pink-footer-adaptive.svg#logo-pink-blue-mobile"></use>
+
+              <use xlink:href="img/logo-pink-footer-adaptive.svg#logo-pink-blue-desktop"></use>
             </svg>
           </a>
         </div>
@@ -304,7 +315,6 @@
               <svg width="17" height="14">
                 <use xlink:href="img/symbols.svg#icon-twitter"></use>
               </svg>
-      <!--        <img src="img/icon-twitter.svg" width="18px" height="15px" alt="Twitter"> -->
             </a>
           </li>
           <li class="social-links__item">
@@ -312,7 +322,6 @@
               <svg width="8" height="18">
                 <use xlink:href="img/symbols.svg#icon-facebook"></use>
               </svg>
-      <!--        <img src="img/icon-facebook.svg" width="9px" height="19px" alt="Facebook"> -->
             </a>
           </li>
           <li class="social-links__item">
@@ -320,7 +329,6 @@
               <svg width="14" height="13">
                 <use xlink:href="img/symbols.svg#icon-youtube"></use>
               </svg>
-        <!--      <img src="img/icon-youtube.svg" width="15px" height="14px" alt="Youtube"> -->
             </a>
           </li>
         </ul>

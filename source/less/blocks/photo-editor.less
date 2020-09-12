@@ -8,6 +8,7 @@
 
   @media @tablet {
     width: auto;
+    max-width: @desktop-width - 260;
   }
 
   @media @desktop {
@@ -45,10 +46,13 @@
   background-color: @silver;
 
   @media @tablet {
-    width: auto;
+    padding-top: 57px;
+    padding-bottom: 54px;
+    width: @tablet-width + 40;
   }
 
   @media @desktop {
-    width: 79%;
+    padding: 57px 0;
+    width: @desktop-width - 260;
   }
 }

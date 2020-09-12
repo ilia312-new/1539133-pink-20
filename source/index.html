@@ -13,20 +13,18 @@
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
-              <svg class="header-logo__image header-logo__image--desktop" width="146" height="40">
+              <svg class="header-logo__image" width="146" height="40">
                 <use xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
-              </svg>
-              <svg class="header-logo__image header-logo__image--tablet" width="146" height="40">
+
                 <use xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
-              </svg>
-              <svg class="header-logo__image header-logo__image--mobile" width="74" height="23">
+
                 <use xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
               </svg>
-            <!--  <picture>
-                <source media="(min-width: 1080px)" srcset="img/logo-pink-white-desktop.svg" type="image/svg+xml">
-                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg" type="image/svg+xml">
-                <img srcset="img/logo-pink-white-mobile.svg" alt="Pink">
-              </picture> -->
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                  <img class="header-logo__image--mobile-only" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
+              </picture>
             </a>
 
             <button class="main-nav__toggle main-nav__toggle--cross" type="button" aria-label="Меню"></button>
@@ -63,7 +61,6 @@
                 <svg width="46" height="56">
                   <use xlink:href="img/symbols.svg#logo-apple"></use>
                 </svg>
-        <!--        <img src="img/logo-apple.svg" alt="iOS-sign" width="46" height="57"> -->
               </a>
             </li>
             <li class="store__item">
@@ -71,7 +68,6 @@
                 <svg width="42" height="47">
                   <use xlink:href="img/symbols.svg#logo-android"></use>
                 </svg>
-        <!--        <img src="img/logo-android.svg" alt="Android-logo" width="42" height="47"> -->
               </a>
             </li>
             <li class="store__item">
@@ -79,7 +75,6 @@
                 <svg width="43" height="41">
                   <use xlink:href="img/symbols.svg#logo-microsoft"></use>
                 </svg>
-        <!--        <img src="img/logo-microsoft.svg" alt="Windows-logo" width="44" height="42"> -->
               </a>
             </li>
           </ul>
@@ -127,15 +122,19 @@
         </section>
 
         <section class="slider-reviews">
-
-          <div class="slider-reviews__slide">
-            <p class="slider-reviews__author">Николай Петров</p>
-            <p class="slider-reviews__author-description">25 лет, водитель трамвая</p>
-            <blockquote class="slider-reviews__quote">
-              <p class="slider-reviews__quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-              </p>
-            </blockquote>
+          <div class="slider-reviews__slide-wrapper">
+            <div class="slider-reviews__slide">
+              <p class="slider-reviews__author">Николай Петров</p>
+              <p class="slider-reviews__author-description">25 лет, водитель трамвая</p>
+              <blockquote class="slider-reviews__quote">
+                <p class="slider-reviews__quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
+                </p>
+              </blockquote>
+            </div>
+            <button class="slider-reviews__button slider-reviews__button--back"></button>
+            <button class="slider-reviews__button slider-reviews__button--forward"></button>
           </div>
+
           <div class="slider-reviews__slider-controls slider-controls">
             <button class="slider-controls__button" type="button" aria-label="1"></button>
             <button class="slider-controls__button" type="button" aria-label="2"></button>
@@ -278,25 +277,24 @@
           </dl>
         </section>
 
-        <div class="map">
-          <picture>
-            <source media="(min-width: 1080px)" srcset="img/bg-map-desktop@1x.jpg">
-            <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg">
-            <img class="map__image" srcset="img/bg-map-mobile@1x.png" width="320px" height="645px">
-          </picture>
-          <div class="map__marker"></div>
-        </div>
+        <div class="map" id="map">
+
+            <iframe class="map__image" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872586871!2d30.320853351933284!3d59.93871648178722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1599649536225!5m2!1sru!2sru" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+
+            <div class="map__marker"></div>
+
+          </div>
       </main>
 
       <footer class="page-footer">
         <div class="page-footer__content-wrapper">
           <div class="page-footer__icon-wrapper">
             <a class="page-footer__logo" href="index.html" aria-label="Логотип сайта Пинк">
-              <svg class="footer-logo__image footer-logo__image--mobile" width="146" height="40">
-                <use xlink:href="img/symbols.svg#logo-pink-blue-mobile"></use>
-              </svg>
-              <svg class="footer-logo__image footer-logo__image--desktop" width="146" height="40">
-                <use xlink:href="img/symbols.svg#logo-pink-blue-desktop"></use>
+              <svg class="footer-logo__image" width="146" height="40">
+                <use xlink:href="img/logo-pink-footer-adaptive.svg#logo-pink-blue-mobile"></use>
+
+                <use xlink:href="img/logo-pink-footer-adaptive.svg#logo-pink-blue-desktop"></use>
               </svg>
             </a>
           </div>
@@ -307,7 +305,6 @@
                 <svg width="17" height="14">
                   <use xlink:href="img/symbols.svg#icon-twitter"></use>
                 </svg>
-        <!--        <img src="img/icon-twitter.svg" width="18px" height="15px" alt="Twitter"> -->
               </a>
             </li>
             <li class="social-links__item">
@@ -315,7 +312,6 @@
                 <svg width="8" height="18">
                   <use xlink:href="img/symbols.svg#icon-facebook"></use>
                 </svg>
-        <!--        <img src="img/icon-facebook.svg" width="9px" height="19px" alt="Facebook"> -->
               </a>
             </li>
             <li class="social-links__item">
@@ -323,7 +319,6 @@
                 <svg width="14" height="13">
                   <use xlink:href="img/symbols.svg#icon-youtube"></use>
                 </svg>
-          <!--      <img src="img/icon-youtube.svg" width="15px" height="14px" alt="Youtube"> -->
               </a>
             </li>
           </ul>
@@ -338,6 +333,19 @@
           </div>
         </div>
       </footer>
-  </body>
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-4UG20Q0dZnu6rNphfT24eAmJ9RBNLmw&callback=initMap">
+        function initMap() {
+          var coordinates = {lat:59.938825, lng:30.323006},
 
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: coordinates
+          }),
+
+          marker = new google.maps.Marker({
+            position: coordinates,
+            map: map
+          });
+        }
+      </script>
+  </body>
 </html>

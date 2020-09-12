@@ -13,15 +13,18 @@
         <nav class="main-nav">
           <div class="main-nav__logo-wrapper">
             <a class="main-nav__header-logo" href="index.html" aria-label="Логотип Pink">
-              <svg class="header-logo__image header-logo__image--desktop" width="146" height="40">
+              <svg class="header-logo__image" width="146" height="40">
                 <use xlink:href="img/symbols.svg#logo-pink-white-desktop"></use>
-              </svg>
-              <svg class="header-logo__image header-logo__image--tablet" width="146" height="40">
+
                 <use xlink:href="img/symbols.svg#logo-pink-white-tablet"></use>
-              </svg>
-              <svg class="header-logo__image header-logo__image--mobile" width="74" height="23">
+
                 <use xlink:href="img/symbols.svg#logo-pink-white-mobile"></use>
               </svg>
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/logo-pink-white-desktop.svg">
+                <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                  <img class="header-logo__image--mobile-only" src="img/logo-pink-white-mobile.svg" alt="Логотип Пинк">
+              </picture>
             </a>
 
           <button class="main-nav__toggle main-nav__toggle--cross" type="button" aria-label="Меню"></button>
@@ -53,7 +56,7 @@
       <div class="page-inner__title-wrapper content-wrapper">
         <p class="page-inner__title">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту! <span>Пожалуйста заполните форму ниже:</span></p>
       </div>
-<!-- формы отправки -->
+
       <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
         <div class="form-feedback__name-wrapper">
           <fieldset class="form-feedback__fieldset-fullname">
@@ -132,10 +135,22 @@
               <li class="form-feedback__contacts-item">
                 <label class="form-feedback__label form-feedback__label--contacts" for="phone">Номер телефона</label>
                 <input class="form-feedback__input form-feedback__input--phone" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
+                <div class="form-feedback__icon-wrapper">
+                  <svg class="form-feedback__icon" width="19" height="19">
+                    <use xlink:href="img/symbols.svg#icon-phone"></use>
+                  </svg>
+                </div>
+
               </li>
               <li class="form-feedback__contacts-item">
                 <label class="form-feedback__label form-feedback__label--contacts" for="email">Номер email</label>
                 <input class="form-feedback__input form-feedback__input--email" type="email" id="email" name="email" placeholder="Ведите почту *" required>
+                <div class="form-feedback__icon-wrapper">
+                  <svg class="form-feedback__icon" width="17" height="13">
+                    <use xlink:href="img/symbols.svg#icon-mail"></use>
+                  </svg>
+                </div>
+
               </li>
             </ul>
           </fieldset>
@@ -181,7 +196,7 @@
         </div>
 
         <div class="form-feedback__submit-wrapper">
-          <button class="form-feedback__submit-button" type="submit">Отправить форму</button>
+          <button class="form-feedback__submit-button" type="submit" disabled>Отправить форму</button>
 
           <p class="form-feedback__notification">* - обязательные <span>для заполнения</span> поля</p>
         </div>
@@ -192,11 +207,10 @@
       <div class="page-footer__content-wrapper">
         <div class="page-footer__icon-wrapper">
           <a class="page-footer__logo" href="index.html" aria-label="Логотип сайта Пинк">
-            <svg class="footer-logo__image footer-logo__image--mobile" width="146" height="40">
-              <use xlink:href="img/symbols.svg#logo-pink-blue-mobile"></use>
-            </svg>
-            <svg class="footer-logo__image footer-logo__image--desktop" width="146" height="40">
-              <use xlink:href="img/symbols.svg#logo-pink-blue-desktop"></use>
+            <svg class="footer-logo__image" width="146" height="40">
+              <use xlink:href="img/logo-pink-footer-adaptive.svg#logo-pink-blue-mobile"></use>
+
+              <use xlink:href="img/logo-pink-footer-adaptive.svg#logo-pink-blue-desktop"></use>
             </svg>
           </a>
         </div>
@@ -207,7 +221,6 @@
               <svg width="17" height="14">
                 <use xlink:href="img/symbols.svg#icon-twitter"></use>
               </svg>
-      <!--        <img src="img/icon-twitter.svg" width="18px" height="15px" alt="Twitter"> -->
             </a>
           </li>
           <li class="social-links__item">
@@ -215,7 +228,6 @@
               <svg width="8" height="18">
                 <use xlink:href="img/symbols.svg#icon-facebook"></use>
               </svg>
-      <!--        <img src="img/icon-facebook.svg" width="9px" height="19px" alt="Facebook"> -->
             </a>
           </li>
           <li class="social-links__item">
@@ -223,7 +235,6 @@
               <svg width="14" height="13">
                 <use xlink:href="img/symbols.svg#icon-youtube"></use>
               </svg>
-        <!--      <img src="img/icon-youtube.svg" width="15px" height="14px" alt="Youtube"> -->
             </a>
           </li>
         </ul>

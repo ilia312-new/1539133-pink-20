@@ -15,7 +15,7 @@
   @media @tablet {
     background-color: transparent;
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: 50% 259px;
+    background-position: 50% 109px;
     background-size: cover;
 
     @media @retina {
@@ -59,8 +59,8 @@
 
 .page-header__store {
   margin: 0 auto;
-  min-width: @mobile-width;
   padding: 0 20px;
+  max-width: @mobile-width - 40;
   background-image: url("../img/iphone-hand-mobile@1x.png");
   background-position: 0 110px;
   background-size: auto;
@@ -71,8 +71,9 @@
   }
 
   @media @tablet {
+    box-sizing: border-box;
     padding: 90px 0 98px;
-    max-width: @tablet-max-width;
+    max-width: 700px;
     background-image: url("../img/iphone-hand-tablet@1x.png");
     background-position: -20px bottom;
 
@@ -82,10 +83,10 @@
   }
 
   @media @desktop {
-    padding: 108px 122px 124px;
-    max-width: @desktop-width;
+    padding: 108px 75px 124px;
+    max-width: @desktop-width - 300;
     background-image: url("../img/iphone-hand-desktop@1x.png");
-    background-position: 100% bottom;
+    background-position: 0 bottom;
 
     @media @retina {
       background-image: url("../img/iphone-hand-desktop@1x.png");

@@ -26,14 +26,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: auto;
   margin: 0;
   margin-top: 20px;
   padding: 0;
   row-gap: 20px;
 
   @media @tablet {
-    width: 94%;
+    max-width: @tablet-width - 40;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: stretch;
@@ -43,7 +42,7 @@
   }
 
   @media @desktop {
-    width: 79%;
+    max-width: @desktop-width - 260;
     margin-bottom: 0;
   }
 }

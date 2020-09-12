@@ -1,15 +1,19 @@
+// костыль, но адаптивность не работает внутри свг, если это спрайт
+
 .footer-logo__image {
   display: block;
   pointer-events: none;
 }
 
-.footer-logo__image--mobile {
+.footer-logo__image use:first-child {
+  display: block;
+
   @media @desktop {
     display: none;
   }
 }
 
-.footer-logo__image--desktop {
+.footer-logo__image use:last-child {
   display: none;
 
   @media @desktop {
