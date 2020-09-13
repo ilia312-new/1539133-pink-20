@@ -18,7 +18,7 @@
 // extremules
 
 @mobile-max-width: (@tablet-width - 1);
-
+@mobile-only: ~"(max-width: @{mobile-max-width})";
 @tablet-min-width: (@tablet-width + 1);
 @tablet-max-width: (@desktop-width - 1);
 
@@ -26,6 +26,8 @@
 
 @retina-dpi: 144dpi;
 @retina: ~"(min-resolution: @{retina-dpi})";
+
+// common media
 
 @tablet: ~"(min-width: @{tablet-width})";
 @desktop: ~"(min-width: @{desktop-width})";
