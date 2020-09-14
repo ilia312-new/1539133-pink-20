@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "csso": "^4.0.3",
+    "gulp-rename": "^2.0.0",
     "ignore": "^5.1.8",
     "imagemin": "^7.0.1",
     "normalize.css": "^8.0.1"

@@ -5,7 +5,10 @@ const less = require("gulp-less");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
-const webp = require('gulp-webp');
+const webp = require("gulp-webp");
+const imagemin = require("gulp-imagemin");
+const csso = require("gulp-csso");
+const rename = require("rename");
 
 // Styles
 
@@ -17,6 +20,7 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(csso())
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
@@ -54,15 +58,13 @@ exports.default = gulp.series(
 
 // imageoptimize
 
-const imagemin = require("gulp-imagemin");
-
-const image = () => {
-  return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
-  ]))
-    .pipe(gulp.dest("source/img"))
+const images = () => {
+  return gulp.src("source/img/**/*{jpg,png}")
+    .pipe(imagemin());
 }
+
+// minimization
+
+
 
 // convert webp
