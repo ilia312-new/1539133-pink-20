@@ -21,14 +21,15 @@ const styles = () => {
       autoprefixer()
     ]))
     .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
-    .pipe(sync.stream());
+    .pipe(sync.stream())
 }
 
 exports.styles = styles;
 
-// Server
+// Server // don't disturbed
 
 const server = (done) => {
   sync.init({
@@ -55,16 +56,77 @@ exports.default = gulp.series(
   styles, server, watcher
 );
 
+// minimization
+
+gulp.task("csso", function () {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+  ]))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
+    .pipe(gulp.dest("source/css"))
+})
 
 // imageoptimize
 
-const images = () => {
+gulp.task("images", function () {
   return gulp.src("source/img/**/*{jpg,png}")
-    .pipe(imagemin());
-}
+    .pipe(imagemin([
+      imagemin.mozjpeg({quality: 50, progressive: true}),
+      imagemin.optipng({optimizationLevel: 3}),
+    ]))
+    .pipe(gulp.dest("source/img/test"))
+})
 
-// minimization
+// copy
+
+gulp.task("copy", function () {
+  return gulp.src([
+    "source/fonts/*.{woff,woff2}",
+    "source/*.html",
+    "source/css/*.css"
+  ], {
+    base: "source"
+  })
+    .pipe(gulp.dest("build"))
+})
+
+gulp.task("move", function () {
+  return gulp.src([
+      "source/img/test/*.{png,jpg}",
+      "source/img/webp/*.webp"
+  ])
+    .pipe(gulp.dest("build/img"))
+})
+
+gulp.task("sprite", function () {
+  return gulp.src("source/img/symbols.svg")
+    .pipe(gulp.dest("build/img"))
+})
+
+// building
+
+gulp.task("build", function(done) {
+  run("copy", "move", "sprite", done);
+})
+
+
+// server
 
 
 
-// convert webp
+/*
+gulp.task("server", function () {
+  server.init({
+    server: "build",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
+  });
+})
+
+*/
