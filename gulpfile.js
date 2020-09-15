@@ -8,7 +8,7 @@ const sync = require("browser-sync").create();
 const webp = require("gulp-webp");
 const imagemin = require("gulp-imagemin");
 const csso = require("gulp-csso");
-const rename = require("rename");
+const rename = require("gulp-rename");
 
 // Styles
 
@@ -20,8 +20,6 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(csso())
-    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream())
@@ -61,14 +59,17 @@ exports.default = gulp.series(
 gulp.task("csso", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
+    .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
       autoprefixer()
-  ]))
+    ]))
     .pipe(csso())
     .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
-})
+    .pipe(sync.stream())
+});
 
 // imageoptimize
 
@@ -78,8 +79,8 @@ gulp.task("images", function () {
       imagemin.mozjpeg({quality: 50, progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
     ]))
-    .pipe(gulp.dest("source/img/test"))
-})
+    .pipe(gulp.dest("source/img/test"));
+});
 
 // copy
 
@@ -87,46 +88,46 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/*.{woff,woff2}",
     "source/*.html",
-    "source/css/*.css"
+    "source/css/*.css",
+    "source/js/**"
   ], {
     base: "source"
   })
     .pipe(gulp.dest("build"))
-})
+});
 
 gulp.task("move", function () {
   return gulp.src([
+      "source/img/*.svg",
       "source/img/test/*.{png,jpg}",
       "source/img/webp/*.webp"
   ])
     .pipe(gulp.dest("build/img"))
-})
+});
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/symbols.svg")
     .pipe(gulp.dest("build/img"))
-})
+});
 
 // building
 
-gulp.task("build", function(done) {
-  run("copy", "move", "sprite", done);
-})
+gulp.task("build", gulp.series("csso", "copy", "move", "sprite"));
 
+// clean
+
+gulp.task("clean", function () {
+  return del("build")
+});
 
 // server
 
-
-
-/*
 gulp.task("server", function () {
   server.init({
-    server: "build",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 })
-
-*/
