@@ -99,10 +99,14 @@ gulp.task("copy", function () {
 gulp.task("move", function () {
   return gulp.src([
       "source/img/*.svg",
-      "source/img/test/*.{png,jpg}",
-      "source/img/webp/*.webp"
+      "source/img/test/*.{png,jpg}"
   ])
     .pipe(gulp.dest("build/img"))
+});
+
+gulp.task("webp", function () {
+  return gulp.src("source/img/webp/*.webp")
+    .pipe(gulp.dest("build/img/webp"))
 });
 
 gulp.task("sprite", function () {
@@ -112,7 +116,7 @@ gulp.task("sprite", function () {
 
 // building
 
-gulp.task("build", gulp.series("csso", "copy", "move", "sprite"));
+gulp.task("build", gulp.series("csso", "copy", "move", "webp", "sprite"));
 
 // clean
 
